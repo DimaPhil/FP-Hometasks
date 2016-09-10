@@ -1,6 +1,6 @@
 module Test where
 
-zipN :: ([a] -> a) -> [[a]] -> [a]
+zipN :: ([a] -> b) -> [[a]] -> [b]
 zipN f xs
-  | length (head xs) == 0 = []
-  | otherwise             = (f $ map head xs) : zipN f (map tail xs)
+  | null $ head xs = []
+  | otherwise      = (f $ map head xs) : zipN f (map tail xs)
