@@ -19,9 +19,9 @@ getSize t    = t & size
 findNewMin :: Ord a => Tree a -> a
 findNewMin Leaf                            = undefined
 findNewMin t@(Node { l = Leaf, r = Leaf }) = t & value
-findNewMin t@(Node { l = Leaf })           = min (t & value) (t & r & value)
-findNewMin t@(Node { r = Leaf })           = min (t & value) (t & l & value)
-findNewMin t                               = minimum [t & l & value, t & r & value, t & value]
+findNewMin t@(Node { l = Leaf })           = min (t & value) (t & r & minv)
+findNewMin t@(Node { r = Leaf })           = min (t & value) (t & l & minv)
+findNewMin t                               = minimum [t & value, t & l & minv, t & r & minv]
 
 recalc :: Ord a => Tree a -> Tree a
 recalc Leaf = undefined
@@ -31,24 +31,22 @@ recalc t    = t { minv = newMin, size = newSize } where
 
 split :: Ord a => Tree a -> Int -> (Tree a, Tree a)
 split Leaf _ = (Leaf, Leaf)
-split t k
-  | getSize (t & l) >= k = (t1, newL)
-  | otherwise           = (newR, t4) where
+split t k = let
     (t1, t2) = split (t & l) k
     newL = recalc $ t { l = t2 }
     (t3, t4) = split (t & r) (k - getSize (t & l) - 1)
     newR = recalc $ t { r = t3 }
+  in if getSize (t & l) >= k then (t1, newL) else (newR, t4)
 
 merge :: Ord a => Tree a -> Tree a -> Tree a
 merge l Leaf = l
 merge Leaf r = r
-merge lt rt
-  | (lt & y) < (rt & y) = newt1
-  | otherwise           = newt2 where
+merge lt rt = let
     t1 = merge (lt & r) rt
     newt1 = recalc $ lt { r = t1 }
     t2 = merge lt (rt & l)
     newt2 = recalc $ rt { l = t2 }
+  in if (lt & y) < (rt & y) then newt1 else newt2
 
 pushBack :: Ord a => Tree a -> a -> Tree a
 pushBack root x = merge root newv where 
