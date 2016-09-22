@@ -6,7 +6,14 @@ import Control.Applicative
 randInt :: Int -> Int -> Int
 randInt from to = fst $ randomR (from, to) (mkStdGen 66)
 
-data Tree a = Leaf | Node { value :: a, minv :: a, y :: Int, size :: Int, l :: Tree a, r :: Tree a } deriving Show
+data Tree a = Leaf | Node 
+  { value :: a
+  , minv :: a
+  , y :: Int
+  , size :: Int
+  , l :: Tree a
+  , r :: Tree a
+  } deriving Show
 
 infixl 1 &
 (&) :: a -> (a -> b) -> b
