@@ -1,0 +1,67 @@
+
+==================== FINAL INTERFACE ====================
+2016-10-14 16:51:35.970106 UTC
+
+interface hw4-0.1.0.0-8ydcU7LkNiv7Z660KS3PPI:MonadJoin 8001
+  interface hash: 63400832f40967a99c7f90b9c2d47997
+  ABI hash: f624d6e4af61d2c06c963c915c9539d4
+  export-list hash: 85b937455f0e0e5d06206ace7eb16427
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 213a3fcae0a104d0add4041f7711647d
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  MonadJoin.MonadJoin{MonadJoin.join MonadJoin.returnJoin}
+module dependencies:
+package dependencies:
+orphans:
+family instance modules:
+3cdebee434cd2099715399d407faec73
+  $tc'C:MonadJoin :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9956541308185771388##
+                   14803726100599437994##
+                   MonadJoin.$trModule
+                   MonadJoin.$tc'C:MonadJoin1) -}
+5ab32bfe73b0d7c1988d22654f2e2c5f
+  $tc'C:MonadJoin1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:MonadJoin"#) -}
+e7ca3971ab659d498b34c0a984c81c3e
+  $tcMonadJoin :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18441850932735487620##
+                   1668481696186270255##
+                   MonadJoin.$trModule
+                   MonadJoin.$trModule1) -}
+73458d184e766bae829bb10ab1368acc
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   MonadJoin.$trModule2
+                   MonadJoin.$trModule1) -}
+82e39ef646ba631b38a352ca3b5c5f11
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MonadJoin"#) -}
+befc37674a668c5b3e062b2e34ca799b
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw4-0.1.0.0-8ydcU7LkNiv7Z660KS3PPI"#) -}
+e728c4b3a8bc40ebdb3b6491eaef9138
+  class MonadJoin (m :: * -> *) where
+    returnJoin :: a -> m a
+    join :: m (m a) -> m a
+    {-# MINIMAL returnJoin, join #-}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

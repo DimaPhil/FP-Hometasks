@@ -1,0 +1,67 @@
+
+==================== FINAL INTERFACE ====================
+2016-10-14 16:51:35.997946 UTC
+
+interface hw4-0.1.0.0-8ydcU7LkNiv7Z660KS3PPI:MonadFish 8001
+  interface hash: 5d040d007903cc6955f8aa2311685b63
+  ABI hash: 67dcdc33a2204f18ea2b8ee627ea9656
+  export-list hash: ab82301f4577555c6dc34131996dede0
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 213a3fcae0a104d0add4041f7711647d
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  MonadFish.MonadFish{MonadFish.>=> MonadFish.returnFish}
+module dependencies:
+package dependencies:
+orphans:
+family instance modules:
+a5fb9b735aab003701f3ed933504f6c8
+  $tc'C:MonadFish :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12585960189885638611##
+                   2158242181255730794##
+                   MonadFish.$trModule
+                   MonadFish.$tc'C:MonadFish1) -}
+c2cafe705e487b001ef173034dfbe4d4
+  $tc'C:MonadFish1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:MonadFish"#) -}
+03b8019ce2a1af39d9d4376dfa44ad7f
+  $tcMonadFish :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2375033904563802347##
+                   4143735020254471139##
+                   MonadFish.$trModule
+                   MonadFish.$trModule1) -}
+ba5d1aec911092783cdf3a935d2c5e25
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   MonadFish.$trModule2
+                   MonadFish.$trModule1) -}
+0d108bb61ac54305935cdf030c450fba
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MonadFish"#) -}
+d6b1d98b8b12736400ce395697ad3f49
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw4-0.1.0.0-8ydcU7LkNiv7Z660KS3PPI"#) -}
+92d56bc4b968792a2afec3454a973fcc
+  class MonadFish (m :: * -> *) where
+    returnFish :: a -> m a
+    (>=>) :: (a -> m b) -> (b -> m c) -> a -> m c
+    {-# MINIMAL returnFish, (>=>) #-}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

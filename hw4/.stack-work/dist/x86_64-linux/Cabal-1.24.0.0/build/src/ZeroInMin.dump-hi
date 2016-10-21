@@ -1,0 +1,181 @@
+
+==================== FINAL INTERFACE ====================
+2016-10-14 16:51:35.741491 UTC
+
+interface hw4-0.1.0.0-8ydcU7LkNiv7Z660KS3PPI:ZeroInMin 8001
+  interface hash: 5cf3658ba3fc7040428a5d30a71314a2
+  ABI hash: 34c60842622ede4de80ccaa3f653760b
+  export-list hash: 211840a1c8c838d7115b72849fa2a4dc
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  ZeroInMin.manHeaps
+  ZeroInMin.zeroInMin
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.Real 08bf4acb5f2508f89d6fbcd57fe232e9
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+dc586baf0377120a11c8ddc2573ff36d
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   ZeroInMin.$trModule2
+                   ZeroInMin.$trModule1) -}
+314a7c521765c305d84144cbd6f4d16c
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "ZeroInMin"#) -}
+222b3eb825db20873f0663a5e768f6a5
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw4-0.1.0.0-8ydcU7LkNiv7Z660KS3PPI"#) -}
+e4ca53edb2e494670d0dd9f900cc40e0
+  $whelper ::
+    [(GHC.Types.Int, GHC.Types.Int)] -> GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><L,U>, Inline: [0] -}
+b4454c58b4261e0cdcf29e9178e414d3
+  $wmanHeaps ::
+    GHC.Prim.Int# -> GHC.Types.Int -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><L,U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) (ww1 :: GHC.Types.Int) ->
+                 let {
+                   x :: GHC.Prim.Int# = GHC.Prim.-# ww 1#
+                 } in
+                 let {
+                   r :: [(GHC.Types.Int, GHC.Types.Int)]
+                   = let {
+                       x1 :: GHC.Prim.Int# = GHC.Prim.*# ww 2#
+                     } in
+                     let {
+                       r1 :: [(GHC.Types.Int, GHC.Types.Int)]
+                       = case GHC.Classes.divInt# ww 2# of ww4 { DEFAULT ->
+                         case GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.>=# ww4 0#) of wild {
+                           GHC.Types.False -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int)
+                           GHC.Types.True
+                           -> case ww1 of wild1 { GHC.Types.I# x2 ->
+                              let {
+                                x3 :: GHC.Prim.Int# = GHC.Prim.*# x2 2#
+                              } in
+                              case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# x3 0#) of wild2 {
+                                GHC.Types.False -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int)
+                                GHC.Types.True
+                                -> GHC.Types.:
+                                     @ (GHC.Types.Int, GHC.Types.Int)
+                                     (GHC.Types.I# ww4, GHC.Types.I# x3)
+                                     (GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int)) } } } }
+                     } in
+                     let {
+                       r2 :: [(GHC.Types.Int, GHC.Types.Int)]
+                       = case GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.>=# ww 0#) of wild {
+                           GHC.Types.False -> r1
+                           GHC.Types.True
+                           -> case ww1 of wild1 { GHC.Types.I# x2 ->
+                              let {
+                                x3 :: GHC.Prim.Int# = GHC.Prim.-# x2 1#
+                              } in
+                              case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# x3 0#) of wild2 {
+                                GHC.Types.False -> r1
+                                GHC.Types.True
+                                -> GHC.Types.:
+                                     @ (GHC.Types.Int, GHC.Types.Int)
+                                     (GHC.Types.I# ww, GHC.Types.I# x3)
+                                     r1 } } }
+                     } in
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.>=# x1 0#) of wild {
+                       GHC.Types.False -> r2
+                       GHC.Types.True
+                       -> case ww1 of ww2 { GHC.Types.I# ww3 ->
+                          case GHC.Classes.divInt# ww3 2# of ww4 { DEFAULT ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.>=# ww4 0#) of wild1 {
+                            GHC.Types.False -> r2
+                            GHC.Types.True
+                            -> GHC.Types.:
+                                 @ (GHC.Types.Int, GHC.Types.Int)
+                                 (GHC.Types.I# x1, GHC.Types.I# ww4)
+                                 r2 } } } }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# x 0#) of wild {
+                   GHC.Types.False -> r
+                   GHC.Types.True
+                   -> case ww1 of wild1 { GHC.Types.I# x1 ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x1 0#) of wild2 {
+                        GHC.Types.False -> r
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ (GHC.Types.Int, GHC.Types.Int)
+                             (GHC.Types.I# x, wild1)
+                             r } } }) -}
+508cd495b6ddef7e4f4884acbebd0f13
+  manHeaps ::
+    (GHC.Types.Int, GHC.Types.Int) -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S(S)L),1*U(1*U(U),U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: (GHC.Types.Int, GHC.Types.Int)) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 ZeroInMin.$wmanHeaps ww4 ww2 } }) -}
+3dd422cc87882bc718959cf6132262cd
+  zeroInMin :: (GHC.Types.Int, GHC.Types.Int) -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (h :: (GHC.Types.Int, GHC.Types.Int)) ->
+                 ZeroInMin.zeroInMin_helper
+                   (GHC.Types.:
+                      @ (GHC.Types.Int, GHC.Types.Int)
+                      h
+                      (GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int)))
+                   ZeroInMin.zeroInMin1) -}
+d59d8363b4a54166bab409ff5073aeaa
+  zeroInMin1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+381c34e9e8dceff2ec1ea572c48dc6ac
+  zeroInMin_helper ::
+    [(GHC.Types.Int, GHC.Types.Int)] -> GHC.Types.Int -> GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,1*U(U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: [(GHC.Types.Int, GHC.Types.Int)]) (w1 :: GHC.Types.Int) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case ZeroInMin.$whelper w ww1 of ww2 { DEFAULT ->
+                 GHC.Types.I# ww2 } }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

@@ -1,0 +1,885 @@
+
+==================== FINAL INTERFACE ====================
+2016-10-10 10:41:38.729536 UTC
+
+interface hw3-0.1.0.0-AXaGW1BIMzGD78qTtHJ6tU:MapToSet 8001
+  interface hash: 130837369be0afbab20382d0e256cb36
+  ABI hash: 56a32e10c07a1b00097d1ffe275cc342
+  export-list hash: 318a38bdb419db3197ba466fd1dcedb1
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 5d0384261942ab4b8e8bd9c9cd4d2eec
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  MapToSet.first
+  MapToSet.makePair
+  MapToSet.second
+  MapToSet.Map{MapToSet.emptyMap MapToSet.isEmptyMap MapToSet.mdelete MapToSet.mfind MapToSet.mfromList MapToSet.minsert MapToSet.mnext MapToSet.mtoList}
+  MapToSet.Pair{MapToSet.Pair}
+  MapToSet.Set{MapToSet.delete MapToSet.emptySet MapToSet.find MapToSet.fromList MapToSet.insert MapToSet.isEmptySet MapToSet.next MapToSet.toList}
+module dependencies: Tree
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:Data.Tuple acb0ed10307ed88df6c81b8589f4de16
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  Tree bba9531432d9061f8d6e1fa735def018
+  exports: def4a1dcc44cfa58e547a926cb80c8b4
+  Leaf cbae0c9a8c6dd938b4b89221412e6763
+  Node 744f70eb05e3d6956861b56b96f98807
+  Tree db78a0f77ca0e5645dea8d54fd29f847
+  delete 222ba6e8b04b14d6a83ffe0284fd3d24
+  findVertex bbfc46cd3b7beeee5316827e99a1bff1
+  insert 8026bee43a009628ba8160ed7e19ee1e
+  next e49f5d618b60b78b79d8cc871a5b1bab
+  tmap 15690c2b4211b25dcdae3e9815290457
+e7852b299f872b4d8a3d28606f8ca31c
+  $fEqPair :: GHC.Classes.Eq f => GHC.Classes.Eq (MapToSet.Pair f s)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ f @ s ($dEq :: GHC.Classes.Eq f).
+                  @ (MapToSet.Pair f s)
+                  (MapToSet.$fEqPair_$c== @ f @ s $dEq)
+                  (MapToSet.$fEqPair_$c/= @ f @ s $dEq) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fEqPair_$c/= ::
+    GHC.Classes.Eq f =>
+    MapToSet.Pair f s -> MapToSet.Pair f s -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)><L,U><L,U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ f
+                   @ s
+                   ($dEq :: GHC.Classes.Eq f)
+                   (x :: MapToSet.Pair f s)
+                   (y :: MapToSet.Pair f s) ->
+                 GHC.Classes.not (MapToSet.$fEqPair_$c== @ f @ s $dEq x y)) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fEqPair_$c== ::
+    GHC.Classes.Eq f =>
+    MapToSet.Pair f s -> MapToSet.Pair f s -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><S,1*U(U,A)><S,1*U(U,A)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ f
+                   @ s
+                   ($dEq :: GHC.Classes.Eq f)
+                   (ds :: MapToSet.Pair f s)
+                   (ds1 :: MapToSet.Pair f s) ->
+                 case ds of wild { MapToSet.Pair x1 ds2 ->
+                 case ds1 of wild1 { MapToSet.Pair x2 ds3 ->
+                 GHC.Classes.== @ f $dEq x1 x2 } }) -}
+a148d526c1e95acfbd5cf0d65f494c90
+  $fMapTreekv :: GHC.Classes.Ord k => MapToSet.Map Tree.Tree k v
+  DFunId
+  {- Arity: 1,
+     Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ k @ v ($dOrd :: GHC.Classes.Ord k).
+                  @ Tree.Tree
+                  @ k
+                  @ v
+                  (MapToSet.$fMapTreekv_$cemptyMap @ k @ v $dOrd)
+                  (MapToSet.$fMapTreekv_$cisEmptyMap @ k @ v $dOrd)
+                  (MapToSet.$fMapTreekv_$cmtoList @ k @ v $dOrd)
+                  (MapToSet.$fMapTreekv_$cmfind @ k @ v $dOrd)
+                  (MapToSet.$fMapTreekv_$cminsert @ k @ v $dOrd)
+                  (MapToSet.$fMapTreekv_$cmdelete @ k @ v $dOrd)
+                  (MapToSet.$fMapTreekv_$cmnext @ k @ v $dOrd)
+                  (MapToSet.$fMapTreekv_$cmfromList @ k @ v $dOrd) -}
+7e7e865fbc78580b0fec4abba7f25364
+  $fMapTreekv1 :: v
+  {- Strictness: x -}
+bde7a0bde0265cc08e6670e8ab362291
+  $fMapTreekv2 :: v
+  {- Strictness: x -}
+8dd41ff0b5ac68e3b39c48f2270d19f8
+  $fMapTreekv3 :: v
+  {- Strictness: x -}
+1f3afa91c9fe302ffe150cd9628e61a8
+  $fMapTreekv_$cemptyMap ::
+    GHC.Classes.Ord k => Tree.Tree (MapToSet.Pair k v)
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ k @ v ($dOrd :: GHC.Classes.Ord k) ->
+                 Tree.Leaf @ (MapToSet.Pair k v)) -}
+09eade26647b1aba53bb01cdc715d5c8
+  $fMapTreekv_$cisEmptyMap ::
+    GHC.Classes.Ord k =>
+    Tree.Tree (MapToSet.Pair k v) -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ k
+                   @ v
+                   ($dOrd :: GHC.Classes.Ord k)
+                   (ds :: Tree.Tree (MapToSet.Pair k v)) ->
+                 case ds of wild {
+                   Tree.Leaf -> GHC.Types.True
+                   Tree.Node ipv ipv1 ipv2 -> GHC.Types.False }) -}
+77c6657099850cdf56ec08359a78298b
+  $fMapTreekv_$cmdelete ::
+    (GHC.Classes.Ord k, GHC.Classes.Ord k) =>
+    Tree.Tree (MapToSet.Pair k v) -> k -> Tree.Tree (MapToSet.Pair k v)
+  {- Arity: 2,
+     Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)><L,A>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ k @ v (w :: GHC.Classes.Ord k) (w1 :: GHC.Classes.Ord k) ->
+                 MapToSet.$w$cmdelete @ k @ v w) -}
+e5b80224a3f0f7f2a4623cb206cbcccc
+  $fMapTreekv_$cmfind ::
+    (GHC.Classes.Ord k, GHC.Classes.Ord k) =>
+    Tree.Tree (MapToSet.Pair k v) -> k -> GHC.Base.Maybe v
+  {- Arity: 2,
+     Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)><L,A>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ k @ v (w :: GHC.Classes.Ord k) (w1 :: GHC.Classes.Ord k) ->
+                 MapToSet.$w$cmfind @ k @ v w) -}
+6f4e1b6d467648d0097e1e9b1eca4d0e
+  $fMapTreekv_$cmfromList ::
+    GHC.Classes.Ord k => [(k, v)] -> Tree.Tree (MapToSet.Pair k v)
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)>,
+     Unfolding: (\ @ k @ v ($dOrd :: GHC.Classes.Ord k) ->
+                 let {
+                   $dOrd1 :: GHC.Classes.Ord (MapToSet.Pair k v)
+                   = MapToSet.$fOrdPair @ k @ v $dOrd
+                 } in
+                 letrec {
+                   go :: [(k, v)] -> Tree.Tree (MapToSet.Pair k v)
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [(k, v)]) ->
+                     case ds of wild {
+                       [] -> Tree.Leaf @ (MapToSet.Pair k v)
+                       : y ys
+                       -> case y of wild1 { (,) x y1 ->
+                          case Tree.$winsert
+                                 @ (MapToSet.Pair k v)
+                                 $dOrd1
+                                 (go ys)
+                                 (MapToSet.Pair @ k @ v x y1) of ww { (#,,#) ww1 ww2 ww3 ->
+                          Tree.Node @ (MapToSet.Pair k v) ww1 ww2 ww3 } } }
+                 } in
+                 \ (eta :: [(k, v)]) -> go eta) -}
+f5639c1d15835ccc36c28e7fa3411620
+  $fMapTreekv_$cminsert ::
+    (GHC.Classes.Ord k, GHC.Classes.Ord k) =>
+    Tree.Tree (MapToSet.Pair k v)
+    -> k -> v -> Tree.Tree (MapToSet.Pair k v)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)><L,A>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ k @ v (w :: GHC.Classes.Ord k) (w1 :: GHC.Classes.Ord k) ->
+                 MapToSet.$w$cminsert @ k @ v w) -}
+c59af092a11a9890ebb1033678d9149d
+  $fMapTreekv_$cmnext ::
+    (GHC.Classes.Ord k, GHC.Classes.Ord k) =>
+    Tree.Tree (MapToSet.Pair k v) -> k -> GHC.Base.Maybe (k, v)
+  {- Arity: 2,
+     Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)><L,A>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ k @ v (w :: GHC.Classes.Ord k) (w1 :: GHC.Classes.Ord k) ->
+                 MapToSet.$w$cmnext @ k @ v w) -}
+e9e7b6350c0521293ca3ffe45da2dfee
+  $fMapTreekv_$cmtoList ::
+    GHC.Classes.Ord k => Tree.Tree (MapToSet.Pair k v) -> [(k, v)]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ k
+                   @ v
+                   ($dOrd :: GHC.Classes.Ord k)
+                   (tree :: Tree.Tree (MapToSet.Pair k v)) ->
+                 Tree.$fFoldableTree_$cfoldr
+                   @ (k, v)
+                   @ [(k, v)]
+                   (GHC.Types.: @ (k, v))
+                   (GHC.Types.[] @ (k, v))
+                   (Tree.tmap
+                      @ (MapToSet.Pair k v)
+                      @ (k, v)
+                      (MapToSet.makePair @ k @ v)
+                      tree)) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fOrdPair ::
+    GHC.Classes.Ord f => GHC.Classes.Ord (MapToSet.Pair f s)
+  DFunId
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,U(1*U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ f @ s ($dOrd :: GHC.Classes.Ord f).
+                  @ (MapToSet.Pair f s)
+                  (MapToSet.$fOrdPair_$cp1Ord @ f @ s $dOrd)
+                  (MapToSet.$fOrdPair_$ccompare @ f @ s $dOrd)
+                  (MapToSet.$fOrdPair_$c< @ f @ s $dOrd)
+                  (MapToSet.$fOrdPair_$c<= @ f @ s $dOrd)
+                  (MapToSet.$fOrdPair_$c> @ f @ s $dOrd)
+                  (MapToSet.$fOrdPair_$c>= @ f @ s $dOrd)
+                  (MapToSet.$fOrdPair_$cmax @ f @ s $dOrd)
+                  (MapToSet.$fOrdPair_$cmin @ f @ s $dOrd) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fOrdPair_$c< ::
+    GHC.Classes.Ord f =>
+    MapToSet.Pair f s -> MapToSet.Pair f s -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))LLLLLL),1*U(A,1*C1(C1(U)),A,A,A,A,A,A)><S,1*U(U,A)><S,1*U(U,A)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ f
+                   @ s
+                   ($dOrd :: GHC.Classes.Ord f)
+                   (x :: MapToSet.Pair f s)
+                   (y :: MapToSet.Pair f s) ->
+                 case x of wild { MapToSet.Pair x1 ds ->
+                 case y of wild1 { MapToSet.Pair x2 ds1 ->
+                 case GHC.Classes.compare @ f $dOrd x1 x2 of wild2 {
+                   DEFAULT -> GHC.Types.False GHC.Types.LT -> GHC.Types.True } } }) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fOrdPair_$c<= ::
+    GHC.Classes.Ord f =>
+    MapToSet.Pair f s -> MapToSet.Pair f s -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))LLLLLL),1*U(A,1*C1(C1(U)),A,A,A,A,A,A)><S,1*U(U,A)><S,1*U(U,A)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ f
+                   @ s
+                   ($dOrd :: GHC.Classes.Ord f)
+                   (x :: MapToSet.Pair f s)
+                   (y :: MapToSet.Pair f s) ->
+                 case x of wild { MapToSet.Pair x1 ds ->
+                 case y of wild1 { MapToSet.Pair x2 ds1 ->
+                 case GHC.Classes.compare @ f $dOrd x1 x2 of wild2 {
+                   DEFAULT -> GHC.Types.True GHC.Types.GT -> GHC.Types.False } } }) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fOrdPair_$c> ::
+    GHC.Classes.Ord f =>
+    MapToSet.Pair f s -> MapToSet.Pair f s -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))LLLLLL),1*U(A,1*C1(C1(U)),A,A,A,A,A,A)><S,1*U(U,A)><S,1*U(U,A)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ f
+                   @ s
+                   ($dOrd :: GHC.Classes.Ord f)
+                   (x :: MapToSet.Pair f s)
+                   (y :: MapToSet.Pair f s) ->
+                 case x of wild { MapToSet.Pair x1 ds ->
+                 case y of wild1 { MapToSet.Pair x2 ds1 ->
+                 case GHC.Classes.compare @ f $dOrd x1 x2 of wild2 {
+                   DEFAULT -> GHC.Types.False GHC.Types.GT -> GHC.Types.True } } }) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fOrdPair_$c>= ::
+    GHC.Classes.Ord f =>
+    MapToSet.Pair f s -> MapToSet.Pair f s -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))LLLLLL),1*U(A,1*C1(C1(U)),A,A,A,A,A,A)><S,1*U(U,A)><S,1*U(U,A)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ f
+                   @ s
+                   ($dOrd :: GHC.Classes.Ord f)
+                   (x :: MapToSet.Pair f s)
+                   (y :: MapToSet.Pair f s) ->
+                 case x of wild { MapToSet.Pair x1 ds ->
+                 case y of wild1 { MapToSet.Pair x2 ds1 ->
+                 case GHC.Classes.compare @ f $dOrd x1 x2 of wild2 {
+                   DEFAULT -> GHC.Types.True GHC.Types.LT -> GHC.Types.False } } }) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fOrdPair_$ccompare ::
+    GHC.Classes.Ord f =>
+    MapToSet.Pair f s -> MapToSet.Pair f s -> GHC.Types.Ordering
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))LLLLLL),1*U(A,1*C1(C1(U)),A,A,A,A,A,A)><S,1*U(U,A)><S,1*U(U,A)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ f
+                   @ s
+                   ($dOrd :: GHC.Classes.Ord f)
+                   (ds :: MapToSet.Pair f s)
+                   (ds1 :: MapToSet.Pair f s) ->
+                 case ds of wild { MapToSet.Pair x1 ds2 ->
+                 case ds1 of wild1 { MapToSet.Pair x2 ds3 ->
+                 GHC.Classes.compare @ f $dOrd x1 x2 } }) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fOrdPair_$cmax ::
+    GHC.Classes.Ord f =>
+    MapToSet.Pair f s -> MapToSet.Pair f s -> MapToSet.Pair f s
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))LLLLLL),1*U(A,1*C1(C1(U)),A,A,A,A,A,A)><S,1*U(U,U)><S,1*U(U,U)>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ f
+                   @ s
+                   ($dOrd :: GHC.Classes.Ord f)
+                   (x :: MapToSet.Pair f s)
+                   (y :: MapToSet.Pair f s) ->
+                 case x of wild { MapToSet.Pair x1 ds ->
+                 case y of wild1 { MapToSet.Pair x2 ds1 ->
+                 case GHC.Classes.compare @ f $dOrd x1 x2 of wild2 {
+                   DEFAULT -> wild1 GHC.Types.GT -> wild } } }) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fOrdPair_$cmin ::
+    GHC.Classes.Ord f =>
+    MapToSet.Pair f s -> MapToSet.Pair f s -> MapToSet.Pair f s
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))LLLLLL),1*U(A,1*C1(C1(U)),A,A,A,A,A,A)><S,1*U(U,U)><S,1*U(U,U)>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ f
+                   @ s
+                   ($dOrd :: GHC.Classes.Ord f)
+                   (x :: MapToSet.Pair f s)
+                   (y :: MapToSet.Pair f s) ->
+                 case x of wild { MapToSet.Pair x1 ds ->
+                 case y of wild1 { MapToSet.Pair x2 ds1 ->
+                 case GHC.Classes.compare @ f $dOrd x1 x2 of wild2 {
+                   DEFAULT -> wild GHC.Types.GT -> wild1 } } }) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fOrdPair_$cp1Ord ::
+    GHC.Classes.Ord f => GHC.Classes.Eq (MapToSet.Pair f s)
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,1*U(1*U(C(C1(U)),A),A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ f @ s ($dOrd :: GHC.Classes.Ord f) ->
+                 MapToSet.$fEqPair @ f @ s (GHC.Classes.$p1Ord @ f $dOrd)) -}
+9ed758512d5cbaba03caad2b80d04922
+  $fSetTreek :: GHC.Classes.Ord k => MapToSet.Set Tree.Tree k
+  DFunId
+  {- Arity: 1,
+     Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ k ($dOrd :: GHC.Classes.Ord k).
+                  @ Tree.Tree
+                  @ k
+                  (MapToSet.$fSetTreek_$cemptySet @ k $dOrd)
+                  (MapToSet.$fSetTreek_$cisEmptySet @ k $dOrd)
+                  (MapToSet.$fSetTreek_$ctoList @ k $dOrd)
+                  (MapToSet.$fSetTreek_$cfind @ k $dOrd)
+                  (MapToSet.$fSetTreek_$cinsert @ k $dOrd)
+                  (MapToSet.$fSetTreek_$cdelete @ k $dOrd)
+                  (MapToSet.$fSetTreek_$cnext @ k $dOrd)
+                  (MapToSet.$fSetTreek_$cfromList @ k $dOrd) -}
+db1eeebc57f9ef0c709c01beea4ca1cf
+  $fSetTreek_$cdelete ::
+    (GHC.Classes.Ord k, GHC.Classes.Ord k) =>
+    Tree.Tree (MapToSet.Pair k GHC.Types.Bool)
+    -> k -> Tree.Tree (MapToSet.Pair k GHC.Types.Bool)
+  {- Arity: 2,
+     Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ k
+                   ($dOrd :: GHC.Classes.Ord k)
+                   ($dOrd1 :: GHC.Classes.Ord k) ->
+                 MapToSet.$fMapTreekv_$cmdelete @ k @ GHC.Types.Bool $dOrd $dOrd) -}
+3166d4918fbb36ebc4efeb4318fb7dd5
+  $fSetTreek_$cemptySet ::
+    GHC.Classes.Ord k => Tree.Tree (MapToSet.Pair k GHC.Types.Bool)
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ k ($dOrd :: GHC.Classes.Ord k) ->
+                 Tree.Leaf @ (MapToSet.Pair k GHC.Types.Bool)) -}
+843bfc8b9716e642f2d6d0e76c14cebe
+  $fSetTreek_$cfind ::
+    (GHC.Classes.Ord k, GHC.Classes.Ord k) =>
+    Tree.Tree (MapToSet.Pair k GHC.Types.Bool) -> k -> GHC.Types.Bool
+  {- Arity: 4,
+     Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)><L,A><S,1*U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ k
+                   ($dOrd :: GHC.Classes.Ord k)
+                   ($dOrd1 :: GHC.Classes.Ord k)
+                   (tree :: Tree.Tree (MapToSet.Pair k GHC.Types.Bool))
+                   (k1 :: k) ->
+                 case Tree.findVertex
+                        @ (MapToSet.Pair k GHC.Types.Bool)
+                        (MapToSet.$fOrdPair @ k @ GHC.Types.Bool $dOrd)
+                        tree
+                        (MapToSet.Pair
+                           @ k
+                           @ GHC.Types.Bool
+                           k1
+                           (MapToSet.$fMapTreekv3 @ GHC.Types.Bool)) of wild {
+                   Tree.Leaf -> GHC.Types.False
+                   Tree.Node x ds ds1 -> GHC.Types.True }) -}
+5debac51dffa7f3302ffb1bccfc28801
+  $fSetTreek_$cfromList ::
+    GHC.Classes.Ord k =>
+    [k] -> Tree.Tree (MapToSet.Pair k GHC.Types.Bool)
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)>,
+     Unfolding: (\ @ k ($dOrd :: GHC.Classes.Ord k) ->
+                 let {
+                   $dOrd1 :: GHC.Classes.Ord (MapToSet.Pair k GHC.Types.Bool)
+                   = MapToSet.$fOrdPair @ k @ GHC.Types.Bool $dOrd
+                 } in
+                 letrec {
+                   go :: [k] -> Tree.Tree (MapToSet.Pair k GHC.Types.Bool)
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [k]) ->
+                     case ds of wild {
+                       [] -> Tree.Leaf @ (MapToSet.Pair k GHC.Types.Bool)
+                       : y ys
+                       -> case Tree.$winsert
+                                 @ (MapToSet.Pair k GHC.Types.Bool)
+                                 $dOrd1
+                                 (go ys)
+                                 (MapToSet.Pair
+                                    @ k
+                                    @ GHC.Types.Bool
+                                    y
+                                    GHC.Types.True) of ww { (#,,#) ww1 ww2 ww3 ->
+                          Tree.Node @ (MapToSet.Pair k GHC.Types.Bool) ww1 ww2 ww3 } }
+                 } in
+                 \ (eta :: [k]) -> go eta) -}
+b41972c326b6f676eddf81bc592aec27
+  $fSetTreek_$cinsert ::
+    (GHC.Classes.Ord k, GHC.Classes.Ord k) =>
+    Tree.Tree (MapToSet.Pair k GHC.Types.Bool)
+    -> k -> Tree.Tree (MapToSet.Pair k GHC.Types.Bool)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)><L,A><S,1*U><L,U>m2,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ k
+                   ($dOrd :: GHC.Classes.Ord k)
+                   ($dOrd1 :: GHC.Classes.Ord k)
+                   (tree :: Tree.Tree (MapToSet.Pair k GHC.Types.Bool))
+                   (k1 :: k) ->
+                 case Tree.$winsert
+                        @ (MapToSet.Pair k GHC.Types.Bool)
+                        (MapToSet.$fOrdPair @ k @ GHC.Types.Bool $dOrd)
+                        tree
+                        (MapToSet.Pair
+                           @ k
+                           @ GHC.Types.Bool
+                           k1
+                           GHC.Types.True) of ww { (#,,#) ww1 ww2 ww3 ->
+                 Tree.Node @ (MapToSet.Pair k GHC.Types.Bool) ww1 ww2 ww3 }) -}
+0f5117d6eaaf5ae6e631e7670db6b70b
+  $fSetTreek_$cisEmptySet ::
+    GHC.Classes.Ord k =>
+    Tree.Tree (MapToSet.Pair k GHC.Types.Bool) -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ k
+                   ($dOrd :: GHC.Classes.Ord k)
+                   (ds :: Tree.Tree (MapToSet.Pair k GHC.Types.Bool)) ->
+                 case ds of wild {
+                   Tree.Leaf -> GHC.Types.True
+                   Tree.Node ipv ipv1 ipv2 -> GHC.Types.False }) -}
+84ef0d31dd67571d14ac75b9543e55ee
+  $fSetTreek_$cnext ::
+    (GHC.Classes.Ord k, GHC.Classes.Ord k) =>
+    Tree.Tree (MapToSet.Pair k GHC.Types.Bool) -> k -> GHC.Base.Maybe k
+  {- Arity: 4,
+     Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)><L,A><S,1*U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ k
+                   ($dOrd :: GHC.Classes.Ord k)
+                   ($dOrd1 :: GHC.Classes.Ord k)
+                   (tree :: Tree.Tree (MapToSet.Pair k GHC.Types.Bool))
+                   (k1 :: k) ->
+                 case Tree.next
+                        @ (MapToSet.Pair k GHC.Types.Bool)
+                        (MapToSet.$fOrdPair @ k @ GHC.Types.Bool $dOrd)
+                        tree
+                        (MapToSet.Pair
+                           @ k
+                           @ GHC.Types.Bool
+                           k1
+                           (MapToSet.$fMapTreekv1 @ GHC.Types.Bool)) of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ k
+                   GHC.Base.Just x
+                   -> GHC.Base.Just
+                        @ k
+                        (case x of wild1 { MapToSet.Pair x1 y -> x1 }) }) -}
+5dd98c5643b4ca7000f26e270d02ee2a
+  $fSetTreek_$ctoList ::
+    GHC.Classes.Ord k =>
+    Tree.Tree (MapToSet.Pair k GHC.Types.Bool) -> [k]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ k
+                   ($dOrd :: GHC.Classes.Ord k)
+                   (eta :: Tree.Tree (MapToSet.Pair k GHC.Types.Bool)) ->
+                 Tree.$fFoldableTree_$cfoldr
+                   @ k
+                   @ [k]
+                   (GHC.Types.: @ k)
+                   (GHC.Types.[] @ k)
+                   (Tree.tmap
+                      @ (MapToSet.Pair k GHC.Types.Bool)
+                      @ k
+                      (MapToSet.first @ k @ GHC.Types.Bool)
+                      eta)) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fShowPair ::
+    (GHC.Show.Show f, GHC.Show.Show s) =>
+    GHC.Show.Show (MapToSet.Pair f s)
+  DFunId
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ f
+                      @ s
+                      ($dShow :: GHC.Show.Show f)
+                      ($dShow1 :: GHC.Show.Show s).
+                  @ (MapToSet.Pair f s)
+                  (MapToSet.$fShowPair_$cshowsPrec @ f @ s $dShow $dShow1)
+                  (MapToSet.$fShowPair_$cshow @ f @ s $dShow $dShow1)
+                  (MapToSet.$fShowPair_$cshowList @ f @ s $dShow $dShow1) -}
+4ff4a7bca3bbcdc01e57c9cbb84776ac
+  $fShowPair1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+e5436bc39d8a7377f841dba174e3b726
+  $fShowPair2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Pair "#) -}
+819802fb004f9832aefc2ca596156628
+  $fShowPair3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fShowPair_$cshow ::
+    (GHC.Show.Show f, GHC.Show.Show s) =>
+    MapToSet.Pair f s -> GHC.Base.String
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(U)),A,A)><L,1*U(1*C1(C1(U)),A,A)><S,1*U(U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ f
+                   @ s
+                   ($dShow :: GHC.Show.Show f)
+                   ($dShow1 :: GHC.Show.Show s)
+                   (x :: MapToSet.Pair f s) ->
+                 MapToSet.$fShowPair_$cshowsPrec
+                   @ f
+                   @ s
+                   $dShow
+                   $dShow1
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fShowPair_$cshowList ::
+    (GHC.Show.Show f, GHC.Show.Show s) =>
+    [MapToSet.Pair f s] -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ f
+                   @ s
+                   ($dShow :: GHC.Show.Show f)
+                   ($dShow1 :: GHC.Show.Show s)
+                   (eta :: [MapToSet.Pair f s])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (MapToSet.Pair f s)
+                   (MapToSet.$fShowPair_$cshowsPrec
+                      @ f
+                      @ s
+                      $dShow
+                      $dShow1
+                      MapToSet.$fShowPair1)
+                   eta
+                   eta1) -}
+e7852b299f872b4d8a3d28606f8ca31c
+  $fShowPair_$cshowsPrec ::
+    (GHC.Show.Show f, GHC.Show.Show s) =>
+    GHC.Types.Int -> MapToSet.Pair f s -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,1*U(1*C1(C1(U)),A,A)><L,1*U(1*C1(C1(U)),A,A)><S(S),1*U(U)><S,1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ f
+                   @ s
+                   (w :: GHC.Show.Show f)
+                   (w1 :: GHC.Show.Show s)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: MapToSet.Pair f s) ->
+                 case w2 of ww { GHC.Types.I# ww1 ->
+                 case w3 of ww2 { MapToSet.Pair ww3 ww4 ->
+                 MapToSet.$w$cshowsPrec @ f @ s w w1 ww1 ww3 ww4 } }) -}
+94a71d7b8dc03f01564532d20a9599c2
+  $tc'C:Map :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6701200414966219424##
+                   12410376220731487029##
+                   MapToSet.$trModule
+                   MapToSet.$tc'C:Map1) -}
+8f9c806b2fa29b13986fbee5d0075d40
+  $tc'C:Map1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:Map"#) -}
+5be303d04ddea3d68bbce20649eb3a54
+  $tc'C:Set :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1345464131230069006##
+                   8091182593684927316##
+                   MapToSet.$trModule
+                   MapToSet.$tc'C:Set1) -}
+0c5cd7cf85cc4fc483b4b7397d6974ba
+  $tc'C:Set1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:Set"#) -}
+129c2d5309345905ddc6a0e480e4cef3
+  $tc'Pair :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   879928917871903640##
+                   9377893664040728069##
+                   MapToSet.$trModule
+                   MapToSet.$tc'Pair1) -}
+b9b07a3452b4f610794b90a803f9d23e
+  $tc'Pair1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Pair"#) -}
+f3271337f75680b37b8ec74a72ae9bcc
+  $tcMap :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1203093837147669606##
+                   2087308391215488201##
+                   MapToSet.$trModule
+                   MapToSet.$tcMap1) -}
+0bacc4e7c26fff79fb4552bcaece09ff
+  $tcMap1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Map"#) -}
+0cb10804a64fc488b1a7ff509aaaba1c
+  $tcPair :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6485214388023204453##
+                   41769850437571879##
+                   MapToSet.$trModule
+                   MapToSet.$tcPair1) -}
+3f0c71226b5dae6016f818e6f70aa303
+  $tcPair1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Pair"#) -}
+bde8d643ab1f67e0502bfa0b1a1de543
+  $tcSet :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3645905939448014883##
+                   66898766240863238##
+                   MapToSet.$trModule
+                   MapToSet.$tcSet1) -}
+e3bbe4b56ed02568cc31d9e3964bce9d
+  $tcSet1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Set"#) -}
+0864aeb0e63edcf8b175eaede14c8703
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   MapToSet.$trModule2
+                   MapToSet.$trModule1) -}
+0eeafa38f88348e87a96de1b09e4ce99
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MapToSet"#) -}
+5161108e33ea3efda7696fa72af18c6d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw3-0.1.0.0-AXaGW1BIMzGD78qTtHJ6tU"#) -}
+c7db083d9c5f95a2d57d33e75f2fbb76
+  $w$cmdelete ::
+    GHC.Classes.Ord k =>
+    Tree.Tree (MapToSet.Pair k v) -> k -> Tree.Tree (MapToSet.Pair k v)
+  {- Arity: 1, Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)>,
+     Inline: [0],
+     Unfolding: (\ @ k @ v (w :: GHC.Classes.Ord k) ->
+                 let {
+                   $dOrd :: GHC.Classes.Ord (MapToSet.Pair k v)
+                   = MapToSet.$fOrdPair @ k @ v w
+                 } in
+                 \ (tree :: Tree.Tree (MapToSet.Pair k v)) (k1 :: k) ->
+                 Tree.delete
+                   @ (MapToSet.Pair k v)
+                   $dOrd
+                   tree
+                   (MapToSet.Pair @ k @ v k1 (MapToSet.$fMapTreekv2 @ v))) -}
+05429291fee37995f339b005309abf2e
+  $w$cmfind ::
+    GHC.Classes.Ord k =>
+    Tree.Tree (MapToSet.Pair k v) -> k -> GHC.Base.Maybe v
+  {- Arity: 1, Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)>,
+     Inline: [0],
+     Unfolding: (\ @ k @ v (w :: GHC.Classes.Ord k) ->
+                 let {
+                   $dOrd :: GHC.Classes.Ord (MapToSet.Pair k v)
+                   = MapToSet.$fOrdPair @ k @ v w
+                 } in
+                 \ (tree :: Tree.Tree (MapToSet.Pair k v)) (k1 :: k) ->
+                 case Tree.findVertex
+                        @ (MapToSet.Pair k v)
+                        $dOrd
+                        tree
+                        (MapToSet.Pair @ k @ v k1 (MapToSet.$fMapTreekv3 @ v)) of wild {
+                   Tree.Leaf -> GHC.Base.Nothing @ v
+                   Tree.Node x ds ds1
+                   -> GHC.Base.Just
+                        @ v
+                        (case x of wild1 { MapToSet.Pair ds2 y -> y }) }) -}
+ece1efc85dc9d0f1f84fbf79b3506dc0
+  $w$cminsert ::
+    GHC.Classes.Ord k =>
+    Tree.Tree (MapToSet.Pair k v)
+    -> k -> v -> Tree.Tree (MapToSet.Pair k v)
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)>, Inline: [0],
+     Unfolding: (\ @ k @ v (w :: GHC.Classes.Ord k) ->
+                 let {
+                   $dOrd :: GHC.Classes.Ord (MapToSet.Pair k v)
+                   = MapToSet.$fOrdPair @ k @ v w
+                 } in
+                 \ (tree :: Tree.Tree (MapToSet.Pair k v)) (k1 :: k) (v1 :: v) ->
+                 case Tree.$winsert
+                        @ (MapToSet.Pair k v)
+                        $dOrd
+                        tree
+                        (MapToSet.Pair @ k @ v k1 v1) of ww { (#,,#) ww1 ww2 ww3 ->
+                 Tree.Node @ (MapToSet.Pair k v) ww1 ww2 ww3 }) -}
+f2cd2b5c6051a2f831bc5f0d04585c9f
+  $w$cmnext ::
+    GHC.Classes.Ord k =>
+    Tree.Tree (MapToSet.Pair k v) -> k -> GHC.Base.Maybe (k, v)
+  {- Arity: 1, Strictness: <L,U(U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)>,
+     Inline: [0],
+     Unfolding: (\ @ k @ v (w :: GHC.Classes.Ord k) ->
+                 let {
+                   $dOrd :: GHC.Classes.Ord (MapToSet.Pair k v)
+                   = MapToSet.$fOrdPair @ k @ v w
+                 } in
+                 \ (tree :: Tree.Tree (MapToSet.Pair k v)) (k1 :: k) ->
+                 case Tree.next
+                        @ (MapToSet.Pair k v)
+                        $dOrd
+                        tree
+                        (MapToSet.Pair @ k @ v k1 (MapToSet.$fMapTreekv1 @ v)) of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ (k, v)
+                   GHC.Base.Just x
+                   -> GHC.Base.Just
+                        @ (k, v)
+                        (case x of wild1 { MapToSet.Pair x1 y -> (x1, y) }) }) -}
+65c6f72161b731032b3d46e447bfcfbe
+  $w$cshowsPrec ::
+    (GHC.Show.Show f, GHC.Show.Show s) =>
+    GHC.Prim.Int# -> f -> s -> GHC.Show.ShowS
+  {- Arity: 5,
+     Strictness: <L,1*U(1*C1(C1(U)),A,A)><L,1*U(1*C1(C1(U)),A,A)><S,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ f
+                   @ s
+                   (w :: GHC.Show.Show f)
+                   (w1 :: GHC.Show.Show s)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: f)
+                   (ww2 :: s) ->
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ f w MapToSet.$fShowPair3 ww1
+                 } in
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ s w1 MapToSet.$fShowPair3 ww2
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Base.++
+                        @ GHC.Types.Char
+                        MapToSet.$fShowPair2
+                        (f1 (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)))
+                   GHC.Types.True
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           MapToSet.$fShowPair2
+                           (f1
+                              (GHC.Types.:
+                                 @ GHC.Types.Char
+                                 GHC.Show.showSpace1
+                                 (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 x))))) }) -}
+a148d526c1e95acfbd5cf0d65f494c90
+  class Map (a :: * -> *) k v where
+    emptyMap :: a (MapToSet.Pair k v)
+    isEmptyMap :: a (MapToSet.Pair k v) -> GHC.Types.Bool
+    mtoList :: a (MapToSet.Pair k v) -> [(k, v)]
+    mfind :: GHC.Classes.Ord k =>
+             a (MapToSet.Pair k v) -> k -> GHC.Base.Maybe v
+    minsert :: GHC.Classes.Ord k =>
+               a (MapToSet.Pair k v) -> k -> v -> a (MapToSet.Pair k v)
+    mdelete :: GHC.Classes.Ord k =>
+               a (MapToSet.Pair k v) -> k -> a (MapToSet.Pair k v)
+    mnext :: GHC.Classes.Ord k =>
+             a (MapToSet.Pair k v) -> k -> GHC.Base.Maybe (k, v)
+    mfromList :: [(k, v)] -> a (MapToSet.Pair k v)
+    {-# MINIMAL emptyMap, isEmptyMap, mtoList, mfind, minsert, mdelete,
+                mnext, mfromList #-}
+e7852b299f872b4d8a3d28606f8ca31c
+  data Pair f s = Pair f s
+9ed758512d5cbaba03caad2b80d04922
+  class Set (a :: * -> *) b where
+    emptySet :: a (MapToSet.Pair b GHC.Types.Bool)
+    isEmptySet :: a (MapToSet.Pair b GHC.Types.Bool) -> GHC.Types.Bool
+    toList :: a (MapToSet.Pair b GHC.Types.Bool) -> [b]
+    find :: GHC.Classes.Ord b =>
+            a (MapToSet.Pair b GHC.Types.Bool) -> b -> GHC.Types.Bool
+    insert :: GHC.Classes.Ord b =>
+              a (MapToSet.Pair b GHC.Types.Bool)
+              -> b -> a (MapToSet.Pair b GHC.Types.Bool)
+    delete :: GHC.Classes.Ord b =>
+              a (MapToSet.Pair b GHC.Types.Bool)
+              -> b -> a (MapToSet.Pair b GHC.Types.Bool)
+    next :: GHC.Classes.Ord b =>
+            a (MapToSet.Pair b GHC.Types.Bool) -> b -> GHC.Base.Maybe b
+    fromList :: [b] -> a (MapToSet.Pair b GHC.Types.Bool)
+    {-# MINIMAL emptySet, isEmptySet, toList, find, insert, delete,
+                next, fromList #-}
+cc3ec2c08c2fb6a15a6e72e63b0c4430
+  first :: MapToSet.Pair f s -> f
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ f @ s (ds :: MapToSet.Pair f s) ->
+                 case ds of wild { MapToSet.Pair x ds1 -> x }) -}
+bea6d5d8e38a9407adad83d37b980293
+  makePair :: MapToSet.Pair f s -> (f, s)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ f @ s (ds :: MapToSet.Pair f s) ->
+                 case ds of wild { MapToSet.Pair x y -> (x, y) }) -}
+66b45ee92a4d8b506c130875a01774cf
+  second :: MapToSet.Pair f s -> s
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ f @ s (ds :: MapToSet.Pair f s) ->
+                 case ds of wild { MapToSet.Pair ds1 y -> y }) -}
+instance [safe] GHC.Classes.Eq [MapToSet.Pair] = MapToSet.$fEqPair
+instance [safe] MapToSet.Map [Tree.Tree, ., .]
+  = MapToSet.$fMapTreekv
+instance [safe] GHC.Classes.Ord [MapToSet.Pair]
+  = MapToSet.$fOrdPair
+instance [safe] MapToSet.Set [Tree.Tree, .] = MapToSet.$fSetTreek
+instance [safe] GHC.Show.Show [MapToSet.Pair] = MapToSet.$fShowPair
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

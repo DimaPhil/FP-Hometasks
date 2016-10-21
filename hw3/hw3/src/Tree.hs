@@ -4,23 +4,24 @@ import           Data.Foldable hiding (find, maximum, toList)
 import           Data.Monoid
 import           Prelude       hiding (foldr)
 
-data Tree a = Leaf | Node a (Tree a) (Tree a)
+data Tree a = Leaf | Node a (Tree a) (Tree a) deriving Show
 
 instance Ord a => Monoid (Tree a) where
   mempty = Leaf
   mappend Leaf r = r
   mappend l Leaf = l
-  mappend v1@(Node x l1 r1) v2@(Node y l2 r2) = mappend (insert v1 y) (merge l2 r2)
+  mappend v1@Node{} (Node y l2 r2) = mappend (insert v1 y) (merge l2 r2)
 
 instance Foldable Tree where
-  foldMap _ Leaf = mempty
-  foldMap f (Node x l r) = foldMap f l `mappend` f x `mappend` foldMap f r
+  foldr _ identity Leaf = identity
+  foldr f identity (Node x l r) = foldr f (f x (foldr f identity r)) l
 
-  foldr _ id Leaf = id
-  foldr f id (Node x l r) = foldr f (f x (foldr f id r)) l
+tmap :: (a -> b) -> Tree a -> Tree b
+tmap _ Leaf         = Leaf
+tmap f (Node x l r) = Node (f x) (tmap f l) (tmap f r)
 
 findVertex :: Ord a => Tree a -> a -> Tree a
-findVertex Leaf key = Leaf
+findVertex Leaf _ = Leaf
 findVertex v@(Node x l r) key
   | key == x  = v
   | key < x   = findVertex l key
@@ -33,7 +34,7 @@ find tree key = case findVertex tree key of
 
 insert :: Ord a => Tree a -> a -> Tree a
 insert Leaf key = Node key Leaf Leaf
-insert tree@(Node x l r) key
+insert (Node x l r) key
   | key == x  = Node x l r
   | key < x   = Node x (insert l key) r
   | otherwise = Node x l (insert r key)
@@ -55,14 +56,14 @@ merge l r       = Node best newl r
     newl = delete l best
 
 delete :: Ord a => Tree a -> a -> Tree a
-delete Leaf key = Leaf
-delete tree@(Node x l r) key
+delete Leaf _ = Leaf
+delete (Node x l r) key
   | key == x  = merge l r
   | key < x   = Node x (delete l key) r
   | otherwise = Node x l (delete r key)
 
 next :: Ord a => Tree a -> a -> Maybe a
-next Leaf k   = Nothing
+next Leaf _   = Nothing
 next (Node x l r) k
   | x > k     = case next l k of
     Nothing -> Just x

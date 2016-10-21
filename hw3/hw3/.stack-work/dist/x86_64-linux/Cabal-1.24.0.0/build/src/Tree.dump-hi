@@ -1,0 +1,622 @@
+
+==================== FINAL INTERFACE ====================
+2016-10-10 14:37:20.670055 UTC
+
+interface hw3-0.1.0.0-AXaGW1BIMzGD78qTtHJ6tU:Tree 8001
+  interface hash: afd04ba7bf019be685a388ac01147281
+  ABI hash: bba9531432d9061f8d6e1fa735def018
+  export-list hash: def4a1dcc44cfa58e547a926cb80c8b4
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Tree.delete
+  Tree.find
+  Tree.findMax
+  Tree.findVertex
+  Tree.insert
+  Tree.merge
+  Tree.next
+  Tree.tmap
+  Tree.Tree{Tree.Leaf Tree.Node}
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:Data.Monoid 1efae021212a10c79fd75960dc0a1d99
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree :: Data.Foldable.Foldable Tree.Tree
+  DFunId
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Tree.Tree
+                  Tree.$fFoldableTree_$cfold
+                  Tree.$fFoldableTree_$cfoldMap
+                  Tree.$fFoldableTree_$cfoldr
+                  Tree.$fFoldableTree_$cfoldr'
+                  Tree.$fFoldableTree_$cfoldl
+                  Tree.$fFoldableTree_$cfoldl'
+                  Tree.$fFoldableTree_$cfoldr1
+                  Tree.$fFoldableTree_$cfoldl1
+                  Tree.$fFoldableTree_$ctoList
+                  Tree.$fFoldableTree_$cnull
+                  Tree.$fFoldableTree_$clength
+                  Tree.$fFoldableTree_$celem
+                  Tree.$fFoldableTree_$cmaximum
+                  Tree.$fFoldableTree_$cminimum
+                  Tree.$fFoldableTree_$csum
+                  Tree.$fFoldableTree_$cproduct -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree1 ::
+    GHC.Num.Num a => Tree.Tree a -> Data.Monoid.Product a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(A,A,1*U,A,A,A,1*C1(U))><S,1*U>,
+     Unfolding: (\ @ a ($dNum :: GHC.Num.Num a) (eta :: Tree.Tree a) ->
+                 Tree.$fFoldableTree_$cfoldr
+                   @ a
+                   @ (Data.Monoid.Product a)
+                   (let {
+                      f1 :: a -> a -> a = GHC.Num.* @ a $dNum
+                    } in
+                    (\ (x :: a) -> f1 x)
+                      `cast`
+                    (<a>_R
+                     ->_R Sym (Data.Monoid.N:Product[0] <a>_R)
+                     ->_R Sym (Data.Monoid.N:Product[0] <a>_R)))
+                   (Data.Monoid.$fMonoidProduct2 @ a $dNum)
+                     `cast`
+                   (Sym (Data.Monoid.N:Product[0] <a>_R))
+                   eta) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree2 ::
+    GHC.Num.Num a => Tree.Tree a -> Data.Monoid.Sum a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*U,A,A,A,A,A,1*C1(U))><S,1*U>,
+     Unfolding: (\ @ a ($dNum :: GHC.Num.Num a) (eta :: Tree.Tree a) ->
+                 Tree.$fFoldableTree_$cfoldr
+                   @ a
+                   @ (Data.Monoid.Sum a)
+                   (let {
+                      f1 :: a -> a -> a = GHC.Num.+ @ a $dNum
+                    } in
+                    (\ (x :: a) -> f1 x)
+                      `cast`
+                    (<a>_R
+                     ->_R Sym (Data.Monoid.N:Sum[0] <a>_R)
+                     ->_R Sym (Data.Monoid.N:Sum[0] <a>_R)))
+                   (Data.Monoid.$fMonoidSum2 @ a $dNum)
+                     `cast`
+                   (Sym (Data.Monoid.N:Sum[0] <a>_R))
+                   eta) -}
+dd9cca5f5cd72a3c15834824fdf7a18c
+  $fFoldableTree3 :: a
+  {- Strictness: x -}
+f547185ff3a9a1bb01c05c08ed769594
+  $fFoldableTree4 :: a
+  {- Strictness: x -}
+26e2aed1ebf3b8ec9c4ec5319c3265cc
+  $fFoldableTree5 ::
+    a
+    -> (GHC.Types.Int -> GHC.Types.Int)
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+  {- Arity: 3, HasNoCafRefs,
+     Unfolding: (\ @ a
+                   (x :: a)
+                   (k :: GHC.Types.Int -> GHC.Types.Int)[OneShot]
+                   (z :: GHC.Types.Int) ->
+                 case z of wild { GHC.Types.I# x1 ->
+                 k (GHC.Types.I# (GHC.Prim.+# x1 1#)) }) -}
+56d489d85a6b55d7f4a90dd45d4db22a
+  $fFoldableTree6 :: a -> GHC.Types.Bool -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a (ds :: a) (ds1 :: GHC.Types.Bool) -> GHC.Types.False) -}
+266a373df924cb8980374306a397586a
+  $fFoldableTree7 :: a
+  {- Strictness: x -}
+f524b077391414d8e29b5c0078626d9f
+  $fFoldableTree8 :: a
+  {- Strictness: x -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$celem ::
+    GHC.Classes.Eq a => a -> Tree.Tree a -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(1*C1(U),A)><L,U>,
+     Unfolding: (\ @ a ($dEq :: GHC.Classes.Eq a) (eta :: a) ->
+                 let {
+                   f :: a -> GHC.Types.Bool = GHC.Classes.== @ a $dEq eta
+                 } in
+                 let {
+                   lvl19 :: a -> GHC.Types.Bool -> GHC.Types.Bool {- Arity: 2 -}
+                   = \ (x :: a) (ds1 :: GHC.Types.Bool)[OneShot] ->
+                     case f x of wild {
+                       GHC.Types.False -> ds1 GHC.Types.True -> GHC.Types.True }
+                 } in
+                 (\ (eta1 :: Tree.Tree a) ->
+                  Tree.$fFoldableTree_$cfoldr
+                    @ a
+                    @ Data.Monoid.Any
+                    lvl19
+                      `cast`
+                    (<a>_R
+                     ->_R Sym (Data.Monoid.N:Any[0])
+                     ->_R Sym (Data.Monoid.N:Any[0]))
+                    GHC.Types.False `cast` (Sym (Data.Monoid.N:Any[0]))
+                    eta1)
+                   `cast`
+                 (<Tree.Tree a>_R ->_R Data.Monoid.N:Any[0])) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$cfold :: GHC.Base.Monoid m => Tree.Tree m -> m
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(1*U,1*U,A)><S,1*U>,
+     Unfolding: (\ @ m
+                   ($dMonoid :: GHC.Base.Monoid m)
+                   (eta :: Tree.Tree m) ->
+                 Tree.$fFoldableTree_$cfoldr
+                   @ m
+                   @ m
+                   (let {
+                      f1 :: m -> m -> m = GHC.Base.mappend @ m $dMonoid
+                    } in
+                    \ (x :: m) -> f1 x)
+                   (GHC.Base.mempty @ m $dMonoid)
+                   eta) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$cfoldMap ::
+    GHC.Base.Monoid m => (a -> m) -> Tree.Tree a -> m
+  {- Arity: 2, Strictness: <L,U(1*U,1*U,A)><L,C(U)>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ m
+                   @ a
+                   ($dMonoid :: GHC.Base.Monoid m)
+                   (f :: a -> m)
+                   (eta :: Tree.Tree a) ->
+                 Tree.$fFoldableTree_$cfoldr
+                   @ a
+                   @ m
+                   (let {
+                      f1 :: m -> m -> m = GHC.Base.mappend @ m $dMonoid
+                    } in
+                    \ (x :: a) -> f1 (f x))
+                   (GHC.Base.mempty @ m $dMonoid)
+                   eta) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$cfoldl :: (b -> a -> b) -> b -> Tree.Tree a -> b
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,C(C1(U))><L,U><S,1*U>,
+     Unfolding: (\ @ b
+                   @ a
+                   (f :: b -> a -> b)
+                   (z :: b)
+                   (t1 :: Tree.Tree a) ->
+                 (Tree.$fFoldableTree_$cfoldr
+                    @ a
+                    @ (Data.Monoid.Dual (Data.Monoid.Endo b))
+                    (\ (x :: a)
+                       (eta :: Data.Monoid.Dual (Data.Monoid.Endo b))[OneShot]
+                       (eta1 :: b) ->
+                     eta `cast` (Data.Monoid.N:Dual[0] (Data.Monoid.N:Endo[0] <b>_R))
+                       (f eta1 x))
+                      `cast`
+                    (<a>_R
+                     ->_R <Data.Monoid.Dual (Data.Monoid.Endo b)>_R
+                     ->_R Sym (Data.Monoid.N:Dual[0] (Data.Monoid.N:Endo[0] <b>_R)))
+                    (GHC.Base.id @ b)
+                      `cast`
+                    (Sym (Data.Monoid.N:Dual[0] (Data.Monoid.N:Endo[0] <b>_R)))
+                    t1)
+                   `cast`
+                 (Data.Monoid.N:Dual[0] (Data.Monoid.N:Endo[0] <b>_R))
+                   z) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$cfoldl' :: (b -> a -> b) -> b -> Tree.Tree a -> b
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,C(C1(U))><L,U><S,1*U>,
+     Unfolding: (\ @ b
+                   @ a
+                   (f :: b -> a -> b)
+                   (z0 :: b)
+                   (xs :: Tree.Tree a) ->
+                 Tree.$fFoldableTree_$cfoldr
+                   @ a
+                   @ (b -> b)
+                   (\ (x :: a) (k :: b -> b)[OneShot] (z :: b) ->
+                    case f z x of x1 { DEFAULT -> k x1 })
+                   (GHC.Base.id @ b)
+                   xs
+                   z0) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$cfoldl1 :: (a -> a -> a) -> Tree.Tree a -> a
+  {- Arity: 2, Strictness: <L,C(C1(U))><S,1*U>,
+     Unfolding: (\ @ a (f :: a -> a -> a) (xs :: Tree.Tree a) ->
+                 case (Tree.$fFoldableTree_$cfoldr
+                         @ a
+                         @ (Data.Monoid.Dual (Data.Monoid.Endo (GHC.Base.Maybe a)))
+                         (\ (x :: a)
+                            (eta :: Data.Monoid.Dual
+                                      (Data.Monoid.Endo (GHC.Base.Maybe a)))[OneShot]
+                            (eta1 :: GHC.Base.Maybe a) ->
+                          eta
+                            `cast`
+                          (Data.Monoid.N:Dual[0]
+                               (Data.Monoid.N:Endo[0] <GHC.Base.Maybe a>_R))
+                            (GHC.Base.Just
+                               @ a
+                               (case eta1 of wild {
+                                  GHC.Base.Nothing -> x GHC.Base.Just x1 -> f x1 x })))
+                           `cast`
+                         (<a>_R
+                          ->_R <Data.Monoid.Dual (Data.Monoid.Endo (GHC.Base.Maybe a))>_R
+                          ->_R Sym (Data.Monoid.N:Dual[0]
+                                        (Data.Monoid.N:Endo[0] <GHC.Base.Maybe a>_R)))
+                         (GHC.Base.id @ (GHC.Base.Maybe a))
+                           `cast`
+                         (Sym (Data.Monoid.N:Dual[0]
+                                   (Data.Monoid.N:Endo[0] <GHC.Base.Maybe a>_R)))
+                         xs)
+                        `cast`
+                      (Data.Monoid.N:Dual[0]
+                           (Data.Monoid.N:Endo[0] <GHC.Base.Maybe a>_R))
+                        (GHC.Base.Nothing @ a) of wild {
+                   GHC.Base.Nothing -> Tree.$fFoldableTree7 @ a
+                   GHC.Base.Just v -> v }) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$cfoldr :: (a -> b -> b) -> b -> Tree.Tree a -> b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,C(C1(U))><L,1*U><S,1*U> -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$cfoldr' :: (a -> b -> b) -> b -> Tree.Tree a -> b
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,C(C1(U))><L,U><S,1*U>,
+     Unfolding: (\ @ a
+                   @ b
+                   (f :: a -> b -> b)
+                   (z0 :: b)
+                   (xs :: Tree.Tree a) ->
+                 (Tree.$fFoldableTree_$cfoldr
+                    @ a
+                    @ (Data.Monoid.Dual (Data.Monoid.Endo (b -> b)))
+                    (\ (x :: a)
+                       (eta :: Data.Monoid.Dual (Data.Monoid.Endo (b -> b)))[OneShot]
+                       (eta1 :: b -> b) ->
+                     eta
+                       `cast`
+                     (Data.Monoid.N:Dual[0] (Data.Monoid.N:Endo[0] <b -> b>_R))
+                       (\ (z :: b) -> case f x z of x1 { DEFAULT -> eta1 x1 }))
+                      `cast`
+                    (<a>_R
+                     ->_R <Data.Monoid.Dual (Data.Monoid.Endo (b -> b))>_R
+                     ->_R Sym (Data.Monoid.N:Dual[0]
+                                   (Data.Monoid.N:Endo[0] <b -> b>_R)))
+                    (GHC.Base.id @ (b -> b))
+                      `cast`
+                    (Sym (Data.Monoid.N:Dual[0] (Data.Monoid.N:Endo[0] <b -> b>_R)))
+                    xs)
+                   `cast`
+                 (Data.Monoid.N:Dual[0] (Data.Monoid.N:Endo[0] <b -> b>_R))
+                   (GHC.Base.id @ b)
+                   z0) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$cfoldr1 :: (a -> a -> a) -> Tree.Tree a -> a
+  {- Arity: 2, Strictness: <L,C(C1(U))><S,1*U>,
+     Unfolding: (\ @ a (f :: a -> a -> a) (xs :: Tree.Tree a) ->
+                 case Tree.$fFoldableTree_$cfoldr
+                        @ a
+                        @ (GHC.Base.Maybe a)
+                        (\ (x :: a) (m :: GHC.Base.Maybe a)[OneShot] ->
+                         GHC.Base.Just
+                           @ a
+                           (case m of wild {
+                              GHC.Base.Nothing -> x GHC.Base.Just y -> f x y }))
+                        (GHC.Base.Nothing @ a)
+                        xs of wild {
+                   GHC.Base.Nothing -> Tree.$fFoldableTree8 @ a
+                   GHC.Base.Just v -> v }) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$clength :: Tree.Tree a -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ @ a (xs :: Tree.Tree a) ->
+                 Tree.$fFoldableTree_$cfoldr
+                   @ a
+                   @ (GHC.Types.Int -> GHC.Types.Int)
+                   (Tree.$fFoldableTree5 @ a)
+                   (GHC.Base.id @ GHC.Types.Int)
+                   xs
+                   Tree.$fFoldableTree_z0) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$cmaximum :: GHC.Classes.Ord a => Tree.Tree a -> a
+  {- Arity: 2, Strictness: <L,U(A,A,A,A,A,C(C1(U)),A,A)><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dOrd :: GHC.Classes.Ord a)
+                   (eta :: Tree.Tree a) ->
+                 case (Tree.$fFoldableTree_$cfoldr
+                         @ a
+                         @ (Data.Foldable.Max a)
+                         (\ (x :: a) (eta1 :: Data.Foldable.Max a)[OneShot] ->
+                          case eta1 `cast` (Data.Foldable.N:Max[0] <a>_N) of wild {
+                            GHC.Base.Nothing
+                            -> (GHC.Base.Just @ a x)
+                                 `cast`
+                               (Sym (Data.Foldable.N:Max[0]) <a>_N)
+                            GHC.Base.Just ipv
+                            -> case GHC.Classes.>= @ a $dOrd x ipv of wild2 {
+                                 GHC.Types.False -> wild `cast` (Sym (Data.Foldable.N:Max[0]) <a>_N)
+                                 GHC.Types.True
+                                 -> (GHC.Base.Just @ a x)
+                                      `cast`
+                                    (Sym (Data.Foldable.N:Max[0]) <a>_N) } })
+                         (GHC.Base.Nothing @ a) `cast` (Sym (Data.Foldable.N:Max[0]) <a>_N)
+                         eta)
+                        `cast`
+                      (Data.Foldable.N:Max[0] <a>_N) of wild {
+                   GHC.Base.Nothing -> Tree.$fFoldableTree4 @ a
+                   GHC.Base.Just v -> v }) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$cminimum :: GHC.Classes.Ord a => Tree.Tree a -> a
+  {- Arity: 2, Strictness: <L,U(A,A,A,C(C1(U)),A,A,A,A)><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dOrd :: GHC.Classes.Ord a)
+                   (eta :: Tree.Tree a) ->
+                 case (Tree.$fFoldableTree_$cfoldr
+                         @ a
+                         @ (Data.Foldable.Min a)
+                         (\ (x :: a) (eta1 :: Data.Foldable.Min a)[OneShot] ->
+                          case eta1 `cast` (Data.Foldable.N:Min[0] <a>_N) of wild {
+                            GHC.Base.Nothing
+                            -> (GHC.Base.Just @ a x)
+                                 `cast`
+                               (Sym (Data.Foldable.N:Min[0]) <a>_N)
+                            GHC.Base.Just ipv
+                            -> case GHC.Classes.<= @ a $dOrd x ipv of wild2 {
+                                 GHC.Types.False -> wild `cast` (Sym (Data.Foldable.N:Min[0]) <a>_N)
+                                 GHC.Types.True
+                                 -> (GHC.Base.Just @ a x)
+                                      `cast`
+                                    (Sym (Data.Foldable.N:Min[0]) <a>_N) } })
+                         (GHC.Base.Nothing @ a) `cast` (Sym (Data.Foldable.N:Min[0]) <a>_N)
+                         eta)
+                        `cast`
+                      (Data.Foldable.N:Min[0] <a>_N) of wild {
+                   GHC.Base.Nothing -> Tree.$fFoldableTree3 @ a
+                   GHC.Base.Just v -> v }) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$cnull :: Tree.Tree a -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ @ a ->
+                 Tree.$fFoldableTree_$cfoldr
+                   @ a
+                   @ GHC.Types.Bool
+                   (Tree.$fFoldableTree6 @ a)
+                   GHC.Types.True) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$cproduct :: GHC.Num.Num a => Tree.Tree a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(A,A,1*U,A,A,A,1*C1(U))><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Tree.$fFoldableTree1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Num.Num a>_R
+                 ->_R <Tree.Tree a>_R
+                 ->_R Data.Monoid.N:Product[0] <a>_R) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$csum :: GHC.Num.Num a => Tree.Tree a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*U,A,A,A,A,A,1*C1(U))><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Tree.$fFoldableTree2
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Num.Num a>_R
+                 ->_R <Tree.Tree a>_R
+                 ->_R Data.Monoid.N:Sum[0] <a>_R) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fFoldableTree_$ctoList :: Tree.Tree a -> [a]
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a (t1 :: Tree.Tree a) ->
+                 GHC.Base.build
+                   @ a
+                   (\ @ b (c :: a -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                    Tree.$fFoldableTree_$cfoldr @ a @ b c n t1)) -}
+aa9fed02f2306cade801818f90787d21
+  $fFoldableTree_z0 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fMonoidTree :: GHC.Classes.Ord a => GHC.Base.Monoid (Tree.Tree a)
+  DFunId
+  {- Arity: 1,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A,A,U,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dOrd :: GHC.Classes.Ord a).
+                  @ (Tree.Tree a)
+                  (Tree.$fMonoidTree_$cmempty @ a $dOrd)
+                  (Tree.$fMonoidTree_$cmappend @ a $dOrd)
+                  (Tree.$fMonoidTree_$cmconcat @ a $dOrd) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fMonoidTree_$cmappend ::
+    GHC.Classes.Ord a => Tree.Tree a -> Tree.Tree a -> Tree.Tree a
+  {- Arity: 3,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A,A,U,A)><S,1*U><S,1*U> -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fMonoidTree_$cmconcat ::
+    GHC.Classes.Ord a => [Tree.Tree a] -> Tree.Tree a
+  {- Arity: 2,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A,A,U,A)><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dOrd :: GHC.Classes.Ord a)
+                   (eta :: [Tree.Tree a]) ->
+                 letrec {
+                   go :: [Tree.Tree a] -> Tree.Tree a
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [Tree.Tree a]) ->
+                     case ds of wild {
+                       [] -> Tree.Leaf @ a
+                       : y ys -> Tree.$fMonoidTree_$cmappend @ a $dOrd y (go ys) }
+                 } in
+                 go eta) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fMonoidTree_$cmempty :: GHC.Classes.Ord a => Tree.Tree a
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a ($dOrd :: GHC.Classes.Ord a) -> Tree.Leaf @ a) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fShowTree :: GHC.Show.Show a => GHC.Show.Show (Tree.Tree a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dShow :: GHC.Show.Show a).
+                  @ (Tree.Tree a)
+                  (Tree.$fShowTree_$cshowsPrec @ a $dShow)
+                  (Tree.$fShowTree_$cshow @ a $dShow)
+                  (Tree.$fShowTree_$cshowList @ a $dShow) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fShowTree_$cshow ::
+    GHC.Show.Show a => Tree.Tree a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dShow :: GHC.Show.Show a) (x :: Tree.Tree a) ->
+                 Tree.$fShowTree_$cshowsPrec
+                   @ a
+                   $dShow
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fShowTree_$cshowList ::
+    GHC.Show.Show a => [Tree.Tree a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (eta :: [Tree.Tree a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Tree.Tree a)
+                   (Tree.$fShowTree_$cshowsPrec @ a $dShow Tree.$fFoldableTree_z0)
+                   eta
+                   eta1) -}
+db78a0f77ca0e5645dea8d54fd29f847
+  $fShowTree_$cshowsPrec ::
+    GHC.Show.Show a => GHC.Types.Int -> Tree.Tree a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><L,1*U(U)><S,1*U> -}
+a1b4e6a1aa0d70cb2b8d6123134bd0f3
+  $tc'Leaf :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15485119203021366785##
+                   6044401108352840262##
+                   Tree.$trModule
+                   Tree.$tc'Leaf1) -}
+706b96cabf30b30ad431ed76957ca4c8
+  $tc'Leaf1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Leaf"#) -}
+172c40b794d09cd2bfeef4f0cc7985e0
+  $tc'Node :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1335261769819176215##
+                   13244072908023367593##
+                   Tree.$trModule
+                   Tree.$tc'Node1) -}
+feb291fe5c81bf3a42d314a4e994033f
+  $tc'Node1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Node"#) -}
+ff8c73d666b0b245ac101c47737b4d3c
+  $tcTree :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   622391811037605052##
+                   5646169553364361953##
+                   Tree.$trModule
+                   Tree.$trModule1) -}
+0f1caa4b46230d10f090a30262eee41f
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Tree.$trModule2 Tree.$trModule1) -}
+29fed4a8420b7009183cde075f2dd27a
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Tree"#) -}
+885de0c37090a5854af1119ea1986239
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw3-0.1.0.0-AXaGW1BIMzGD78qTtHJ6tU"#) -}
+6dfdc113fe8f740fd6917771acd323d2
+  $winsert ::
+    GHC.Classes.Ord a =>
+    Tree.Tree a -> a -> (# a, Tree.Tree a, Tree.Tree a #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A,A,A,A)><S,1*U><L,U>,
+     Inline: [0] -}
+db78a0f77ca0e5645dea8d54fd29f847
+  data Tree a = Leaf | Node a (Tree.Tree a) (Tree.Tree a)
+222ba6e8b04b14d6a83ffe0284fd3d24
+  delete :: GHC.Classes.Ord a => Tree.Tree a -> a -> Tree.Tree a
+  {- Arity: 3,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A,A,U,A)><S,1*U><L,U> -}
+195e6a869059725671cced597e679bf5
+  find :: GHC.Classes.Ord a => Tree.Tree a -> a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A,A,A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dOrd :: GHC.Classes.Ord a)
+                   (tree :: Tree.Tree a)
+                   (key :: a) ->
+                 case Tree.findVertex @ a $dOrd tree key of wild {
+                   Tree.Leaf -> GHC.Types.False
+                   Tree.Node ipv ipv1 ipv2 -> GHC.Types.True }) -}
+6715e3bf654eecdf6cfd82acbbec97a6
+  findMax :: GHC.Classes.Ord a => Tree.Tree a -> a
+  {- Arity: 2, Strictness: <L,U(A,A,A,A,A,A,U,A)><S,1*U> -}
+bbfc46cd3b7beeee5316827e99a1bff1
+  findVertex :: GHC.Classes.Ord a => Tree.Tree a -> a -> Tree.Tree a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A,A,A,A)><S,1*U><L,U> -}
+8026bee43a009628ba8160ed7e19ee1e
+  insert :: GHC.Classes.Ord a => Tree.Tree a -> a -> Tree.Tree a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A,A,A,A)><S,1*U><L,U>m2,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a (w :: GHC.Classes.Ord a) (w1 :: Tree.Tree a) (w2 :: a) ->
+                 case Tree.$winsert @ a w w1 w2 of ww { (#,,#) ww1 ww2 ww3 ->
+                 Tree.Node @ a ww1 ww2 ww3 }) -}
+942a324581ebca0bdfaf69d57b9809d7
+  merge ::
+    GHC.Classes.Ord a => Tree.Tree a -> Tree.Tree a -> Tree.Tree a
+  {- Arity: 3,
+     Strictness: <L,U(U(C(C1(U)),A),A,C(C1(U)),A,A,A,U,A)><S,1*U><S,1*U> -}
+e49f5d618b60b78b79d8cc871a5b1bab
+  next :: GHC.Classes.Ord a => Tree.Tree a -> a -> GHC.Base.Maybe a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,A,A,A,C(C1(U)),A,A,A)><S,1*U><L,U> -}
+15690c2b4211b25dcdae3e9815290457
+  tmap :: (a -> b) -> Tree.Tree a -> Tree.Tree b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U> -}
+instance [safe] Data.Foldable.Foldable [Tree.Tree]
+  = Tree.$fFoldableTree
+instance [safe] GHC.Base.Monoid [Tree.Tree] = Tree.$fMonoidTree
+instance [safe] GHC.Show.Show [Tree.Tree] = Tree.$fShowTree
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
