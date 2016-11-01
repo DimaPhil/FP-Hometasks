@@ -1,0 +1,486 @@
+
+==================== FINAL INTERFACE ====================
+2016-10-31 14:05:26.958041 UTC
+
+interface hw5-0.1.0.0-1fLzu6nyqqO1Ivpu7UzSSs:SExpr 8001
+  interface hash: 578f9d8739dbc2139cdd07bb20844c81
+  ABI hash: 22e93398bd6f4eb378f604a7b590530a
+  export-list hash: fafbfaf9dfd015b8769dd3642d510b67
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  SExpr.ident
+  SExpr.oneOrMore
+  SExpr.parseSExpr
+  SExpr.spaces
+  SExpr.zeroOrMore
+  SExpr.Atom{SExpr.I SExpr.N}
+  SExpr.Ident
+  SExpr.SExpr{SExpr.A SExpr.Comb}
+module dependencies: AParser
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Control.Applicative 7728b33d6969dce59e89474349eb1397
+import  -/  base-4.9.0.0:Data.Char eb33dc25ecb52d018a0ca26590e2b50b
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:GHC.Unicode 2343b0871604cc5116abba8f24d75b42
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  AParser 25b5fe60e3613817a1c9b7d3d2ce92f7
+  exports: eaa4232df45f2577b79a66f7735fdfec
+  Parser 39ba1a766571f10548a915fe1d97346e
+  char 37e30ecf580ac78a8159311a1a7eb1a8
+  posInt 900f045dab47e24b52cd65fb21cb9ad5
+  satisfy 47ba0a02b931005ad14abaab2d367d5d
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 62c0e736506aac47ef40569f5b82e19d
+ec48d85c47dca0bcbcc18af12dde30f3
+  $fShowAtom :: GHC.Show.Show SExpr.Atom
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ SExpr.Atom
+                  SExpr.$fShowAtom_$cshowsPrec
+                  SExpr.$fShowAtom_$cshow
+                  SExpr.$fShowAtom_$cshowList -}
+ec48d85c47dca0bcbcc18af12dde30f3
+  $fShowAtom1 :: SExpr.Atom -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: SExpr.Atom) (w1 :: GHC.Base.String) ->
+                 SExpr.$w$cshowsPrec 0# w w1) -}
+c835d3e46caf63cd28261e617038b6c4
+  $fShowAtom2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "I "#) -}
+a5546b2a405e0777ffab19dc115201b2
+  $fShowAtom3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "N "#) -}
+ec48d85c47dca0bcbcc18af12dde30f3
+  $fShowAtom_$cshow :: SExpr.Atom -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: SExpr.Atom) ->
+                 SExpr.$fShowAtom_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+ec48d85c47dca0bcbcc18af12dde30f3
+  $fShowAtom_$cshowList :: [SExpr.Atom] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__ @ SExpr.Atom SExpr.$fShowAtom1) -}
+ec48d85c47dca0bcbcc18af12dde30f3
+  $fShowAtom_$cshowsPrec ::
+    GHC.Types.Int -> SExpr.Atom -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: SExpr.Atom)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 SExpr.$w$cshowsPrec ww1 w1 w2 }) -}
+b1068c0e500b31f86870af8f1ad97ff1
+  $fShowSExpr :: GHC.Show.Show SExpr.SExpr
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ SExpr.SExpr
+                  SExpr.$fShowSExpr_$cshowsPrec
+                  SExpr.$fShowSExpr_$cshow
+                  SExpr.$fShowSExpr_$cshowList -}
+b1068c0e500b31f86870af8f1ad97ff1
+  $fShowSExpr1 :: SExpr.SExpr -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: SExpr.SExpr) (w1 :: GHC.Base.String) ->
+                 SExpr.$w$cshowsPrec1 0# w w1) -}
+b1068c0e500b31f86870af8f1ad97ff1
+  $fShowSExpr_$cshow :: SExpr.SExpr -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: SExpr.SExpr) ->
+                 SExpr.$fShowSExpr_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+b1068c0e500b31f86870af8f1ad97ff1
+  $fShowSExpr_$cshowList :: [SExpr.SExpr] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ SExpr.SExpr
+                   SExpr.$fShowSExpr1) -}
+b1068c0e500b31f86870af8f1ad97ff1
+  $fShowSExpr_$cshowsPrec ::
+    GHC.Types.Int -> SExpr.SExpr -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: SExpr.SExpr)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 SExpr.$w$cshowsPrec1 ww1 w1 w2 }) -}
+69d969bbc4761991ccfab571e3af442d
+  $tc'A :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13785922636587774241##
+                   17596344832656372870##
+                   SExpr.$trModule
+                   SExpr.$tc'A1) -}
+49cfb57d9efa129c5a7c3c0cbdbc923f
+  $tc'A1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'A"#) -}
+b1119f87e3746f505489f6ac43b40b90
+  $tc'Comb :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5479384656493796016##
+                   8884777078242612858##
+                   SExpr.$trModule
+                   SExpr.$tc'Comb1) -}
+3f1613ce6a09a77dc9a0154e482a5461
+  $tc'Comb1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Comb"#) -}
+dc2b868ec8903972fa898d56eac3eaa3
+  $tc'I :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11049098855383538687##
+                   9336584929810187382##
+                   SExpr.$trModule
+                   SExpr.$tc'I1) -}
+1d4571981751f6c71c42ddcaac786bf2
+  $tc'I1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'I"#) -}
+2ccff0517f43a73f6b89c7d761550b03
+  $tc'N :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7398990022668809978##
+                   16085200534839760834##
+                   SExpr.$trModule
+                   SExpr.$tc'N1) -}
+0cbe7ac739da77379c88f95784a2c726
+  $tc'N1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'N"#) -}
+def48091365819c6be6f31e54ac9e6a9
+  $tcAtom :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16604262325601534426##
+                   12445077716991269542##
+                   SExpr.$trModule
+                   SExpr.$tcAtom1) -}
+acf88ee03ea5029903cdabbccf627d6d
+  $tcAtom1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Atom"#) -}
+8017e9a4dbbe3427ff755e0948a25b2e
+  $tcSExpr :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2438138181353280544##
+                   6028277162617106264##
+                   SExpr.$trModule
+                   SExpr.$trModule1) -}
+0690b942465d8a795b037a2f0e9e3f04
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module SExpr.$trModule2 SExpr.$trModule1) -}
+97533bbb096b795e5eb9e10f1ed027a1
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "SExpr"#) -}
+ea92dfe2ac8c63488891b2a56d29edb1
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw5-0.1.0.0-1fLzu6nyqqO1Ivpu7UzSSs"#) -}
+ec48d85c47dca0bcbcc18af12dde30f3
+  $w$cshowsPrec ::
+    GHC.Prim.Int# -> SExpr.Atom -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: SExpr.Atom)
+                   (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   SExpr.N b1
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# ww 11#) of wild1 {
+                        GHC.Types.False
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             SExpr.$fShowAtom3
+                             (case GHC.Show.$w$cshowsPrec3 11# b1 w1 of ww2 { (#,#) ww3 ww4 ->
+                              GHC.Types.: @ GHC.Types.Char ww3 ww4 })
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows9
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                SExpr.$fShowAtom3
+                                (case GHC.Show.$w$cshowsPrec3
+                                        11#
+                                        b1
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.shows6
+                                           w1) of ww2 { (#,#) ww3 ww4 ->
+                                 GHC.Types.: @ GHC.Types.Char ww3 ww4 })) }
+                   SExpr.I b1
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# ww 11#) of wild1 {
+                        GHC.Types.False
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             SExpr.$fShowAtom2
+                             (GHC.Types.:
+                                @ GHC.Types.Char
+                                GHC.Show.shows8
+                                (GHC.Show.showLitString
+                                   b1
+                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 w1)))
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows9
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                SExpr.$fShowAtom2
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.shows8
+                                   (GHC.Show.showLitString
+                                      b1
+                                      (GHC.Types.:
+                                         @ GHC.Types.Char
+                                         GHC.Show.shows8
+                                         (GHC.Types.:
+                                            @ GHC.Types.Char
+                                            GHC.Show.shows6
+                                            w1))))) } }) -}
+b1068c0e500b31f86870af8f1ad97ff1
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int# -> SExpr.SExpr -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [0] -}
+236d9497012cab37306c725fabe3248e
+  $wzeroOrMore ::
+    AParser.Parser a -> GHC.Base.String -> (# ([a], GHC.Base.String) #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U)><L,U>,
+     Inline: [0] -}
+ec48d85c47dca0bcbcc18af12dde30f3
+  data Atom = N GHC.Integer.Type.Integer | I SExpr.Ident
+5365ab6d8445cec439fcec475e542796
+  type Ident = GHC.Base.String
+b1068c0e500b31f86870af8f1ad97ff1
+  data SExpr = A SExpr.Atom | Comb [SExpr.SExpr]
+e79138f47c7248fa47f473c1e6d0f44a
+  ident :: AParser.Parser GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                SExpr.ident1
+                  `cast`
+                (Sym (AParser.N:Parser[0] <[GHC.Types.Char]>_R)) -}
+88b716bc7a70f8bb7aaddec7483acc65
+  ident1 ::
+    GHC.Base.String
+    -> GHC.Base.Maybe ([GHC.Types.Char], GHC.Base.String)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (eta :: GHC.Base.String) ->
+                 case eta of wild {
+                   [] -> GHC.Base.Nothing @ ([GHC.Types.Char], GHC.Base.String)
+                   : x xs
+                   -> case x of wild1 { GHC.Types.C# c# ->
+                      case {__pkg_ccall base-4.9.0.0 u_iswalpha GHC.Prim.Int#
+                                                                -> GHC.Prim.State#
+                                                                     GHC.Prim.RealWorld
+                                                                -> (# GHC.Prim.State#
+                                                                        GHC.Prim.RealWorld,
+                                                                      GHC.Prim.Int# #)}
+                             (GHC.Prim.ord# c#)
+                             GHC.Prim.realWorld# of wild2 { (#,#) ds ds1 ->
+                      case ds1 of wild3 {
+                        DEFAULT
+                        -> case SExpr.$wzeroOrMore
+                                  @ GHC.Types.Char
+                                  SExpr.ident2 `cast` (Sym (AParser.N:Parser[0] <GHC.Types.Char>_R))
+                                  xs of ww { Unit# ww1 ->
+                           GHC.Base.Just
+                             @ ([GHC.Types.Char], GHC.Base.String)
+                             (case ww1 of wild4 { (,) x1 y ->
+                              (GHC.Types.: @ GHC.Types.Char wild1 x1, y) }) }
+                        0#
+                        -> GHC.Base.Nothing
+                             @ ([GHC.Types.Char], GHC.Base.String) } } } }) -}
+553dba47b4b5282837471620927c88f3
+  ident2 ::
+    [GHC.Types.Char]
+    -> GHC.Base.Maybe (GHC.Types.Char, [GHC.Types.Char])
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: [GHC.Types.Char]) ->
+                 case ds of wild {
+                   [] -> GHC.Base.Nothing @ (GHC.Types.Char, [GHC.Types.Char])
+                   : x xs
+                   -> case x of wild1 { GHC.Types.C# c# ->
+                      case {__pkg_ccall base-4.9.0.0 u_iswalnum GHC.Prim.Int#
+                                                                -> GHC.Prim.State#
+                                                                     GHC.Prim.RealWorld
+                                                                -> (# GHC.Prim.State#
+                                                                        GHC.Prim.RealWorld,
+                                                                      GHC.Prim.Int# #)}
+                             (GHC.Prim.ord# c#)
+                             GHC.Prim.realWorld# of wild2 { (#,#) ds1 ds2 ->
+                      case ds2 of wild3 {
+                        DEFAULT
+                        -> GHC.Base.Just @ (GHC.Types.Char, [GHC.Types.Char]) (wild1, xs)
+                        0#
+                        -> GHC.Base.Nothing
+                             @ (GHC.Types.Char, [GHC.Types.Char]) } } } }) -}
+3361cb79ab3bc865ea37a8a8ffccce39
+  oneOrMore :: AParser.Parser a -> AParser.Parser [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                SExpr.oneOrMore1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <AParser.Parser a>_R ->_R Sym (AParser.N:Parser[0] <[a]>_R)) -}
+185d5ea681c69c0bf8fade929630cff8
+  oneOrMore1 ::
+    AParser.Parser a
+    -> GHC.Base.String -> GHC.Base.Maybe ([a], GHC.Base.String)
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U)><L,U>,
+     Unfolding: (\ @ a
+                   (p :: AParser.Parser a)
+                   (eta :: GHC.Base.String) ->
+                 case p `cast` (AParser.N:Parser[0] <a>_R) eta of wild2 {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ ([a], GHC.Base.String)
+                   GHC.Base.Just x2
+                   -> case x2 of wild { (,) x y ->
+                      case SExpr.$wzeroOrMore @ a p y of ww { Unit# ww1 ->
+                      GHC.Base.Just
+                        @ ([a], GHC.Base.String)
+                        (case ww1 of wild1 { (,) x1 y1 ->
+                         (GHC.Types.: @ a x x1, y1) }) } } }) -}
+b42fc0d317fb761ee7674ad4ac8fdafe
+  parseSExpr :: AParser.Parser SExpr.SExpr
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                SExpr.parseSExpr1
+                  `cast`
+                (Sym (AParser.N:Parser[0] <SExpr.SExpr>_R)) -}
+e0c5417041682bd8cb110fb68a1cc75b
+  parseSExpr1 ::
+    GHC.Base.String -> GHC.Base.Maybe (SExpr.SExpr, GHC.Base.String)
+  {- Arity: 1, Strictness: <S,U> -}
+3d624ffa5d8e6ab639979e884bfa099b
+  spaces :: AParser.Parser GHC.Base.String
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: InlineRule (0, True, True)
+                SExpr.spaces1
+                  `cast`
+                (Sym (AParser.N:Parser[0] <[GHC.Types.Char]>_R)) -}
+200384a711b4eb960648cedd3e9f4ad8
+  spaces1 ::
+    GHC.Base.String
+    -> GHC.Base.Maybe ([GHC.Types.Char], GHC.Base.String)
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (w :: GHC.Base.String) ->
+                 case SExpr.$wzeroOrMore
+                        @ GHC.Types.Char
+                        SExpr.spaces2 `cast` (Sym (AParser.N:Parser[0] <GHC.Types.Char>_R))
+                        w of ww { Unit# ww1 ->
+                 GHC.Base.Just @ ([GHC.Types.Char], GHC.Base.String) ww1 }) -}
+0b719ce89f36467ddac6941ed3dc3633
+  spaces2 ::
+    [GHC.Types.Char]
+    -> GHC.Base.Maybe (GHC.Types.Char, [GHC.Types.Char])
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: [GHC.Types.Char]) ->
+                 case ds of wild {
+                   [] -> GHC.Base.Nothing @ (GHC.Types.Char, [GHC.Types.Char])
+                   : x xs
+                   -> case x of ww { GHC.Types.C# ww1 ->
+                      let {
+                        x1 :: GHC.Prim.Word# = GHC.Prim.int2Word# (GHC.Prim.ord# ww1)
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.leWord# x1 887##) of wild1 {
+                        GHC.Types.False
+                        -> case {__pkg_ccall base-4.9.0.0 u_iswspace GHC.Prim.Int#
+                                                                     -> GHC.Prim.State#
+                                                                          GHC.Prim.RealWorld
+                                                                     -> (# GHC.Prim.State#
+                                                                             GHC.Prim.RealWorld,
+                                                                           GHC.Prim.Int# #)}
+                                  (GHC.Prim.ord# ww1)
+                                  GHC.Prim.realWorld# of wild2 { (#,#) ds1 ds2 ->
+                           case ds2 of wild3 {
+                             DEFAULT
+                             -> GHC.Base.Just @ (GHC.Types.Char, [GHC.Types.Char]) (ww, xs)
+                             0# -> GHC.Base.Nothing @ (GHC.Types.Char, [GHC.Types.Char]) } }
+                        GHC.Types.True
+                        -> case x1 of wild2 {
+                             DEFAULT
+                             -> case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.leWord#
+                                          (GHC.Prim.minusWord# wild2 9##)
+                                          4##) of wild3 {
+                                  GHC.Types.False
+                                  -> case wild2 of wild4 {
+                                       DEFAULT
+                                       -> GHC.Base.Nothing @ (GHC.Types.Char, [GHC.Types.Char])
+                                       160##
+                                       -> GHC.Base.Just
+                                            @ (GHC.Types.Char, [GHC.Types.Char])
+                                            (ww, xs) }
+                                  GHC.Types.True
+                                  -> GHC.Base.Just @ (GHC.Types.Char, [GHC.Types.Char]) (ww, xs) }
+                             32##
+                             -> GHC.Base.Just
+                                  @ (GHC.Types.Char, [GHC.Types.Char])
+                                  (ww, xs) } } } }) -}
+2e18c3950ae04e628dcf12309c435e5e
+  zeroOrMore :: AParser.Parser a -> AParser.Parser [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U)><L,U>m2,
+     Unfolding: InlineRule (0, True, True)
+                SExpr.zeroOrMore1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <AParser.Parser a>_R ->_R Sym (AParser.N:Parser[0] <[a]>_R)) -}
+fa65ea43cb026ce106370b30ce389e7f
+  zeroOrMore1 ::
+    AParser.Parser a
+    -> GHC.Base.String -> GHC.Base.Maybe ([a], GHC.Base.String)
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U)><L,U>m2,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (w :: AParser.Parser a) (w1 :: GHC.Base.String) ->
+                 case SExpr.$wzeroOrMore @ a w w1 of ww { Unit# ww1 ->
+                 GHC.Base.Just @ ([a], GHC.Base.String) ww1 }) -}
+instance [safe] GHC.Show.Show [SExpr.Atom] = SExpr.$fShowAtom
+instance [safe] GHC.Show.Show [SExpr.SExpr] = SExpr.$fShowSExpr
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

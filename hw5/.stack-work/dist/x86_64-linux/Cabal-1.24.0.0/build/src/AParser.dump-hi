@@ -1,0 +1,776 @@
+
+==================== FINAL INTERFACE ====================
+2016-10-31 14:05:26.701346 UTC
+
+interface hw5-0.1.0.0-1fLzu6nyqqO1Ivpu7UzSSs:AParser 8001
+  interface hash: fbd1f0f0b32bf5fabaf36694d6bba6a8
+  ABI hash: 25b5fe60e3613817a1c9b7d3d2ce92f7
+  export-list hash: eaa4232df45f2577b79a66f7735fdfec
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  AParser.abParser
+  AParser.abParser_
+  AParser.char
+  AParser.charUppercase
+  AParser.charUppercaseParser
+  AParser.first
+  AParser.intOrUppercase
+  AParser.intPair
+  AParser.intParser
+  AParser.posInt
+  AParser.satisfy
+  AParser.Parser{AParser.Parser runParser}
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Control.Applicative 7728b33d6969dce59e89474349eb1397
+import  -/  base-4.9.0.0:Control.Monad 7767aebfd53f0b584cef2fe66ad3986c
+import  -/  base-4.9.0.0:Data.Char eb33dc25ecb52d018a0ca26590e2b50b
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:Data.Functor 6fc476505db88d678632a4a838125f13
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Unicode 2343b0871604cc5116abba8f24d75b42
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:Text.Read 9c1be14f7e5eac8b18bcb566c5763677
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 62c0e736506aac47ef40569f5b82e19d
+39ba1a766571f10548a915fe1d97346e
+  $fAlternativeParser :: GHC.Base.Alternative AParser.Parser
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ AParser.Parser
+                  AParser.$fApplicativeParser
+                  AParser.$fAlternativeParser_$cempty
+                  AParser.$fAlternativeParser_$c<|>
+                  AParser.$fAlternativeParser_$csome
+                  AParser.$fAlternativeParser_$cmany -}
+39ba1a766571f10548a915fe1d97346e
+  $fAlternativeParser1 ::
+    AParser.Parser a
+    -> GHC.Base.String -> GHC.Base.Maybe ([a], GHC.Base.String)
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U)><L,U>,
+     Unfolding: (\ @ a
+                   (eta :: AParser.Parser a)
+                   (eta1 :: GHC.Base.String) ->
+                 letrec {
+                   many_v :: GHC.Base.String -> GHC.Base.Maybe ([a], GHC.Base.String)
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ (s :: GHC.Base.String) ->
+                     case eta `cast` (AParser.N:Parser[0] <a>_R) s of wild {
+                       GHC.Base.Nothing
+                       -> GHC.Base.Just @ ([a], GHC.Base.String) (GHC.Types.[] @ a, s)
+                       GHC.Base.Just x
+                       -> case x of wild1 { (,) x1 y ->
+                          case many_v y of wild2 {
+                            GHC.Base.Nothing
+                            -> GHC.Base.Just @ ([a], GHC.Base.String) (GHC.Types.[] @ a, s)
+                            GHC.Base.Just x2
+                            -> GHC.Base.Just
+                                 @ ([a], GHC.Base.String)
+                                 (case x2 of wild3 { (,) x3 y1 ->
+                                  (GHC.Types.: @ a x1 x3, y1) }) } } }
+                 } in
+                 many_v eta1) -}
+39ba1a766571f10548a915fe1d97346e
+  $fAlternativeParser2 ::
+    AParser.Parser a
+    -> GHC.Base.String -> GHC.Base.Maybe ([a], GHC.Base.String)
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U)><L,U>,
+     Unfolding: (\ @ a
+                   (eta :: AParser.Parser a)
+                   (eta1 :: GHC.Base.String) ->
+                 letrec {
+                   some_v :: GHC.Base.String -> GHC.Base.Maybe ([a], GHC.Base.String)
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ (eta2 :: GHC.Base.String) ->
+                     case eta `cast` (AParser.N:Parser[0] <a>_R) eta2 of wild {
+                       GHC.Base.Nothing -> GHC.Base.Nothing @ ([a], GHC.Base.String)
+                       GHC.Base.Just x
+                       -> case x of wild1 { (,) x1 y ->
+                          case some_v y of wild2 {
+                            GHC.Base.Nothing
+                            -> GHC.Base.Just
+                                 @ ([a], GHC.Base.String)
+                                 (GHC.Types.: @ a x1 (GHC.Types.[] @ a), y)
+                            GHC.Base.Just ipv
+                            -> GHC.Base.Just
+                                 @ ([a], GHC.Base.String)
+                                 (case ipv of wild3 { (,) x2 y1 ->
+                                  (GHC.Types.: @ a x1 x2, y1) }) } } }
+                 } in
+                 some_v eta1) -}
+39ba1a766571f10548a915fe1d97346e
+  $fAlternativeParser3 ::
+    AParser.Parser a
+    -> AParser.Parser a
+    -> GHC.Base.String
+    -> GHC.Base.Maybe (a, GHC.Base.String)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (p1 :: AParser.Parser a)
+                   (p2 :: AParser.Parser a)
+                   (s :: GHC.Base.String) ->
+                 case p1 `cast` (AParser.N:Parser[0] <a>_R) s of wild {
+                   GHC.Base.Nothing -> p2 `cast` (AParser.N:Parser[0] <a>_R) s
+                   GHC.Base.Just ipv -> wild }) -}
+0685c8dd22d32955ad966d2092e2d61f
+  $fAlternativeParser4 ::
+    GHC.Base.String -> GHC.Base.Maybe (a, GHC.Base.String)
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a (ds :: GHC.Base.String) ->
+                 GHC.Base.Nothing @ (a, GHC.Base.String)) -}
+39ba1a766571f10548a915fe1d97346e
+  $fAlternativeParser_$c<|> ::
+    AParser.Parser a -> AParser.Parser a -> AParser.Parser a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.$fAlternativeParser3
+                  `cast`
+                (forall (a :: <*>_N).
+                 <AParser.Parser a>_R
+                 ->_R <AParser.Parser a>_R
+                 ->_R Sym (AParser.N:Parser[0] <a>_R)) -}
+39ba1a766571f10548a915fe1d97346e
+  $fAlternativeParser_$cempty :: AParser.Parser a
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.$fAlternativeParser4
+                  `cast`
+                (forall (a :: <*>_N). Sym (AParser.N:Parser[0] <a>_R)) -}
+39ba1a766571f10548a915fe1d97346e
+  $fAlternativeParser_$cmany ::
+    AParser.Parser a -> AParser.Parser [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.$fAlternativeParser1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <AParser.Parser a>_R ->_R Sym (AParser.N:Parser[0] <[a]>_R)) -}
+39ba1a766571f10548a915fe1d97346e
+  $fAlternativeParser_$csome ::
+    AParser.Parser a -> AParser.Parser [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.$fAlternativeParser2
+                  `cast`
+                (forall (a :: <*>_N).
+                 <AParser.Parser a>_R ->_R Sym (AParser.N:Parser[0] <[a]>_R)) -}
+39ba1a766571f10548a915fe1d97346e
+  $fApplicativeParser :: GHC.Base.Applicative AParser.Parser
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ AParser.Parser
+                  AParser.$fFunctorParser
+                  AParser.$fApplicativeParser_$cpure
+                  AParser.$fApplicativeParser_$c<*>
+                  AParser.$fApplicativeParser_$c*>
+                  AParser.$fApplicativeParser_$c<* -}
+39ba1a766571f10548a915fe1d97346e
+  $fApplicativeParser1 ::
+    AParser.Parser a
+    -> AParser.Parser b
+    -> GHC.Base.String
+    -> GHC.Base.Maybe (a, GHC.Base.String)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   (eta :: AParser.Parser a)
+                   (eta1 :: AParser.Parser b)
+                   (eta2 :: GHC.Base.String) ->
+                 case eta `cast` (AParser.N:Parser[0] <a>_R) eta2 of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ (a, GHC.Base.String)
+                   GHC.Base.Just x
+                   -> case x of wild1 { (,) x1 y ->
+                      case eta1 `cast` (AParser.N:Parser[0] <b>_R) y of wild2 {
+                        GHC.Base.Nothing -> GHC.Base.Nothing @ (a, GHC.Base.String)
+                        GHC.Base.Just x2
+                        -> GHC.Base.Just
+                             @ (a, GHC.Base.String)
+                             (case x2 of wild3 { (,) x3 y1 -> (x1, y1) }) } } }) -}
+39ba1a766571f10548a915fe1d97346e
+  $fApplicativeParser2 ::
+    AParser.Parser a
+    -> AParser.Parser b
+    -> GHC.Base.String
+    -> GHC.Base.Maybe (b, GHC.Base.String)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   (eta :: AParser.Parser a)
+                   (eta1 :: AParser.Parser b)
+                   (eta2 :: GHC.Base.String) ->
+                 case eta `cast` (AParser.N:Parser[0] <a>_R) eta2 of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ (b, GHC.Base.String)
+                   GHC.Base.Just x
+                   -> case x of wild1 { (,) x1 y ->
+                      eta1 `cast` (AParser.N:Parser[0] <b>_R) y } }) -}
+39ba1a766571f10548a915fe1d97346e
+  $fApplicativeParser3 ::
+    AParser.Parser (a -> b)
+    -> AParser.Parser a
+    -> GHC.Base.String
+    -> GHC.Base.Maybe (b, GHC.Base.String)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   (p1 :: AParser.Parser (a -> b))
+                   (p2 :: AParser.Parser a)
+                   (eta :: GHC.Base.String) ->
+                 case p1 `cast` (AParser.N:Parser[0] <a -> b>_R) eta of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ (b, GHC.Base.String)
+                   GHC.Base.Just x
+                   -> case x of wild1 { (,) x1 y ->
+                      case p2 `cast` (AParser.N:Parser[0] <a>_R) y of wild2 {
+                        GHC.Base.Nothing -> GHC.Base.Nothing @ (b, GHC.Base.String)
+                        GHC.Base.Just x2
+                        -> GHC.Base.Just
+                             @ (b, GHC.Base.String)
+                             (AParser.first @ a @ b @ GHC.Base.String x1 x2) } } }) -}
+102a00c1a0fbd50d6adebac6efd8a18a
+  $fApplicativeParser4 ::
+    a -> GHC.Base.String -> GHC.Base.Maybe (a, GHC.Base.String)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (x :: a) (s :: GHC.Base.String) ->
+                 GHC.Base.Just @ (a, GHC.Base.String) (x, s)) -}
+39ba1a766571f10548a915fe1d97346e
+  $fApplicativeParser_$c*> ::
+    AParser.Parser a -> AParser.Parser b -> AParser.Parser b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.$fApplicativeParser2
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <AParser.Parser a>_R
+                 ->_R <AParser.Parser b>_R
+                 ->_R Sym (AParser.N:Parser[0] <b>_R)) -}
+39ba1a766571f10548a915fe1d97346e
+  $fApplicativeParser_$c<* ::
+    AParser.Parser a -> AParser.Parser b -> AParser.Parser a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.$fApplicativeParser1
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <AParser.Parser a>_R
+                 ->_R <AParser.Parser b>_R
+                 ->_R Sym (AParser.N:Parser[0] <a>_R)) -}
+39ba1a766571f10548a915fe1d97346e
+  $fApplicativeParser_$c<*> ::
+    AParser.Parser (a -> b) -> AParser.Parser a -> AParser.Parser b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.$fApplicativeParser3
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <AParser.Parser (a -> b)>_R
+                 ->_R <AParser.Parser a>_R
+                 ->_R Sym (AParser.N:Parser[0] <b>_R)) -}
+39ba1a766571f10548a915fe1d97346e
+  $fApplicativeParser_$cpure :: a -> AParser.Parser a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m2,
+     Unfolding: InlineRule (0, True, True)
+                AParser.$fApplicativeParser4
+                  `cast`
+                (forall (a :: <*>_N).
+                 <a>_R ->_R Sym (AParser.N:Parser[0] <a>_R)) -}
+39ba1a766571f10548a915fe1d97346e
+  $fFunctorParser :: GHC.Base.Functor AParser.Parser
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ AParser.Parser
+                  AParser.$fFunctorParser_$cfmap
+                  AParser.$fFunctorParser_$c<$ -}
+39ba1a766571f10548a915fe1d97346e
+  $fFunctorParser1 ::
+    a
+    -> AParser.Parser b
+    -> GHC.Base.String
+    -> GHC.Base.Maybe (a, GHC.Base.String)
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   (eta :: a)
+                   (eta1 :: AParser.Parser b)
+                   (eta2 :: GHC.Base.String) ->
+                 case eta1 `cast` (AParser.N:Parser[0] <b>_R) eta2 of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ (a, GHC.Base.String)
+                   GHC.Base.Just x
+                   -> GHC.Base.Just
+                        @ (a, GHC.Base.String)
+                        (case x of wild1 { (,) x1 y -> (eta, y) }) }) -}
+39ba1a766571f10548a915fe1d97346e
+  $fFunctorParser2 ::
+    (a -> b)
+    -> AParser.Parser a
+    -> GHC.Base.String
+    -> GHC.Base.Maybe (b, GHC.Base.String)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*C1(U)><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   (f :: a -> b)
+                   (p :: AParser.Parser a)
+                   (eta :: GHC.Base.String) ->
+                 case p `cast` (AParser.N:Parser[0] <a>_R) eta of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ (b, GHC.Base.String)
+                   GHC.Base.Just x
+                   -> GHC.Base.Just
+                        @ (b, GHC.Base.String)
+                        (AParser.first @ a @ b @ GHC.Base.String f x) }) -}
+39ba1a766571f10548a915fe1d97346e
+  $fFunctorParser_$c<$ :: a -> AParser.Parser b -> AParser.Parser a
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.$fFunctorParser1
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <a>_R
+                 ->_R <AParser.Parser b>_R
+                 ->_R Sym (AParser.N:Parser[0] <a>_R)) -}
+39ba1a766571f10548a915fe1d97346e
+  $fFunctorParser_$cfmap ::
+    (a -> b) -> AParser.Parser a -> AParser.Parser b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*C1(U)><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.$fFunctorParser2
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <a -> b>_R
+                 ->_R <AParser.Parser a>_R
+                 ->_R Sym (AParser.N:Parser[0] <b>_R)) -}
+c8f698354c48aeaf6a93cf45b91cbd3c
+  $tc'Parser :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17149406380953261679##
+                   8221738805012394125##
+                   AParser.$trModule
+                   AParser.$tc'Parser1) -}
+8765d5f73834f67039f14f533e96208d
+  $tc'Parser1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Parser"#) -}
+dd49805f52b85022c4b516b5b40152cf
+  $tcParser :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1338148245893510606##
+                   10217918190653861874##
+                   AParser.$trModule
+                   AParser.$tcParser1) -}
+29d9a2be479c5acd6779829128389206
+  $tcParser1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Parser"#) -}
+56d22afddb0e58392d707952c6dcf920
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   AParser.$trModule2
+                   AParser.$trModule1) -}
+e5f85f898cb4567bddc9acfb5a34ebb6
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "AParser"#) -}
+b9e6b57dfa801de514bfc17aa29c245b
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw5-0.1.0.0-1fLzu6nyqqO1Ivpu7UzSSs"#) -}
+39ba1a766571f10548a915fe1d97346e
+  newtype Parser a
+    = Parser {runParser :: GHC.Base.String
+                           -> GHC.Base.Maybe (a, GHC.Base.String)}
+12dad97c576a10578837e60e88cb8040
+  abParser :: AParser.Parser (GHC.Types.Char, GHC.Types.Char)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.abParser1
+                  `cast`
+                (Sym (AParser.N:Parser[0] <(GHC.Types.Char, GHC.Types.Char)>_R)) -}
+13cb12d5687f7984542427cd47ef0ebc
+  abParser1 ::
+    GHC.Base.String
+    -> GHC.Base.Maybe
+         ((GHC.Types.Char, GHC.Types.Char), GHC.Base.String)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (eta :: GHC.Base.String) ->
+                 case eta of wild {
+                   []
+                   -> GHC.Base.Nothing
+                        @ ((GHC.Types.Char, GHC.Types.Char), GHC.Base.String)
+                   : x xs
+                   -> case x of wild1 { GHC.Types.C# x1 ->
+                      case x1 of wild2 {
+                        DEFAULT
+                        -> GHC.Base.Nothing
+                             @ ((GHC.Types.Char, GHC.Types.Char), GHC.Base.String)
+                        'a'#
+                        -> case xs of wild3 {
+                             []
+                             -> GHC.Base.Nothing
+                                  @ ((GHC.Types.Char, GHC.Types.Char), GHC.Base.String)
+                             : x2 xs1
+                             -> case x2 of wild4 { GHC.Types.C# x3 ->
+                                case x3 of wild5 {
+                                  DEFAULT
+                                  -> GHC.Base.Nothing
+                                       @ ((GHC.Types.Char, GHC.Types.Char), GHC.Base.String)
+                                  'b'#
+                                  -> GHC.Base.Just
+                                       @ ((GHC.Types.Char, GHC.Types.Char), GHC.Base.String)
+                                       ((wild1, wild4), xs1) } } } } } }) -}
+24a39f9644c60b4f242f0efd5e2da6f1
+  abParser_ :: AParser.Parser ()
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.abParser_1 `cast` (Sym (AParser.N:Parser[0] <()>_R)) -}
+5df141a1fd59be4c6e3a5f9bb337b90b
+  abParser_1 ::
+    GHC.Base.String -> GHC.Base.Maybe ((), GHC.Base.String)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (eta :: GHC.Base.String) ->
+                 case eta of wild {
+                   [] -> GHC.Base.Nothing @ ((), GHC.Base.String)
+                   : x xs
+                   -> case x of wild1 { GHC.Types.C# x1 ->
+                      case x1 of wild2 {
+                        DEFAULT -> GHC.Base.Nothing @ ((), GHC.Base.String)
+                        'a'#
+                        -> case xs of wild3 {
+                             [] -> GHC.Base.Nothing @ ((), GHC.Base.String)
+                             : x2 xs1
+                             -> case x2 of wild4 { GHC.Types.C# x3 ->
+                                case x3 of wild5 {
+                                  DEFAULT -> GHC.Base.Nothing @ ((), GHC.Base.String)
+                                  'b'#
+                                  -> GHC.Base.Just
+                                       @ ((), GHC.Base.String)
+                                       (GHC.Tuple.(), xs1) } } } } } }) -}
+37e30ecf580ac78a8159311a1a7eb1a8
+  char :: GHC.Types.Char -> AParser.Parser GHC.Types.Char
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.char1
+                  `cast`
+                (<GHC.Types.Char>_R
+                 ->_R Sym (AParser.N:Parser[0] <GHC.Types.Char>_R)) -}
+421dff9a67dfb838e2729a623c6d2142
+  char1 ::
+    GHC.Types.Char
+    -> GHC.Base.String
+    -> GHC.Base.Maybe (GHC.Types.Char, GHC.Base.String)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (c :: GHC.Types.Char) (eta :: GHC.Base.String) ->
+                 case eta of wild {
+                   [] -> GHC.Base.Nothing @ (GHC.Types.Char, [GHC.Types.Char])
+                   : x xs
+                   -> case x of wild1 { GHC.Types.C# x1 ->
+                      case c of wild2 { GHC.Types.C# y ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.eqChar# x1 y) of wild3 {
+                        GHC.Types.False
+                        -> GHC.Base.Nothing @ (GHC.Types.Char, [GHC.Types.Char])
+                        GHC.Types.True
+                        -> GHC.Base.Just
+                             @ (GHC.Types.Char, [GHC.Types.Char])
+                             (wild1, xs) } } } }) -}
+59ffd33dd72e12335025d226c0fbbd80
+  charUppercase :: AParser.Parser GHC.Types.Char
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.charUppercase1
+                  `cast`
+                (Sym (AParser.N:Parser[0] <GHC.Types.Char>_R)) -}
+8d78677ab3d843f694e4a77d9ee4e001
+  charUppercase1 ::
+    [GHC.Types.Char]
+    -> GHC.Base.Maybe (GHC.Types.Char, [GHC.Types.Char])
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: [GHC.Types.Char]) ->
+                 case ds of wild {
+                   [] -> GHC.Base.Nothing @ (GHC.Types.Char, [GHC.Types.Char])
+                   : x xs
+                   -> case x of wild1 { GHC.Types.C# c# ->
+                      case {__pkg_ccall base-4.9.0.0 u_iswupper GHC.Prim.Int#
+                                                                -> GHC.Prim.State#
+                                                                     GHC.Prim.RealWorld
+                                                                -> (# GHC.Prim.State#
+                                                                        GHC.Prim.RealWorld,
+                                                                      GHC.Prim.Int# #)}
+                             (GHC.Prim.ord# c#)
+                             GHC.Prim.realWorld# of wild2 { (#,#) ds1 ds2 ->
+                      case ds2 of wild3 {
+                        DEFAULT
+                        -> GHC.Base.Just @ (GHC.Types.Char, [GHC.Types.Char]) (wild1, xs)
+                        0#
+                        -> GHC.Base.Nothing
+                             @ (GHC.Types.Char, [GHC.Types.Char]) } } } }) -}
+230c8e2fda0441fff6398ff053b86e65
+  charUppercaseParser :: AParser.Parser ()
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.charUppercaseParser1
+                  `cast`
+                (Sym (AParser.N:Parser[0] <()>_R)) -}
+c00c1f7dd93e02a98506bfb42167eca3
+  charUppercaseParser1 ::
+    GHC.Base.String -> GHC.Base.Maybe ((), GHC.Base.String)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (eta :: GHC.Base.String) ->
+                 case eta of wild {
+                   [] -> GHC.Base.Nothing @ ((), GHC.Base.String)
+                   : x xs
+                   -> case x of wild1 { GHC.Types.C# c# ->
+                      case {__pkg_ccall base-4.9.0.0 u_iswupper GHC.Prim.Int#
+                                                                -> GHC.Prim.State#
+                                                                     GHC.Prim.RealWorld
+                                                                -> (# GHC.Prim.State#
+                                                                        GHC.Prim.RealWorld,
+                                                                      GHC.Prim.Int# #)}
+                             (GHC.Prim.ord# c#)
+                             GHC.Prim.realWorld# of wild2 { (#,#) ds ds1 ->
+                      case ds1 of wild3 {
+                        DEFAULT -> GHC.Base.Just @ ((), GHC.Base.String) (GHC.Tuple.(), xs)
+                        0# -> GHC.Base.Nothing @ ((), GHC.Base.String) } } } }) -}
+092013ceb45d70fc2f207335c153a912
+  first :: (a -> b) -> (a, c) -> (b, c)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U(U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ b @ c (f :: a -> b) (ds :: (a, c)) ->
+                 case ds of wild { (,) x y -> (f x, y) }) -}
+41019438eb9a23af318a801cdeae3e54
+  intOrUppercase :: AParser.Parser ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.intOrUppercase1
+                  `cast`
+                (Sym (AParser.N:Parser[0] <()>_R)) -}
+32bd69135f51c45d956e69057937bc9d
+  intOrUppercase1 ::
+    GHC.Base.String -> GHC.Base.Maybe ((), GHC.Base.String)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta :: GHC.Base.String) ->
+                 case AParser.intOrUppercase2 eta of wild {
+                   GHC.Base.Nothing
+                   -> case eta of wild1 {
+                        [] -> GHC.Base.Nothing @ ((), GHC.Base.String)
+                        : x xs
+                        -> case x of wild2 { GHC.Types.C# c# ->
+                           case {__pkg_ccall base-4.9.0.0 u_iswupper GHC.Prim.Int#
+                                                                     -> GHC.Prim.State#
+                                                                          GHC.Prim.RealWorld
+                                                                     -> (# GHC.Prim.State#
+                                                                             GHC.Prim.RealWorld,
+                                                                           GHC.Prim.Int# #)}
+                                  (GHC.Prim.ord# c#)
+                                  GHC.Prim.realWorld# of wild3 { (#,#) ds ds1 ->
+                           case ds1 of wild4 {
+                             DEFAULT -> GHC.Base.Just @ ((), GHC.Base.String) (GHC.Tuple.(), xs)
+                             0# -> GHC.Base.Nothing @ ((), GHC.Base.String) } } } }
+                   GHC.Base.Just x
+                   -> GHC.Base.Just
+                        @ ((), GHC.Base.String)
+                        (case x of wild1 { (,) x1 y -> (GHC.Tuple.(), y) }) }) -}
+7286eb4decb40e9b75d3d8c2f4ded272
+  intOrUppercase2 ::
+    [GHC.Types.Char]
+    -> GHC.Base.Maybe (GHC.Integer.Type.Integer, [GHC.Types.Char])
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (xs :: [GHC.Types.Char]) ->
+                 case GHC.List.$wspan
+                        @ GHC.Types.Char
+                        GHC.Unicode.isDigit
+                        xs of ww { (#,#) ww1 ww2 ->
+                 case ww1 of wild {
+                   []
+                   -> GHC.Base.Nothing @ (GHC.Integer.Type.Integer, [GHC.Types.Char])
+                   : ds1 ds2
+                   -> GHC.Base.Just
+                        @ (GHC.Integer.Type.Integer, [GHC.Types.Char])
+                        (case Text.Read.readEither6
+                                @ GHC.Integer.Type.Integer
+                                (Text.ParserCombinators.ReadP.run
+                                   @ GHC.Integer.Type.Integer
+                                   AParser.intOrUppercase5
+                                   wild) of wild1 {
+                           [] -> AParser.intOrUppercase4
+                           : x ds
+                           -> case ds of wild2 {
+                                [] -> x : ipv ipv1 -> AParser.intOrUppercase3 } },
+                         ww2) } }) -}
+574b675a0f0c5c99972a0b384e78df61
+  intOrUppercase3 :: GHC.Integer.Type.Integer
+  {- Strictness: x -}
+bcde8b77fb7a0409bc2e71801378bf7f
+  intOrUppercase4 :: GHC.Integer.Type.Integer
+  {- Strictness: x -}
+db213028e7024b955d620ccbea84f840
+  intOrUppercase5 ::
+    Text.ParserCombinators.ReadP.P GHC.Integer.Type.Integer
+  {- Unfolding: ((GHC.Read.$fReadInteger3
+                    GHC.Read.$fReadInteger_$sconvertInt
+                    Text.ParserCombinators.ReadPrec.minPrec)
+                   `cast`
+                 (Text.ParserCombinators.ReadP.N:ReadP[0]
+                      <GHC.Integer.Type.Integer>_R)
+                   @ GHC.Integer.Type.Integer
+                   (Text.Read.readEither5 @ GHC.Integer.Type.Integer)) -}
+690a89e3bd3348529f1020555152a252
+  intPair :: AParser.Parser [GHC.Integer.Type.Integer]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.intPair1
+                  `cast`
+                (Sym (AParser.N:Parser[0] <[GHC.Integer.Type.Integer]>_R)) -}
+0d6bfaf00c1241f86be2ccfa2936695e
+  intPair1 ::
+    GHC.Base.String
+    -> GHC.Base.Maybe ([GHC.Integer.Type.Integer], GHC.Base.String)
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (eta :: GHC.Base.String) ->
+                 case AParser.intOrUppercase2 eta of wild {
+                   GHC.Base.Nothing
+                   -> GHC.Base.Nothing @ ([GHC.Integer.Type.Integer], GHC.Base.String)
+                   GHC.Base.Just x
+                   -> case x of wild1 { (,) x1 y ->
+                      case y of wild2 {
+                        []
+                        -> GHC.Base.Nothing @ ([GHC.Integer.Type.Integer], GHC.Base.String)
+                        : x2 xs
+                        -> case x2 of wild3 { GHC.Types.C# x3 ->
+                           case x3 of wild4 {
+                             DEFAULT
+                             -> GHC.Base.Nothing @ ([GHC.Integer.Type.Integer], GHC.Base.String)
+                             ' '#
+                             -> case AParser.intOrUppercase2 xs of wild5 {
+                                  GHC.Base.Nothing
+                                  -> GHC.Base.Nothing
+                                       @ ([GHC.Integer.Type.Integer], GHC.Base.String)
+                                  GHC.Base.Just x4
+                                  -> GHC.Base.Just
+                                       @ ([GHC.Integer.Type.Integer], GHC.Base.String)
+                                       (case x4 of wild6 { (,) x5 y1 ->
+                                        (GHC.Types.:
+                                           @ GHC.Integer.Type.Integer
+                                           x1
+                                           (GHC.Types.:
+                                              @ GHC.Integer.Type.Integer
+                                              x5
+                                              (GHC.Types.[] @ GHC.Integer.Type.Integer)),
+                                         y1) }) } } } } } }) -}
+0644967a7437c4fa9ef08bc0786ce590
+  intParser :: AParser.Parser ()
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.intParser1 `cast` (Sym (AParser.N:Parser[0] <()>_R)) -}
+e4f1a7f3365a6439bc4679a7012ef724
+  intParser1 ::
+    GHC.Base.String -> GHC.Base.Maybe ((), GHC.Base.String)
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: GHC.Base.String) ->
+                 case AParser.intOrUppercase2 eta of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ ((), GHC.Base.String)
+                   GHC.Base.Just x
+                   -> GHC.Base.Just
+                        @ ((), GHC.Base.String)
+                        (case x of wild1 { (,) x1 y -> (GHC.Tuple.(), y) }) }) -}
+900f045dab47e24b52cd65fb21cb9ad5
+  posInt :: AParser.Parser GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.intOrUppercase2
+                  `cast`
+                (Sym (AParser.N:Parser[0] <GHC.Integer.Type.Integer>_R)) -}
+e3ed4fd5e5417c951a56f39a62dea126
+  runParser ::
+    AParser.Parser a
+    -> GHC.Base.String -> GHC.Base.Maybe (a, GHC.Base.String)
+  RecSel Left AParser.Parser
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.runParser1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <AParser.Parser a>_R ->_R AParser.N:Parser[0] <a>_R) -}
+dd3b17df44919d51a8663defd38db480
+  runParser1 :: AParser.Parser a -> AParser.Parser a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a (ds :: AParser.Parser a) -> ds) -}
+47ba0a02b931005ad14abaab2d367d5d
+  satisfy ::
+    (GHC.Types.Char -> GHC.Types.Bool) -> AParser.Parser GHC.Types.Char
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                AParser.satisfy1
+                  `cast`
+                (<GHC.Types.Char -> GHC.Types.Bool>_R
+                 ->_R Sym (AParser.N:Parser[0] <GHC.Types.Char>_R)) -}
+b0c07f2e9fc90055d23c18b434779024
+  satisfy1 ::
+    (GHC.Types.Char -> GHC.Types.Bool)
+    -> [GHC.Types.Char]
+    -> GHC.Base.Maybe (GHC.Types.Char, [GHC.Types.Char])
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (p :: GHC.Types.Char -> GHC.Types.Bool)
+                   (ds :: [GHC.Types.Char]) ->
+                 case ds of wild {
+                   [] -> GHC.Base.Nothing @ (GHC.Types.Char, [GHC.Types.Char])
+                   : x xs
+                   -> case p x of wild1 {
+                        GHC.Types.False
+                        -> GHC.Base.Nothing @ (GHC.Types.Char, [GHC.Types.Char])
+                        GHC.Types.True
+                        -> GHC.Base.Just
+                             @ (GHC.Types.Char, [GHC.Types.Char])
+                             (x, xs) } }) -}
+instance [safe] GHC.Base.Alternative [AParser.Parser]
+  = AParser.$fAlternativeParser
+instance [safe] GHC.Base.Applicative [AParser.Parser]
+  = AParser.$fApplicativeParser
+instance [safe] GHC.Base.Functor [AParser.Parser]
+  = AParser.$fFunctorParser
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

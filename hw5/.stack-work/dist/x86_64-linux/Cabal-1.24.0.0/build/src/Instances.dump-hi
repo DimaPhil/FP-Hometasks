@@ -1,0 +1,2149 @@
+
+==================== FINAL INTERFACE ====================
+2016-10-31 14:05:27.401602 UTC
+
+interface hw5-0.1.0.0-1fLzu6nyqqO1Ivpu7UzSSs:Instances [orphan module] 8001
+  interface hash: 7a5addb4698b9854415b016361bd1440
+  ABI hash: da9fdff7b2420fbed751354567a89f5f
+  export-list hash: 630453f7159b6bb0cd59df799b95c5b0
+  orphan hash: 9abb488fc7237a0131be549cb4903026
+  flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Instances.Const{Instances.Const getConst}
+  Instances.Either{Instances.Left Instances.Right}
+  Instances.Identity{Instances.Identity runIdentity}
+  Instances.Pair{Instances.Pair}
+module dependencies: Tree
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:Data.Traversable 7ce5b7ee67475ac3d03ae825b86efd9f
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  Tree 89928dbbb50b1b7825a3c3b4a0be5b4d
+  exports: 2fe1054cb729d7d9cdd5f95280902473
+  Leaf 17be9e0a2b448ff76f53636a698e4eaf
+  Node d4cc66e1c436a8798f5d2c44454be170
+  Tree fd2a0f04a6467aa17cad224ddf96f785
+2e07086db4bebf913358f43d2adde5a2
+  $fApplicativeConst ::
+    GHC.Base.Monoid m => GHC.Base.Applicative (Instances.Const m)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(U,C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ m ($dMonoid :: GHC.Base.Monoid m).
+                  @ (Instances.Const m)
+                  (Instances.$fApplicativeConst_$cp1Applicative @ m $dMonoid)
+                  (Instances.$fApplicativeConst_$cpure @ m $dMonoid)
+                  (Instances.$fApplicativeConst_$c<*> @ m $dMonoid)
+                  (Instances.$fApplicativeConst_$c*> @ m $dMonoid)
+                  (Instances.$fApplicativeConst_$c<* @ m $dMonoid) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fApplicativeConst1 ::
+    GHC.Base.Monoid m =>
+    forall a b. Instances.Const m a -> Instances.Const m b -> m
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))L),1*U(A,1*C1(C1(U)),A)><L,U><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ m
+                   ($dMonoid :: GHC.Base.Monoid m)
+                   @ a
+                   @ b
+                   (eta :: Instances.Const m a)
+                   (eta1 :: Instances.Const m b) ->
+                 GHC.Base.mappend
+                   @ m
+                   $dMonoid
+                   eta `cast` (Instances.N:Const[0] <m>_R <a>_P)
+                   eta1 `cast` (Instances.N:Const[0] <m>_R <b>_P)) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fApplicativeConst2 ::
+    GHC.Base.Monoid m =>
+    forall a b. Instances.Const m (a -> b) -> Instances.Const m a -> m
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))L),1*U(A,1*C1(C1(U)),A)><L,U><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ m
+                   ($dMonoid :: GHC.Base.Monoid m)
+                   @ a
+                   @ b
+                   (ds :: Instances.Const m (a -> b))
+                   (ds1 :: Instances.Const m a) ->
+                 GHC.Base.mappend
+                   @ m
+                   $dMonoid
+                   ds `cast` (Instances.N:Const[0] <m>_R <a -> b>_P)
+                   ds1 `cast` (Instances.N:Const[0] <m>_R <a>_P)) -}
+071556545cd8d2a5282ecb30437fb56b
+  $fApplicativeConst3 :: GHC.Base.Monoid m => forall a. a -> m
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ m ($dMonoid :: GHC.Base.Monoid m) @ a (ds :: a) ->
+                 GHC.Base.mempty @ m $dMonoid) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fApplicativeConst_$c*> ::
+    GHC.Base.Monoid m =>
+    forall a b.
+    Instances.Const m a -> Instances.Const m b -> Instances.Const m b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))L),1*U(A,1*C1(C1(U)),A)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fApplicativeConst1
+                  `cast`
+                (forall (m :: <*>_N).
+                 <GHC.Base.Monoid m>_R
+                 ->_R forall (a :: <*>_N) (b :: <*>_N).
+                      <Instances.Const m a>_R
+                      ->_R <Instances.Const m b>_R
+                      ->_R Sym (Instances.N:Const[0] <m>_R <b>_P)) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fApplicativeConst_$c<* ::
+    GHC.Base.Monoid m =>
+    forall a b.
+    Instances.Const m a -> Instances.Const m b -> Instances.Const m a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))L),1*U(A,1*C1(C1(U)),A)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fApplicativeConst1
+                  `cast`
+                (forall (m :: <*>_N).
+                 <GHC.Base.Monoid m>_R
+                 ->_R forall (a :: <*>_N) (b :: <*>_N).
+                      <Instances.Const m a>_R
+                      ->_R <Instances.Const m b>_R
+                      ->_R Sym (Instances.N:Const[0] <m>_R <a>_P)) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fApplicativeConst_$c<*> ::
+    GHC.Base.Monoid m =>
+    forall a b.
+    Instances.Const m (a -> b)
+    -> Instances.Const m a -> Instances.Const m b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))L),1*U(A,1*C1(C1(U)),A)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fApplicativeConst2
+                  `cast`
+                (forall (m :: <*>_N).
+                 <GHC.Base.Monoid m>_R
+                 ->_R forall (a :: <*>_N) (b :: <*>_N).
+                      <Instances.Const m (a -> b)>_R
+                      ->_R <Instances.Const m a>_R
+                      ->_R Sym (Instances.N:Const[0] <m>_R <b>_P)) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fApplicativeConst_$cp1Applicative ::
+    GHC.Base.Monoid m => GHC.Base.Functor (Instances.Const m)
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ m ($dMonoid :: GHC.Base.Monoid m) ->
+                 Instances.$fFunctorConst @ m) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fApplicativeConst_$cpure ::
+    GHC.Base.Monoid m => forall a. a -> Instances.Const m a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)><L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fApplicativeConst3
+                  `cast`
+                (forall (m :: <*>_N).
+                 <GHC.Base.Monoid m>_R
+                 ->_R forall (a :: <*>_N).
+                      <a>_R ->_R Sym (Instances.N:Const[0] <m>_R <a>_P)) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fApplicativeEither :: GHC.Base.Applicative (Instances.Either a)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (Instances.Either a)
+                  (Instances.$fFunctorEither @ a)
+                  (Instances.Right @ a)
+                  (Instances.$fApplicativeEither_$c<*> @ a)
+                  (Instances.$fApplicativeEither_$c*> @ a)
+                  (Instances.$fApplicativeEither_$c<* @ a) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fApplicativeEither_$c*> ::
+    Instances.Either a a1
+    -> Instances.Either a b -> Instances.Either a b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ a1
+                   @ b
+                   (eta :: Instances.Either a a1)
+                   (eta1 :: Instances.Either a b) ->
+                 case eta of wild {
+                   Instances.Left v -> Instances.Left @ a @ b v
+                   Instances.Right v -> eta1 }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fApplicativeEither_$c<* ::
+    Instances.Either a a1
+    -> Instances.Either a b -> Instances.Either a a1
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ a1
+                   @ b
+                   (eta :: Instances.Either a a1)
+                   (eta1 :: Instances.Either a b) ->
+                 case eta of wild {
+                   Instances.Left v -> Instances.Left @ a @ a1 v
+                   Instances.Right v
+                   -> case eta1 of wild1 {
+                        Instances.Left v1 -> Instances.Left @ a @ a1 v1
+                        Instances.Right v1 -> Instances.Right @ a @ a1 v } }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fApplicativeEither_$c<*> ::
+    Instances.Either a (a1 -> b)
+    -> Instances.Either a a1 -> Instances.Either a b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ a1
+                   @ b
+                   (ds :: Instances.Either a (a1 -> b))
+                   (ds1 :: Instances.Either a a1) ->
+                 case ds of wild {
+                   Instances.Left f -> Instances.Left @ a @ b f
+                   Instances.Right f
+                   -> Instances.$fApplicativeEither_$cfmap @ a @ a1 @ b f ds1 }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fApplicativeEither_$cfmap ::
+    (a1 -> b) -> Instances.Either a a1 -> Instances.Either a b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 @ b (f :: a1 -> b) (ds :: Instances.Either a a1) ->
+                 case ds of wild {
+                   Instances.Left v -> Instances.Left @ a @ b v
+                   Instances.Right v -> Instances.Right @ a @ b (f v) }) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fApplicativeIdentity :: GHC.Base.Applicative Instances.Identity
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Instances.Identity
+                  Instances.$fFunctorIdentity
+                  Instances.$fApplicativeIdentity_$cpure
+                  Instances.$fApplicativeIdentity_$c<*>
+                  Instances.$fApplicativeIdentity_$c*>
+                  Instances.$fApplicativeIdentity_$c<* -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fApplicativeIdentity1 ::
+    Instances.Identity a
+    -> Instances.Identity b -> Instances.Identity b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a
+                   @ b
+                   (eta :: Instances.Identity a)
+                   (eta1 :: Instances.Identity b) ->
+                 eta1) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fApplicativeIdentity2 :: (a -> b) -> Instances.Identity a -> b
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a @ b (f :: a -> b) (m :: Instances.Identity a) ->
+                 f m `cast` (Instances.N:Identity[0] <a>_R)) -}
+da5de33640f2ee983017d80bc37c1951
+  $fApplicativeIdentity3 :: a -> a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True) (\ @ a (tpl :: a) -> tpl) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fApplicativeIdentity_$c*> ::
+    Instances.Identity a
+    -> Instances.Identity b -> Instances.Identity b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fApplicativeIdentity1 -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fApplicativeIdentity_$c<* ::
+    Instances.Identity a
+    -> Instances.Identity b -> Instances.Identity a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a
+                   @ b
+                   (eta :: Instances.Identity a)
+                   (eta1 :: Instances.Identity b) ->
+                 eta) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fApplicativeIdentity_$c<*> ::
+    Instances.Identity (a -> b)
+    -> Instances.Identity a -> Instances.Identity b
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fApplicativeIdentity2
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 Sym (Instances.N:Identity[0] <a -> b>_R)
+                 ->_R <Instances.Identity a>_R
+                 ->_R Sym (Instances.N:Identity[0] <b>_R)) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fApplicativeIdentity_$cpure :: a -> Instances.Identity a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fApplicativeIdentity3
+                  `cast`
+                (forall (a :: <*>_N).
+                 <a>_R ->_R Sym (Instances.N:Identity[0] <a>_R)) -}
+adcf78c2091b0801238718732c4c60e2
+  $fApplicativePair ::
+    GHC.Base.Monoid a => GHC.Base.Applicative (Instances.Pair a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(U,C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dMonoid :: GHC.Base.Monoid a).
+                  @ (Instances.Pair a)
+                  (Instances.$fApplicativePair_$cp1Applicative @ a $dMonoid)
+                  (Instances.$fApplicativePair_$cpure @ a $dMonoid)
+                  (Instances.$fApplicativePair_$c<*> @ a $dMonoid)
+                  (Instances.$fApplicativePair_$c*> @ a $dMonoid)
+                  (Instances.$fApplicativePair_$c<* @ a $dMonoid) -}
+adcf78c2091b0801238718732c4c60e2
+  $fApplicativePair_$c*> ::
+    GHC.Base.Monoid a =>
+    forall a1 b.
+    Instances.Pair a a1 -> Instances.Pair a b -> Instances.Pair a b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(A,1*C1(C1(U)),A)><S,1*U(U,A)><S,1*U(U,U)>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dMonoid :: GHC.Base.Monoid a)
+                   @ a1
+                   @ b
+                   (eta :: Instances.Pair a a1)
+                   (eta1 :: Instances.Pair a b) ->
+                 case eta of wild { Instances.Pair x y ->
+                 case eta1 of wild1 { Instances.Pair y1 z ->
+                 Instances.Pair
+                   @ a
+                   @ b
+                   (GHC.Base.mappend @ a $dMonoid x y1)
+                   z } }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fApplicativePair_$c<* ::
+    GHC.Base.Monoid a =>
+    forall a1 b.
+    Instances.Pair a a1 -> Instances.Pair a b -> Instances.Pair a a1
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(A,1*C1(C1(U)),A)><S,1*U(U,U)><S,1*U(U,A)>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dMonoid :: GHC.Base.Monoid a)
+                   @ a1
+                   @ b
+                   (eta :: Instances.Pair a a1)
+                   (eta1 :: Instances.Pair a b) ->
+                 case eta of wild { Instances.Pair x y ->
+                 case eta1 of wild1 { Instances.Pair y1 z ->
+                 Instances.Pair
+                   @ a
+                   @ a1
+                   (GHC.Base.mappend @ a $dMonoid x y1)
+                   y } }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fApplicativePair_$c<*> ::
+    GHC.Base.Monoid a =>
+    forall a1 b.
+    Instances.Pair a (a1 -> b)
+    -> Instances.Pair a a1 -> Instances.Pair a b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(A,1*C1(C1(U)),A)><S,1*U(U,1*C1(U))><S,1*U(U,U)>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dMonoid :: GHC.Base.Monoid a)
+                   @ a1
+                   @ b
+                   (ds :: Instances.Pair a (a1 -> b))
+                   (ds1 :: Instances.Pair a a1) ->
+                 case ds of wild { Instances.Pair x f ->
+                 case ds1 of wild1 { Instances.Pair y z ->
+                 Instances.Pair
+                   @ a
+                   @ b
+                   (GHC.Base.mappend @ a $dMonoid x y)
+                   (f z) } }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fApplicativePair_$cp1Applicative ::
+    GHC.Base.Monoid a => GHC.Base.Functor (Instances.Pair a)
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a ($dMonoid :: GHC.Base.Monoid a) ->
+                 Instances.$fFunctorPair @ a) -}
+adcf78c2091b0801238718732c4c60e2
+  $fApplicativePair_$cpure ::
+    GHC.Base.Monoid a => forall a1. a1 -> Instances.Pair a a1
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(1*U,A,A)><L,U>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dMonoid :: GHC.Base.Monoid a) @ a1 (eta :: a1) ->
+                 Instances.Pair @ a @ a1 (GHC.Base.mempty @ a $dMonoid) eta) -}
+3f920ddb26b9a9387395ec9e25f4e007
+  $fApplicativeTree :: GHC.Base.Applicative Tree.Tree
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Tree.Tree
+                  Instances.$fFunctorTree
+                  Instances.$fApplicativeTree_$cpure
+                  Instances.$fApplicativeTree_$c<*>
+                  Instances.$fApplicativeTree_$c*>
+                  Instances.$fApplicativeTree_$c<* -}
+2804fb87acb8b74549c42c7155f0826d
+  $fApplicativeTree1 :: a -> b -> b
+  {- Arity: 2, HasNoCafRefs,
+     Unfolding: (\ @ b @ a (ds :: a) (eta :: b) -> eta) -}
+c688c16a5be55013870582d61d2747b4
+  $fApplicativeTree_$c*> :: Tree.Tree a -> Tree.Tree b -> Tree.Tree b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: (\ @ a @ b (eta :: Tree.Tree a) (eta1 :: Tree.Tree b) ->
+                 case Instances.$fApplicativeTree_$cfmap
+                        @ a
+                        @ (b -> b)
+                        (Instances.$fApplicativeTree1 @ b @ a)
+                        eta of wild {
+                   Tree.Leaf -> Tree.Leaf @ b
+                   Tree.Node f ds ds1
+                   -> Instances.$fApplicativeTree_$cfmap @ b @ b f eta1 }) -}
+7c69a686c3f82e4172893b94339ebd04
+  $fApplicativeTree_$c<* :: Tree.Tree a -> Tree.Tree b -> Tree.Tree a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ b (eta :: Tree.Tree a) (eta1 :: Tree.Tree b) ->
+                 case Instances.$fApplicativeTree_$cfmap
+                        @ a
+                        @ (b -> a)
+                        (GHC.Base.const @ a @ b)
+                        eta of wild {
+                   Tree.Leaf -> Tree.Leaf @ a
+                   Tree.Node f ds ds1
+                   -> Instances.$fApplicativeTree_$cfmap @ b @ a f eta1 }) -}
+e3c2a733758328cb4711a6c0ca62f68c
+  $fApplicativeTree_$c<*> ::
+    Tree.Tree (a -> b) -> Tree.Tree a -> Tree.Tree b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ b (ds :: Tree.Tree (a -> b)) (ds1 :: Tree.Tree a) ->
+                 case ds of wild {
+                   Tree.Leaf -> Tree.Leaf @ b
+                   Tree.Node f ds2 ds3
+                   -> Instances.$fApplicativeTree_$cfmap @ a @ b f ds1 }) -}
+88be14109aa85443ca164deb8f07e569
+  $fApplicativeTree_$cfmap :: (a -> b) -> Tree.Tree a -> Tree.Tree b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U> -}
+1a2d891fbe3b04ce720f2d52ea8a0cb1
+  $fApplicativeTree_$cpure :: a -> Tree.Tree a
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (x :: a) ->
+                 Tree.Node @ a x (Tree.Leaf @ a) (Tree.Leaf @ a)) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst :: Data.Foldable.Foldable (Instances.Const m)
+  DFunId
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ m.
+                  @ (Instances.Const m)
+                  (Instances.$fFoldableConst_$cfold @ m)
+                  (Instances.$fFoldableConst_$cfoldMap @ m)
+                  (Instances.$fFoldableConst_$cfoldr @ m)
+                  (Instances.$fFoldableConst_$cfoldr @ m)
+                  (Instances.$fFoldableConst_$cfoldl' @ m)
+                  (Instances.$fFoldableConst_$cfoldl' @ m)
+                  (Instances.$fFoldableConst_$cfoldr1 @ m)
+                  (Instances.$fFoldableConst_$cfoldl1 @ m)
+                  (Instances.$fFoldableConst_$ctoList @ m)
+                  (Instances.$fFoldableConst_$cnull @ m)
+                  (Instances.$fFoldableConst_$clength @ m)
+                  (Instances.$fFoldableConst_$celem @ m)
+                  (Instances.$fFoldableConst_$cmaximum @ m)
+                  (Instances.$fFoldableConst_$cminimum @ m)
+                  (Instances.$fFoldableConst_$csum @ m)
+                  (Instances.$fFoldableConst_$cproduct @ m) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst1 :: GHC.Num.Num a => Instances.Const m a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLLLLC(S)),1*U(A,A,A,A,A,A,1*C1(U))><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ m @ a ($dNum :: GHC.Num.Num a) (eta :: Instances.Const m a) ->
+                 Data.Monoid.$fMonoidProduct2 @ a $dNum) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst2 :: GHC.Num.Num a => Instances.Const m a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLLLLC(S)),1*U(A,A,A,A,A,A,1*C1(U))><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ m @ a ($dNum :: GHC.Num.Num a) (eta :: Instances.Const m a) ->
+                 Data.Monoid.$fMonoidSum2 @ a $dNum) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$celem ::
+    GHC.Classes.Eq a => a -> Instances.Const m a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A><L,A>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ m
+                   @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (eta :: a)
+                   (eta1 :: Instances.Const m a) ->
+                 GHC.Types.False) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$cfold ::
+    GHC.Base.Monoid m1 => Instances.Const m m1 -> m1
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ m
+                   @ m1
+                   ($dMonoid :: GHC.Base.Monoid m1)
+                   (eta :: Instances.Const m m1) ->
+                 GHC.Base.mempty @ m1 $dMonoid) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$cfoldMap ::
+    GHC.Base.Monoid m1 => (a -> m1) -> Instances.Const m a -> m1
+  {- Arity: 2, Strictness: <L,U(1*U,1*U,A)><L,C(U)>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ m
+                   @ m1
+                   @ a
+                   ($dMonoid :: GHC.Base.Monoid m1)
+                   (f :: a -> m1)
+                   (eta :: Instances.Const m a) ->
+                 Instances.$fFoldableConst_$cfoldr
+                   @ m
+                   @ a
+                   @ m1
+                   (let {
+                      f1 :: m1 -> m1 -> m1 = GHC.Base.mappend @ m1 $dMonoid
+                    } in
+                    \ (x :: a) -> f1 (f x))
+                   (GHC.Base.mempty @ m1 $dMonoid)
+                   eta) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$cfoldl' ::
+    (b -> a -> b) -> b -> Instances.Const m a -> b
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><S,1*U><L,A>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ m
+                   @ b
+                   @ a
+                   (f :: b -> a -> b)
+                   (z0 :: b)
+                   (xs :: Instances.Const m a) ->
+                 z0) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$cfoldl1 ::
+    (a -> a -> a) -> Instances.Const m a -> a
+  {- Arity: 2, Strictness: <B,A><B,A>x, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ m @ a (w :: a -> a -> a) (w1 :: Instances.Const m a) ->
+                 Instances.$w$cfoldl1 @ m @ a GHC.Prim.void#) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$cfoldr ::
+    (a -> b -> b) -> b -> Instances.Const m a -> b
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><S,1*U><L,A>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ m
+                   @ a
+                   @ b
+                   (ds :: a -> b -> b)
+                   (identity :: b)
+                   (ds1 :: Instances.Const m a) ->
+                 identity) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$cfoldr1 ::
+    (a -> a -> a) -> Instances.Const m a -> a
+  {- Arity: 2, Strictness: <B,A><B,A>x, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ m @ a (w :: a -> a -> a) (w1 :: Instances.Const m a) ->
+                 Instances.$w$cfoldr1 @ m @ a GHC.Prim.void#) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$clength :: Instances.Const m a -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ m @ a (xs :: Instances.Const m a) ->
+                 Instances.$fFoldableConst_z0) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$cmaximum ::
+    GHC.Classes.Ord a => Instances.Const m a -> a
+  {- Arity: 2, Strictness: <B,A><B,A>x, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ m @ a (w :: GHC.Classes.Ord a) (w1 :: Instances.Const m a) ->
+                 Instances.$w$cmaximum @ m @ a GHC.Prim.void#) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$cminimum ::
+    GHC.Classes.Ord a => Instances.Const m a -> a
+  {- Arity: 2, Strictness: <B,A><B,A>x, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ m @ a (w :: GHC.Classes.Ord a) (w1 :: Instances.Const m a) ->
+                 Instances.$w$cminimum @ m @ a GHC.Prim.void#) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$cnull :: Instances.Const m a -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ m @ a (ds :: Instances.Const m a) -> GHC.Types.True) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$cproduct ::
+    GHC.Num.Num a => Instances.Const m a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLLLLC(S)),1*U(A,A,A,A,A,A,1*C1(U))><L,A>,
+     Unfolding: InlineRule (0, True, True) Instances.$fFoldableConst1 -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$csum :: GHC.Num.Num a => Instances.Const m a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLLLLC(S)),1*U(A,A,A,A,A,A,1*C1(U))><L,A>,
+     Unfolding: InlineRule (0, True, True) Instances.$fFoldableConst2 -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFoldableConst_$ctoList :: Instances.Const m a -> [a]
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ m @ a (t1 :: Instances.Const m a) ->
+                 GHC.Base.build
+                   @ a
+                   (\ @ b (c :: a -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                    Instances.$fFoldableConst_$cfoldr @ m @ a @ b c n t1)) -}
+b9167409ab87999d659da403a0f375d5
+  $fFoldableConst_z0 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither :: Data.Foldable.Foldable (Instances.Either a)
+  DFunId
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (Instances.Either a)
+                  (Instances.$fFoldableEither_$cfold @ a)
+                  (Instances.$fFoldableEither_$cfoldMap @ a)
+                  (Instances.$fFoldableEither_$cfoldr @ a)
+                  (Instances.$fFoldableEither_$cfoldr @ a)
+                  (Instances.$fFoldableEither_$cfoldl' @ a)
+                  (Instances.$fFoldableEither_$cfoldl' @ a)
+                  (Instances.$fFoldableEither_$cfoldr1 @ a)
+                  (Instances.$fFoldableEither_$cfoldl1 @ a)
+                  (Instances.$fFoldableEither_$ctoList @ a)
+                  (Instances.$fFoldableEither_$cnull @ a)
+                  (Instances.$fFoldableEither_$clength @ a)
+                  (Instances.$fFoldableEither_$celem @ a)
+                  (Instances.$fFoldableEither_$cmaximum @ a)
+                  (Instances.$fFoldableEither_$cminimum @ a)
+                  (Instances.$fFoldableEither_$csum @ a)
+                  (Instances.$fFoldableEither_$cproduct @ a) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither1 ::
+    GHC.Num.Num a1 => Instances.Either a a1 -> Data.Monoid.Product a1
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,U(A,A,1*C1(C1(U)),A,A,A,1*C1(U))><S,1*U>,
+     Unfolding: (\ @ a
+                   @ a1
+                   ($dNum :: GHC.Num.Num a1)
+                   (eta :: Instances.Either a a1) ->
+                 case eta of wild {
+                   Instances.Left ds
+                   -> (GHC.Num.fromInteger @ a1 $dNum Data.Monoid.$fMonoidProduct1)
+                        `cast`
+                      (Sym (Data.Monoid.N:Product[0] <a1>_R))
+                   Instances.Right x
+                   -> (GHC.Num.*
+                         @ a1
+                         $dNum
+                         x
+                         (GHC.Num.fromInteger @ a1 $dNum Data.Monoid.$fMonoidProduct1))
+                        `cast`
+                      (Sym (Data.Monoid.N:Product[0] <a1>_R)) }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither2 ::
+    GHC.Num.Num a1 => Instances.Either a a1 -> Data.Monoid.Sum a1
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,U(1*C1(C1(U)),A,A,A,A,A,1*C1(U))><S,1*U>,
+     Unfolding: (\ @ a
+                   @ a1
+                   ($dNum :: GHC.Num.Num a1)
+                   (eta :: Instances.Either a a1) ->
+                 case eta of wild {
+                   Instances.Left ds
+                   -> (GHC.Num.fromInteger @ a1 $dNum Data.Monoid.$fMonoidSum1)
+                        `cast`
+                      (Sym (Data.Monoid.N:Sum[0] <a1>_R))
+                   Instances.Right x
+                   -> (GHC.Num.+
+                         @ a1
+                         $dNum
+                         x
+                         (GHC.Num.fromInteger @ a1 $dNum Data.Monoid.$fMonoidSum1))
+                        `cast`
+                      (Sym (Data.Monoid.N:Sum[0] <a1>_R)) }) -}
+379563f931696af97d767a06f9bb0ad8
+  $fFoldableEither3 :: a
+  {- Strictness: x -}
+db9b9f6bc50c919e380f405a45095c05
+  $fFoldableEither4 :: a
+  {- Strictness: x -}
+52ea556e86dd185f5ba3bc21bf9918bb
+  $fFoldableEither5 :: a
+  {- Strictness: x -}
+78fdec0a3d4c27c17dcb3462f527daeb
+  $fFoldableEither6 :: a
+  {- Strictness: x -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$celem ::
+    GHC.Classes.Eq a1 => a1 -> Instances.Either a a1 -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 ($dEq :: GHC.Classes.Eq a1) (eta :: a1) ->
+                 let {
+                   f :: a1 -> GHC.Types.Bool = GHC.Classes.== @ a1 $dEq eta
+                 } in
+                 (\ (eta1 :: Instances.Either a a1) ->
+                  case eta1 of wild {
+                    Instances.Left ds
+                    -> GHC.Types.False `cast` (Sym (Data.Monoid.N:Any[0]))
+                    Instances.Right x -> (f x) `cast` (Sym (Data.Monoid.N:Any[0])) })
+                   `cast`
+                 (<Instances.Either a a1>_R ->_R Data.Monoid.N:Any[0])) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$cfold ::
+    GHC.Base.Monoid m => Instances.Either a m -> m
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,U(1*U,1*C1(C1(U)),A)><S,1*U>,
+     Unfolding: (\ @ a
+                   @ m
+                   ($dMonoid :: GHC.Base.Monoid m)
+                   (eta :: Instances.Either a m) ->
+                 case eta of wild {
+                   Instances.Left ds -> GHC.Base.mempty @ m $dMonoid
+                   Instances.Right x
+                   -> GHC.Base.mappend
+                        @ m
+                        $dMonoid
+                        x
+                        (GHC.Base.mempty @ m $dMonoid) }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$cfoldMap ::
+    GHC.Base.Monoid m => (a1 -> m) -> Instances.Either a a1 -> m
+  {- Arity: 2, Strictness: <L,U(1*U,1*U,A)><L,C(U)>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a
+                   @ m
+                   @ a1
+                   ($dMonoid :: GHC.Base.Monoid m)
+                   (f :: a1 -> m)
+                   (eta :: Instances.Either a a1) ->
+                 Instances.$fFoldableEither_$cfoldr
+                   @ a
+                   @ a1
+                   @ m
+                   (\ (x :: a1)[OneShot] -> GHC.Base.mappend @ m $dMonoid (f x))
+                   (GHC.Base.mempty @ m $dMonoid)
+                   eta) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$cfoldl' ::
+    (b -> a1 -> b) -> b -> Instances.Either a a1 -> b
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,1*C1(C1(U))><L,U><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   @ a1
+                   (f :: b -> a1 -> b)
+                   (z0 :: b)
+                   (xs :: Instances.Either a a1) ->
+                 case xs of wild {
+                   Instances.Left ds -> z0 Instances.Right x -> f z0 x }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$cfoldl1 ::
+    (a1 -> a1 -> a1) -> Instances.Either a a1 -> a1
+  {- Arity: 2, Strictness: <L,A><S,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 (w :: a1 -> a1 -> a1) (w1 :: Instances.Either a a1) ->
+                 case w1 of wild {
+                   Instances.Left ds -> Instances.$fFoldableEither5 @ a1
+                   Instances.Right x -> x }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$cfoldr ::
+    (a1 -> b -> b) -> b -> Instances.Either a a1 -> b
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,1*C1(C1(U))><L,U><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ a1
+                   @ b
+                   (ds :: a1 -> b -> b)
+                   (identity :: b)
+                   (ds1 :: Instances.Either a a1) ->
+                 case ds1 of wild {
+                   Instances.Left ds2 -> identity
+                   Instances.Right x -> ds x identity }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$cfoldr1 ::
+    (a1 -> a1 -> a1) -> Instances.Either a a1 -> a1
+  {- Arity: 2, Strictness: <L,A><S,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 (w :: a1 -> a1 -> a1) (w1 :: Instances.Either a a1) ->
+                 case w1 of wild {
+                   Instances.Left ds -> Instances.$fFoldableEither6 @ a1
+                   Instances.Right x -> x }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$clength :: Instances.Either a a1 -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a @ a1 (xs :: Instances.Either a a1) ->
+                 case xs of wild {
+                   Instances.Left ds -> Instances.$fFoldableConst_z0
+                   Instances.Right x -> GHC.Types.I# 1# }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$cmaximum ::
+    GHC.Classes.Ord a1 => Instances.Either a a1 -> a1
+  {- Arity: 2, Strictness: <L,A><S,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ a1
+                   (w :: GHC.Classes.Ord a1)
+                   (w1 :: Instances.Either a a1) ->
+                 case w1 of wild {
+                   Instances.Left ds -> Instances.$fFoldableEither4 @ a1
+                   Instances.Right x -> x }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$cminimum ::
+    GHC.Classes.Ord a1 => Instances.Either a a1 -> a1
+  {- Arity: 2, Strictness: <L,A><S,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ a1
+                   (w :: GHC.Classes.Ord a1)
+                   (w1 :: Instances.Either a a1) ->
+                 case w1 of wild {
+                   Instances.Left ds -> Instances.$fFoldableEither3 @ a1
+                   Instances.Right x -> x }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$cnull :: Instances.Either a a1 -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a @ a1 (ds :: Instances.Either a a1) ->
+                 case ds of wild {
+                   Instances.Left ds1 -> GHC.Types.True
+                   Instances.Right x -> GHC.Types.False }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$cproduct ::
+    GHC.Num.Num a1 => Instances.Either a a1 -> a1
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,U(A,A,1*C1(C1(U)),A,A,A,1*C1(U))><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fFoldableEither1
+                  `cast`
+                (forall (a :: <*>_N) (a1 :: <*>_N).
+                 <GHC.Num.Num a1>_R
+                 ->_R <Instances.Either a a1>_R
+                 ->_R Data.Monoid.N:Product[0] <a1>_R) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$csum ::
+    GHC.Num.Num a1 => Instances.Either a a1 -> a1
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,U(1*C1(C1(U)),A,A,A,A,A,1*C1(U))><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fFoldableEither2
+                  `cast`
+                (forall (a :: <*>_N) (a1 :: <*>_N).
+                 <GHC.Num.Num a1>_R
+                 ->_R <Instances.Either a a1>_R
+                 ->_R Data.Monoid.N:Sum[0] <a1>_R) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFoldableEither_$ctoList :: Instances.Either a a1 -> [a1]
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a @ a1 (t1 :: Instances.Either a a1) ->
+                 GHC.Base.build
+                   @ a1
+                   (\ @ b (c :: a1 -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                    Instances.$fFoldableEither_$cfoldr @ a @ a1 @ b c n t1)) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity :: Data.Foldable.Foldable Instances.Identity
+  DFunId
+  {- HasNoCafRefs, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Instances.Identity
+                  Instances.$fFoldableIdentity_$cfold
+                  Instances.$fFoldableIdentity_$cfoldMap
+                  Instances.$fFoldableIdentity_$cfoldr
+                  Instances.$fFoldableIdentity_$cfoldr
+                  Instances.$fFoldableIdentity_$cfoldl'
+                  Instances.$fFoldableIdentity_$cfoldl'
+                  Instances.$fFoldableIdentity_$cfoldr1
+                  Instances.$fFoldableIdentity_$cfoldr1
+                  Instances.$fFoldableIdentity_$ctoList
+                  Instances.$fFoldableIdentity_$cnull
+                  Instances.$fFoldableIdentity_$clength
+                  Instances.$fFoldableIdentity_$celem
+                  Instances.$fFoldableIdentity_$cminimum
+                  Instances.$fFoldableIdentity_$cminimum
+                  Instances.$fFoldableIdentity_$csum
+                  Instances.$fFoldableIdentity_$cproduct -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity1 :: GHC.Num.Num a => Instances.Identity a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLC(C(S))LLLL),U(A,A,1*C1(C1(U)),A,A,A,1*C1(U))><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dNum :: GHC.Num.Num a) (eta :: Instances.Identity a) ->
+                 GHC.Num.*
+                   @ a
+                   $dNum
+                   eta `cast` (Instances.N:Identity[0] <a>_R)
+                   (GHC.Num.fromInteger @ a $dNum Data.Monoid.$fMonoidProduct1)) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity2 :: GHC.Num.Num a => Instances.Identity a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(1*C1(C1(U)),A,A,A,A,A,1*C1(U))><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dNum :: GHC.Num.Num a) (eta :: Instances.Identity a) ->
+                 GHC.Num.+
+                   @ a
+                   $dNum
+                   eta `cast` (Instances.N:Identity[0] <a>_R)
+                   (GHC.Num.fromInteger @ a $dNum Data.Monoid.$fMonoidSum1)) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity3 ::
+    GHC.Classes.Ord a => Instances.Identity a -> Instances.Identity a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a ($dOrd :: GHC.Classes.Ord a) (x :: Instances.Identity a) ->
+                 x) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity4 ::
+    (a -> a -> a) -> Instances.Identity a -> Instances.Identity a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a (f :: a -> a -> a) (xs :: Instances.Identity a) -> xs) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity_$celem ::
+    GHC.Classes.Eq a => a -> Instances.Identity a -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dEq :: GHC.Classes.Eq a) (eta :: a) ->
+                 let {
+                   f :: a -> GHC.Types.Bool = GHC.Classes.== @ a $dEq eta
+                 } in
+                 \ (eta1 :: Instances.Identity a) ->
+                 f eta1 `cast` (Instances.N:Identity[0] <a>_R)) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity_$cfold ::
+    GHC.Base.Monoid m => Instances.Identity m -> m
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LC(C(S))L),U(1*U,1*C1(C1(U)),A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ m
+                   ($dMonoid :: GHC.Base.Monoid m)
+                   (eta :: Instances.Identity m) ->
+                 GHC.Base.mappend
+                   @ m
+                   $dMonoid
+                   eta `cast` (Instances.N:Identity[0] <m>_R)
+                   (GHC.Base.mempty @ m $dMonoid)) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity_$cfoldMap ::
+    GHC.Base.Monoid m => (a -> m) -> Instances.Identity a -> m
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(1*U,1*U,A)><L,C(U)>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ m
+                   @ a
+                   ($dMonoid :: GHC.Base.Monoid m)
+                   (f :: a -> m)
+                   (eta :: Instances.Identity a) ->
+                 Instances.$fFoldableIdentity_$cfoldr
+                   @ a
+                   @ m
+                   (\ (x :: a)[OneShot] -> GHC.Base.mappend @ m $dMonoid (f x))
+                   (GHC.Base.mempty @ m $dMonoid)
+                   eta) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity_$cfoldl' ::
+    (b -> a -> b) -> b -> Instances.Identity a -> b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(C(S)),1*C1(C1(U))><L,U><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ b
+                   @ a
+                   (f :: b -> a -> b)
+                   (z0 :: b)
+                   (xs :: Instances.Identity a) ->
+                 f z0 xs `cast` (Instances.N:Identity[0] <a>_R)) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity_$cfoldr ::
+    (a -> b -> b) -> b -> Instances.Identity a -> b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(C(S)),1*C1(C1(U))><L,U><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a
+                   @ b
+                   (f :: a -> b -> b)
+                   (identity :: b)
+                   (ds :: Instances.Identity a) ->
+                 f ds `cast` (Instances.N:Identity[0] <a>_R) identity) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity_$cfoldr1 ::
+    (a -> a -> a) -> Instances.Identity a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fFoldableIdentity4
+                  `cast`
+                (forall (a :: <*>_N).
+                 <a -> a -> a>_R
+                 ->_R <Instances.Identity a>_R
+                 ->_R Instances.N:Identity[0] <a>_R) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity_$clength ::
+    Instances.Identity a -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a (xs :: Instances.Identity a) -> GHC.Types.I# 1#) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity_$cminimum ::
+    GHC.Classes.Ord a => Instances.Identity a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fFoldableIdentity3
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Classes.Ord a>_R
+                 ->_R <Instances.Identity a>_R
+                 ->_R Instances.N:Identity[0] <a>_R) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity_$cnull :: Instances.Identity a -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a (ds :: Instances.Identity a) -> GHC.Types.False) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity_$cproduct ::
+    GHC.Num.Num a => Instances.Identity a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLC(C(S))LLLL),U(A,A,1*C1(C1(U)),A,A,A,1*C1(U))><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fFoldableIdentity1 -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity_$csum ::
+    GHC.Num.Num a => Instances.Identity a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(1*C1(C1(U)),A,A,A,A,A,1*C1(U))><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fFoldableIdentity2 -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFoldableIdentity_$ctoList :: Instances.Identity a -> [a]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a (t1 :: Instances.Identity a) ->
+                 GHC.Base.build
+                   @ a
+                   (\ @ b (c :: a -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                    Instances.$fFoldableIdentity_$cfoldr @ a @ b c n t1)) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair :: Data.Foldable.Foldable (Instances.Pair a)
+  DFunId
+  {- HasNoCafRefs, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (Instances.Pair a)
+                  (Instances.$fFoldablePair_$cfold @ a)
+                  (Instances.$fFoldablePair_$cfoldMap @ a)
+                  (Instances.$fFoldablePair_$cfoldr @ a)
+                  (Instances.$fFoldablePair_$cfoldr @ a)
+                  (Instances.$fFoldablePair_$cfoldl' @ a)
+                  (Instances.$fFoldablePair_$cfoldl' @ a)
+                  (Instances.$fFoldablePair_$cfoldr1 @ a)
+                  (Instances.$fFoldablePair_$cfoldr1 @ a)
+                  (Instances.$fFoldablePair_$ctoList @ a)
+                  (Instances.$fFoldablePair_$cnull @ a)
+                  (Instances.$fFoldablePair_$clength @ a)
+                  (Instances.$fFoldablePair_$celem @ a)
+                  (Instances.$fFoldablePair_$cminimum @ a)
+                  (Instances.$fFoldablePair_$cminimum @ a)
+                  (Instances.$fFoldablePair_$csum @ a)
+                  (Instances.$fFoldablePair_$cproduct @ a) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair1 ::
+    GHC.Num.Num a1 => Instances.Pair a a1 -> Data.Monoid.Product a1
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLC(C(S))LLLL),U(A,A,1*C1(C1(U)),A,A,A,1*C1(U))><S,1*U(A,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ a1
+                   ($dNum :: GHC.Num.Num a1)
+                   (eta :: Instances.Pair a a1) ->
+                 case eta of wild { Instances.Pair ds y ->
+                 (GHC.Num.*
+                    @ a1
+                    $dNum
+                    y
+                    (GHC.Num.fromInteger @ a1 $dNum Data.Monoid.$fMonoidProduct1))
+                   `cast`
+                 (Sym (Data.Monoid.N:Product[0] <a1>_R)) }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair2 ::
+    GHC.Num.Num a1 => Instances.Pair a a1 -> Data.Monoid.Sum a1
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(1*C1(C1(U)),A,A,A,A,A,1*C1(U))><S,1*U(A,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ a1
+                   ($dNum :: GHC.Num.Num a1)
+                   (eta :: Instances.Pair a a1) ->
+                 case eta of wild { Instances.Pair ds y ->
+                 (GHC.Num.+
+                    @ a1
+                    $dNum
+                    y
+                    (GHC.Num.fromInteger @ a1 $dNum Data.Monoid.$fMonoidSum1))
+                   `cast`
+                 (Sym (Data.Monoid.N:Sum[0] <a1>_R)) }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair_$celem ::
+    GHC.Classes.Eq a1 => a1 -> Instances.Pair a a1 -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 ($dEq :: GHC.Classes.Eq a1) (eta :: a1) ->
+                 let {
+                   f :: a1 -> GHC.Types.Bool = GHC.Classes.== @ a1 $dEq eta
+                 } in
+                 (\ (eta1 :: Instances.Pair a a1) ->
+                  case eta1 of wild { Instances.Pair ds y ->
+                  (f y) `cast` (Sym (Data.Monoid.N:Any[0])) })
+                   `cast`
+                 (<Instances.Pair a a1>_R ->_R Data.Monoid.N:Any[0])) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair_$cfold ::
+    GHC.Base.Monoid m => Instances.Pair a m -> m
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LC(C(S))L),U(1*U,1*C1(C1(U)),A)><S,1*U(A,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ m
+                   ($dMonoid :: GHC.Base.Monoid m)
+                   (eta :: Instances.Pair a m) ->
+                 case eta of wild { Instances.Pair ds y ->
+                 GHC.Base.mappend
+                   @ m
+                   $dMonoid
+                   y
+                   (GHC.Base.mempty @ m $dMonoid) }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair_$cfoldMap ::
+    GHC.Base.Monoid m => (a1 -> m) -> Instances.Pair a a1 -> m
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(1*U,1*U,A)><L,C(U)>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a
+                   @ m
+                   @ a1
+                   ($dMonoid :: GHC.Base.Monoid m)
+                   (f :: a1 -> m)
+                   (eta :: Instances.Pair a a1) ->
+                 Instances.$fFoldablePair_$cfoldr
+                   @ a
+                   @ a1
+                   @ m
+                   (\ (x :: a1)[OneShot] -> GHC.Base.mappend @ m $dMonoid (f x))
+                   (GHC.Base.mempty @ m $dMonoid)
+                   eta) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair_$cfoldl' ::
+    (b -> a1 -> b) -> b -> Instances.Pair a a1 -> b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(C(S)),1*C1(C1(U))><L,U><S,1*U(A,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   @ a1
+                   (f :: b -> a1 -> b)
+                   (z0 :: b)
+                   (xs :: Instances.Pair a a1) ->
+                 case xs of wild { Instances.Pair ds y -> f z0 y }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair_$cfoldr ::
+    (a1 -> b -> b) -> b -> Instances.Pair a a1 -> b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(C(S)),1*C1(C1(U))><L,U><S,1*U(A,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ a1
+                   @ b
+                   (f :: a1 -> b -> b)
+                   (identity :: b)
+                   (ds :: Instances.Pair a a1) ->
+                 case ds of wild { Instances.Pair ds1 y -> f y identity }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair_$cfoldr1 ::
+    (a1 -> a1 -> a1) -> Instances.Pair a a1 -> a1
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 (f :: a1 -> a1 -> a1) (xs :: Instances.Pair a a1) ->
+                 case xs of wild { Instances.Pair ds y -> y }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair_$clength :: Instances.Pair a a1 -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*H>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a @ a1 (xs :: Instances.Pair a a1) ->
+                 case xs of wild { Instances.Pair ds y -> GHC.Types.I# 1# }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair_$cminimum ::
+    GHC.Classes.Ord a1 => Instances.Pair a a1 -> a1
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ a1
+                   ($dOrd :: GHC.Classes.Ord a1)
+                   (x :: Instances.Pair a a1) ->
+                 case x of wild { Instances.Pair ds y -> y }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair_$cnull :: Instances.Pair a a1 -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*H>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a @ a1 (ds :: Instances.Pair a a1) ->
+                 case ds of wild { Instances.Pair ds1 y -> GHC.Types.False }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair_$cproduct ::
+    GHC.Num.Num a1 => Instances.Pair a a1 -> a1
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLC(C(S))LLLL),U(A,A,1*C1(C1(U)),A,A,A,1*C1(U))><S,1*U(A,U)>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fFoldablePair1
+                  `cast`
+                (forall (a :: <*>_N) (a1 :: <*>_N).
+                 <GHC.Num.Num a1>_R
+                 ->_R <Instances.Pair a a1>_R
+                 ->_R Data.Monoid.N:Product[0] <a1>_R) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair_$csum :: GHC.Num.Num a1 => Instances.Pair a a1 -> a1
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(1*C1(C1(U)),A,A,A,A,A,1*C1(U))><S,1*U(A,U)>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fFoldablePair2
+                  `cast`
+                (forall (a :: <*>_N) (a1 :: <*>_N).
+                 <GHC.Num.Num a1>_R
+                 ->_R <Instances.Pair a a1>_R
+                 ->_R Data.Monoid.N:Sum[0] <a1>_R) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFoldablePair_$ctoList :: Instances.Pair a a1 -> [a1]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a @ a1 (t1 :: Instances.Pair a a1) ->
+                 GHC.Base.build
+                   @ a1
+                   (\ @ b (c :: a1 -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                    Instances.$fFoldablePair_$cfoldr @ a @ a1 @ b c n t1)) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFunctorConst :: GHC.Base.Functor (Instances.Const a)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (Instances.Const a)
+                  (Instances.$fFunctorConst_$cfmap @ a)
+                  (Instances.$fFunctorConst_$c<$ @ a) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFunctorConst1 :: a1 -> Instances.Const a b -> Instances.Const a b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a @ a1 @ b (eta :: a1) (ds :: Instances.Const a b) -> ds) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFunctorConst2 ::
+    (a1 -> b) -> Instances.Const a a1 -> Instances.Const a a1
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a @ a1 @ b (ds :: a1 -> b) (ds1 :: Instances.Const a a1) ->
+                 ds1) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFunctorConst_$c<$ ::
+    a1 -> Instances.Const a b -> Instances.Const a a1
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fFunctorConst1
+                  `cast`
+                (forall (a :: <*>_N) (a1 :: <*>_N) (b :: <*>_N).
+                 <a1>_R
+                 ->_R <Instances.Const a b>_R
+                 ->_R Trans
+                          (Instances.N:Const[0] <a>_R <b>_P)
+                          (Sym (Instances.N:Const[0] <a>_R <a1>_P))) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fFunctorConst_$cfmap ::
+    (a1 -> b) -> Instances.Const a a1 -> Instances.Const a b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fFunctorConst2
+                  `cast`
+                (forall (a :: <*>_N) (a1 :: <*>_N) (b :: <*>_N).
+                 <a1 -> b>_R
+                 ->_R <Instances.Const a a1>_R
+                 ->_R Trans
+                          (Instances.N:Const[0] <a>_R <a1>_P)
+                          (Sym (Instances.N:Const[0] <a>_R <b>_P))) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFunctorEither :: GHC.Base.Functor (Instances.Either a)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (Instances.Either a)
+                  (Instances.$fApplicativeEither_$cfmap @ a)
+                  (Instances.$fFunctorEither_$c<$ @ a) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fFunctorEither_$c<$ ::
+    a1 -> Instances.Either a b -> Instances.Either a a1
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 @ b (eta :: a1) (ds :: Instances.Either a b) ->
+                 case ds of wild {
+                   Instances.Left v -> Instances.Left @ a @ a1 v
+                   Instances.Right v -> Instances.Right @ a @ a1 eta }) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFunctorIdentity :: GHC.Base.Functor Instances.Identity
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Instances.Identity
+                  Instances.$fFunctorIdentity_$cfmap
+                  Instances.$fFunctorIdentity_$c<$ -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFunctorIdentity1 :: a -> Instances.Identity b -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a @ b (eta :: a) (m :: Instances.Identity b) -> eta) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFunctorIdentity_$c<$ ::
+    a -> Instances.Identity b -> Instances.Identity a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fFunctorIdentity1
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <a>_R
+                 ->_R <Instances.Identity b>_R
+                 ->_R Sym (Instances.N:Identity[0] <a>_R)) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fFunctorIdentity_$cfmap ::
+    (a -> b) -> Instances.Identity a -> Instances.Identity b
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.$fApplicativeIdentity2
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <a -> b>_R
+                 ->_R <Instances.Identity a>_R
+                 ->_R Sym (Instances.N:Identity[0] <b>_R)) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFunctorPair :: GHC.Base.Functor (Instances.Pair a)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (Instances.Pair a)
+                  (Instances.$fFunctorPair_$cfmap @ a)
+                  (Instances.$fFunctorPair_$c<$ @ a) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFunctorPair_$c<$ ::
+    a1 -> Instances.Pair a b -> Instances.Pair a a1
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U(U,A)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 @ b (eta :: a1) (ds :: Instances.Pair a b) ->
+                 case ds of wild { Instances.Pair x y ->
+                 Instances.Pair @ a @ a1 x eta }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fFunctorPair_$cfmap ::
+    (a1 -> b) -> Instances.Pair a a1 -> Instances.Pair a b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U(U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 @ b (f :: a1 -> b) (ds :: Instances.Pair a a1) ->
+                 case ds of wild { Instances.Pair x y ->
+                 Instances.Pair @ a @ b x (f y) }) -}
+a21251af2fc8ebcb574aa4e9b1a821d4
+  $fFunctorTree :: GHC.Base.Functor Tree.Tree
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Tree.Tree
+                  Instances.$fApplicativeTree_$cfmap
+                  Instances.$fFunctorTree_$c<$ -}
+6ff68cd411a625b879ed79e772ba6ead
+  $fFunctorTree_$c<$ :: a -> Tree.Tree b -> Tree.Tree a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ b (eta :: a) (eta1 :: Tree.Tree b) ->
+                 Instances.$fApplicativeTree_$cfmap
+                   @ b
+                   @ a
+                   (\ (ds :: b) -> eta)
+                   eta1) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fTraversableConst ::
+    Data.Traversable.Traversable (Instances.Const m)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ m.
+                  @ (Instances.Const m)
+                  (Instances.$fFunctorConst @ m)
+                  (Instances.$fFoldableConst @ m)
+                  (Instances.$fTraversableConst_$ctraverse @ m)
+                  (Instances.$fTraversableConst_$csequenceA @ m)
+                  (Instances.$fTraversableConst_$cmapM @ m)
+                  (Instances.$fTraversableConst_$csequence @ m) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fTraversableConst_$cmapM ::
+    GHC.Base.Monad m1 =>
+    (a -> m1 b) -> Instances.Const m a -> m1 (Instances.Const m b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(S(LC(S)LLL)LLLL),1*U(1*U(A,1*C1(U),A,A,A),A,A,A,A)><L,A><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ m
+                   @ (m1 :: * -> *)
+                   @ a
+                   @ b
+                   ($dMonad :: GHC.Base.Monad m1)
+                   (eta :: a -> m1 b)
+                   (eta1 :: Instances.Const m a) ->
+                 GHC.Base.pure
+                   @ m1
+                   (GHC.Base.$p1Monad @ m1 $dMonad)
+                   @ (Instances.Const m b)
+                   eta1
+                     `cast`
+                   (Trans
+                        (Instances.N:Const[0] <m>_R <a>_P)
+                        (Sym (Instances.N:Const[0] <m>_R <b>_P)))) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fTraversableConst_$csequence ::
+    GHC.Base.Monad m1 =>
+    Instances.Const m (m1 a) -> m1 (Instances.Const m a)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(LC(S)LLL)LLLL),1*U(1*U(A,1*C1(U),A,A,A),A,A,A,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ m
+                   @ (m1 :: * -> *)
+                   @ a
+                   ($dMonad :: GHC.Base.Monad m1)
+                   (eta :: Instances.Const m (m1 a)) ->
+                 GHC.Base.pure
+                   @ m1
+                   (GHC.Base.$p1Monad @ m1 $dMonad)
+                   @ (Instances.Const m a)
+                   eta
+                     `cast`
+                   (Trans
+                        (Instances.N:Const[0] <m>_R <m1 a>_P)
+                        (Sym (Instances.N:Const[0] <m>_R <a>_P)))) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fTraversableConst_$csequenceA ::
+    GHC.Base.Applicative f =>
+    Instances.Const m (f a) -> f (Instances.Const m a)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LC(S)LLL),1*U(A,1*C1(U),A,A,A)><L,U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ m
+                   @ (f :: * -> *)
+                   @ a
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   (ds :: Instances.Const m (f a)) ->
+                 GHC.Base.pure
+                   @ f
+                   $dApplicative
+                   @ (Instances.Const m a)
+                   ds
+                     `cast`
+                   (Trans
+                        (Instances.N:Const[0] <m>_R <f a>_P)
+                        (Sym (Instances.N:Const[0] <m>_R <a>_P)))) -}
+2e07086db4bebf913358f43d2adde5a2
+  $fTraversableConst_$ctraverse ::
+    GHC.Base.Applicative f =>
+    (a -> f b) -> Instances.Const m a -> f (Instances.Const m b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(S)LLL),1*U(A,1*C1(U),A,A,A)><L,A><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ m
+                   @ (f :: * -> *)
+                   @ a
+                   @ b
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   (ds :: a -> f b)
+                   (ds1 :: Instances.Const m a) ->
+                 GHC.Base.pure
+                   @ f
+                   $dApplicative
+                   @ (Instances.Const m b)
+                   ds1
+                     `cast`
+                   (Trans
+                        (Instances.N:Const[0] <m>_R <a>_P)
+                        (Sym (Instances.N:Const[0] <m>_R <b>_P)))) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fTraversableEither ::
+    Data.Traversable.Traversable (Instances.Either a)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (Instances.Either a)
+                  (Instances.$fFunctorEither @ a)
+                  (Instances.$fFoldableEither @ a)
+                  (Instances.$fTraversableEither_$ctraverse @ a)
+                  (Instances.$fTraversableEither_$csequenceA @ a)
+                  (Instances.$fTraversableEither_$cmapM @ a)
+                  (Instances.$fTraversableEither_$csequence @ a) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fTraversableEither1 :: f (Instances.Either a b)
+  {- Strictness: x -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fTraversableEither_$cmapM ::
+    GHC.Base.Monad m =>
+    (a1 -> m b) -> Instances.Either a a1 -> m (Instances.Either a b)
+  {- Arity: 3,
+     Strictness: <S(S(LC(S)LLL)LLLL),1*U(1*U(A,1*C1(U),A,A,A),A,A,A,A)><L,A><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ (m :: * -> *)
+                   @ a1
+                   @ b
+                   ($dMonad :: GHC.Base.Monad m)
+                   (eta :: a1 -> m b)
+                   (eta1 :: Instances.Either a a1) ->
+                 case eta1 of wild {
+                   Instances.Left x
+                   -> GHC.Base.pure
+                        @ m
+                        (GHC.Base.$p1Monad @ m $dMonad)
+                        @ (Instances.Either a b)
+                        (Instances.Left @ a @ b x)
+                   Instances.Right ipv
+                   -> Instances.$fTraversableEither1 @ m @ a @ b }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fTraversableEither_$csequence ::
+    GHC.Base.Monad m =>
+    Instances.Either a (m a1) -> m (Instances.Either a a1)
+  {- Arity: 2,
+     Strictness: <S(S(LC(S)LLL)LLLL),1*U(1*U(A,1*C1(U),A,A,A),A,A,A,A)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ (m :: * -> *)
+                   @ a1
+                   ($dMonad :: GHC.Base.Monad m)
+                   (eta :: Instances.Either a (m a1)) ->
+                 case eta of wild {
+                   Instances.Left x
+                   -> GHC.Base.pure
+                        @ m
+                        (GHC.Base.$p1Monad @ m $dMonad)
+                        @ (Instances.Either a a1)
+                        (Instances.Left @ a @ a1 x)
+                   Instances.Right ipv
+                   -> Instances.$fTraversableEither1 @ m @ a @ a1 }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fTraversableEither_$csequenceA ::
+    GHC.Base.Applicative f =>
+    Instances.Either a (f a1) -> f (Instances.Either a a1)
+  {- Arity: 2, Strictness: <S(LC(S)LLL),1*U(A,1*C1(U),A,A,A)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ (f :: * -> *)
+                   @ a1
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   (ds :: Instances.Either a (f a1)) ->
+                 case ds of wild {
+                   Instances.Left x
+                   -> GHC.Base.pure
+                        @ f
+                        $dApplicative
+                        @ (Instances.Either a a1)
+                        (Instances.Left @ a @ a1 x)
+                   Instances.Right ipv
+                   -> Instances.$fTraversableEither1 @ f @ a @ a1 }) -}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  $fTraversableEither_$ctraverse ::
+    GHC.Base.Applicative f =>
+    (a1 -> f b) -> Instances.Either a a1 -> f (Instances.Either a b)
+  {- Arity: 3,
+     Strictness: <S(LC(S)LLL),1*U(A,1*C1(U),A,A,A)><L,A><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ (f :: * -> *)
+                   @ a1
+                   @ b
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   (ds :: a1 -> f b)
+                   (ds1 :: Instances.Either a a1) ->
+                 case ds1 of wild {
+                   Instances.Left x
+                   -> GHC.Base.pure
+                        @ f
+                        $dApplicative
+                        @ (Instances.Either a b)
+                        (Instances.Left @ a @ b x)
+                   Instances.Right ipv
+                   -> Instances.$fTraversableEither1 @ f @ a @ b }) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fTraversableIdentity ::
+    Data.Traversable.Traversable Instances.Identity
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Instances.Identity
+                  Instances.$fFunctorIdentity
+                  Instances.$fFoldableIdentity
+                  Instances.$fTraversableIdentity_$ctraverse
+                  Instances.$fTraversableIdentity_$csequenceA
+                  Instances.$fTraversableIdentity_$cmapM
+                  Instances.$fTraversableIdentity_$csequence -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fTraversableIdentity_$cmapM ::
+    GHC.Base.Monad m =>
+    (a -> m b) -> Instances.Identity a -> m (Instances.Identity b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U,A,A,A,A)><L,1*C1(U)><L,U>,
+     Unfolding: (\ @ (m :: * -> *)
+                   @ a
+                   @ b
+                   ($dMonad :: GHC.Base.Monad m)
+                   (eta :: a -> m b)
+                   (eta1 :: Instances.Identity a) ->
+                 let {
+                   $dApplicative :: GHC.Base.Applicative m
+                   = GHC.Base.$p1Monad @ m $dMonad
+                 } in
+                 GHC.Base.<*>
+                   @ m
+                   $dApplicative
+                   @ b
+                   @ (Instances.Identity b)
+                   (GHC.Base.pure
+                      @ m
+                      $dApplicative
+                      @ (b -> Instances.Identity b)
+                      (Instances.$fApplicativeIdentity3 @ b)
+                        `cast`
+                      (<b>_R ->_R Sym (Instances.N:Identity[0] <b>_R)))
+                   (eta eta1 `cast` (Instances.N:Identity[0] <a>_R))) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fTraversableIdentity_$csequence ::
+    GHC.Base.Monad m =>
+    Instances.Identity (m a) -> m (Instances.Identity a)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U,A,A,A,A)><L,U>,
+     Unfolding: (\ @ (m :: * -> *)
+                   @ a
+                   ($dMonad :: GHC.Base.Monad m)
+                   (eta :: Instances.Identity (m a)) ->
+                 let {
+                   $dApplicative :: GHC.Base.Applicative m
+                   = GHC.Base.$p1Monad @ m $dMonad
+                 } in
+                 GHC.Base.<*>
+                   @ m
+                   $dApplicative
+                   @ a
+                   @ (Instances.Identity a)
+                   (GHC.Base.pure
+                      @ m
+                      $dApplicative
+                      @ (a -> Instances.Identity a)
+                      (Instances.$fApplicativeIdentity3 @ a)
+                        `cast`
+                      (<a>_R ->_R Sym (Instances.N:Identity[0] <a>_R)))
+                   eta `cast` (Instances.N:Identity[0] <m a>_R)) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fTraversableIdentity_$csequenceA ::
+    GHC.Base.Applicative f =>
+    Instances.Identity (f a) -> f (Instances.Identity a)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLC(C(S))LL),U(A,1*C1(U),1*C1(C1(U)),A,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   (ds :: Instances.Identity (f a)) ->
+                 GHC.Base.<*>
+                   @ f
+                   $dApplicative
+                   @ a
+                   @ (Instances.Identity a)
+                   (GHC.Base.pure
+                      @ f
+                      $dApplicative
+                      @ (a -> Instances.Identity a)
+                      (Instances.$fApplicativeIdentity3 @ a)
+                        `cast`
+                      (<a>_R ->_R Sym (Instances.N:Identity[0] <a>_R)))
+                   ds `cast` (Instances.N:Identity[0] <f a>_R)) -}
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  $fTraversableIdentity_$ctraverse ::
+    GHC.Base.Applicative f =>
+    (a -> f b) -> Instances.Identity a -> f (Instances.Identity b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LLC(C(S))LL),U(A,1*C1(U),1*C1(C1(U)),A,A)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   @ b
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   (f1 :: a -> f b)
+                   (ds :: Instances.Identity a) ->
+                 GHC.Base.<*>
+                   @ f
+                   $dApplicative
+                   @ b
+                   @ (Instances.Identity b)
+                   (GHC.Base.pure
+                      @ f
+                      $dApplicative
+                      @ (b -> Instances.Identity b)
+                      (Instances.$fApplicativeIdentity3 @ b)
+                        `cast`
+                      (<b>_R ->_R Sym (Instances.N:Identity[0] <b>_R)))
+                   (f1 ds `cast` (Instances.N:Identity[0] <a>_R))) -}
+adcf78c2091b0801238718732c4c60e2
+  $fTraversablePair ::
+    Data.Traversable.Traversable (Instances.Pair a)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (Instances.Pair a)
+                  (Instances.$fFunctorPair @ a)
+                  (Instances.$fFoldablePair @ a)
+                  (Instances.$fTraversablePair_$ctraverse @ a)
+                  (Instances.$fTraversablePair_$csequenceA @ a)
+                  (Instances.$fTraversablePair_$cmapM @ a)
+                  (Instances.$fTraversablePair_$csequence @ a) -}
+adcf78c2091b0801238718732c4c60e2
+  $fTraversablePair_$cmapM ::
+    GHC.Base.Monad m =>
+    (a1 -> m b) -> Instances.Pair a a1 -> m (Instances.Pair a b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U,A,A,A,A)><L,1*C1(U)><S,1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ (m :: * -> *)
+                   @ a1
+                   @ b
+                   (w :: GHC.Base.Monad m)
+                   (w1 :: a1 -> m b)
+                   (w2 :: Instances.Pair a a1) ->
+                 case w2 of ww { Instances.Pair ww1 ww2 ->
+                 Instances.$w$cmapM @ a @ m @ a1 @ b w w1 ww1 ww2 }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fTraversablePair_$csequence ::
+    GHC.Base.Monad m =>
+    Instances.Pair a (m a1) -> m (Instances.Pair a a1)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U,A,A,A,A)><S,1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ (m :: * -> *)
+                   @ a1
+                   (w :: GHC.Base.Monad m)
+                   (w1 :: Instances.Pair a (m a1)) ->
+                 case w1 of ww { Instances.Pair ww1 ww2 ->
+                 Instances.$w$csequence @ a @ m @ a1 w ww1 ww2 }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fTraversablePair_$csequenceA ::
+    GHC.Base.Applicative f =>
+    Instances.Pair a (f a1) -> f (Instances.Pair a a1)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLC(C(S))LL),U(A,1*C1(U),1*C1(C1(U)),A,A)><S,1*U(U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ (f :: * -> *)
+                   @ a1
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   (ds :: Instances.Pair a (f a1)) ->
+                 case ds of wild { Instances.Pair x y ->
+                 GHC.Base.<*>
+                   @ f
+                   $dApplicative
+                   @ a1
+                   @ (Instances.Pair a a1)
+                   (GHC.Base.pure
+                      @ f
+                      $dApplicative
+                      @ (a1 -> Instances.Pair a a1)
+                      (Instances.Pair @ a @ a1 x))
+                   y }) -}
+adcf78c2091b0801238718732c4c60e2
+  $fTraversablePair_$ctraverse ::
+    GHC.Base.Applicative f =>
+    (a1 -> f b) -> Instances.Pair a a1 -> f (Instances.Pair a b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LLC(C(S))LL),U(A,1*C1(U),1*C1(C1(U)),A,A)><L,1*C1(U)><S,1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ (f :: * -> *)
+                   @ a1
+                   @ b
+                   (w :: GHC.Base.Applicative f)
+                   (w1 :: a1 -> f b)
+                   (w2 :: Instances.Pair a a1) ->
+                 case w2 of ww { Instances.Pair ww1 ww2 ->
+                 Instances.$w$ctraverse @ a @ f @ a1 @ b w w1 ww1 ww2 }) -}
+eeab02c2c7d04ef307d7f15c3e213e00
+  $fTraversableTree :: Data.Traversable.Traversable Tree.Tree
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Tree.Tree
+                  Instances.$fFunctorTree
+                  Tree.$fFoldableTree
+                  Instances.$fTraversableTree_$ctraverse
+                  Instances.$fTraversableTree_$csequenceA
+                  Instances.$fTraversableTree_$cmapM
+                  Instances.$fTraversableTree_$csequence -}
+7b381cafa642bc875fae48aed6680941
+  $fTraversableTree_$cmapM ::
+    GHC.Base.Monad m => (a -> m b) -> Tree.Tree a -> m (Tree.Tree b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U(A,C(U),C(C1(U)),A,A),A,A,A,A)><L,C(U)><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (m :: * -> *)
+                   @ a
+                   @ b
+                   ($dMonad :: GHC.Base.Monad m)
+                   (eta :: a -> m b)
+                   (eta1 :: Tree.Tree a) ->
+                 Instances.$fTraversableTree_$ctraverse
+                   @ m
+                   @ a
+                   @ b
+                   (GHC.Base.$p1Monad @ m $dMonad)
+                   eta
+                   eta1) -}
+56913e0cc035ad8fad0214214ed78f88
+  $fTraversableTree_$csequence ::
+    GHC.Base.Monad m => Tree.Tree (m a) -> m (Tree.Tree a)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U(A,C(U),C(C1(U)),A,A),A,A,A,A)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (m :: * -> *)
+                   @ a
+                   ($dMonad :: GHC.Base.Monad m)
+                   (eta :: Tree.Tree (m a)) ->
+                 Instances.$fTraversableTree_$ctraverse
+                   @ m
+                   @ (m a)
+                   @ a
+                   (GHC.Base.$p1Monad @ m $dMonad)
+                   (GHC.Base.id @ (m a))
+                   eta) -}
+0dceaff713efbe01d8227db97ee68488
+  $fTraversableTree_$csequenceA ::
+    GHC.Base.Applicative f => Tree.Tree (f a) -> f (Tree.Tree a)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(A,C(U),C(C1(U)),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ (f :: * -> *)
+                   @ a
+                   ($dApplicative :: GHC.Base.Applicative f)
+                   (eta :: Tree.Tree (f a)) ->
+                 Instances.$fTraversableTree_$ctraverse
+                   @ f
+                   @ (f a)
+                   @ a
+                   $dApplicative
+                   (GHC.Base.id @ (f a))
+                   eta) -}
+c547f29b88963f9e43771c34b16433c0
+  $fTraversableTree_$ctraverse ::
+    GHC.Base.Applicative f =>
+    (a -> f b) -> Tree.Tree a -> f (Tree.Tree b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,U(A,C(U),C(C1(U)),A,A)><L,C(U)><S,1*U> -}
+f82f9ff599122361fa9680e9f6345ecf
+  $tc'Const :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12390114697998611183##
+                   5243175636691366396##
+                   Instances.$trModule
+                   Instances.$tc'Const1) -}
+59441cfe870b9cee9b71b999635194ab
+  $tc'Const1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Const"#) -}
+5df08df142ef74c87e222a38308ba7ce
+  $tc'Identity :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16958128599443337294##
+                   8116113686014170566##
+                   Instances.$trModule
+                   Instances.$tc'Identity1) -}
+439b887883da86d10b54598656981f0e
+  $tc'Identity1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Identity"#) -}
+171aa493a4662e084890f0122b56b3a0
+  $tc'Left :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8792006688945008375##
+                   18024733721816233102##
+                   Instances.$trModule
+                   Instances.$tc'Left1) -}
+87e7ff3e5eb04a7a4f97819745a4bdfa
+  $tc'Left1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Left"#) -}
+fcf7088fa90d32f6157abb86a273c156
+  $tc'Pair :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10574566534815381944##
+                   7028648479618489813##
+                   Instances.$trModule
+                   Instances.$tc'Pair1) -}
+604f4914071a913b29cb4feb18d252c6
+  $tc'Pair1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Pair"#) -}
+046aa33ef2b045d5c0393d2fee2bff31
+  $tc'Right :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1379914887882156065##
+                   8865638979932418042##
+                   Instances.$trModule
+                   Instances.$tc'Right1) -}
+40b2d3aa4aded5d45ce58c7206e08ca8
+  $tc'Right1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Right"#) -}
+cf3ee5505e32c7009ee377f29234f742
+  $tcConst :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3545038472247900171##
+                   16755432017914775384##
+                   Instances.$trModule
+                   Instances.$tcConst1) -}
+a7d1cd8ff3d00af912deb1af2b9f301b
+  $tcConst1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Const"#) -}
+f9d7c90e6629a199433a881c932634f9
+  $tcEither :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10200487262129853597##
+                   8646267650210012712##
+                   Instances.$trModule
+                   Instances.$tcEither1) -}
+0b159b956121bc163c568b49cf3a6ffc
+  $tcEither1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Either"#) -}
+ade2dcb49912a5c13baa57b0818fc851
+  $tcIdentity :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14698722968131179350##
+                   15086108798026129519##
+                   Instances.$trModule
+                   Instances.$tcIdentity1) -}
+4ccf66f4056b0e3abb985c93116ea4ba
+  $tcIdentity1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Identity"#) -}
+f887eb23167227936d8f1f6af2c4bd46
+  $tcPair :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6746812867926538777##
+                   12872192102446463870##
+                   Instances.$trModule
+                   Instances.$tcPair1) -}
+be2cfbdf51a66abebce0ca342d0241a6
+  $tcPair1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Pair"#) -}
+a2677a7f1edcd07ab3dc44532bf8d1e8
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Instances.$trModule2
+                   Instances.$trModule1) -}
+d475a357555f469b6e176af070e0e114
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Instances"#) -}
+a43ae828144c12237baa9f2de1d354e3
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw5-0.1.0.0-1fLzu6nyqqO1Ivpu7UzSSs"#) -}
+e5b61e0f280bf3841bd606272a2229a0
+  $w$cfoldl1 :: GHC.Prim.Void# -> a
+  {- Arity: 1, Strictness: <L,U>x, Inline: [0] -}
+2a13d7f103ec32cfebb6c884f52d4f6e
+  $w$cfoldr1 :: GHC.Prim.Void# -> a
+  {- Arity: 1, Strictness: <L,U>x, Inline: [0] -}
+adcf78c2091b0801238718732c4c60e2
+  $w$cmapM ::
+    GHC.Base.Monad m =>
+    (a1 -> m b) -> a -> a1 -> m (Instances.Pair a b)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U,A,A,A,A)><L,1*C1(U)><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ (m :: * -> *)
+                   @ a1
+                   @ b
+                   (w :: GHC.Base.Monad m)
+                   (w1 :: a1 -> m b)
+                   (ww :: a)
+                   (ww1 :: a1) ->
+                 let {
+                   $dApplicative :: GHC.Base.Applicative m = GHC.Base.$p1Monad @ m w
+                 } in
+                 GHC.Base.<*>
+                   @ m
+                   $dApplicative
+                   @ b
+                   @ (Instances.Pair a b)
+                   (GHC.Base.pure
+                      @ m
+                      $dApplicative
+                      @ (b -> Instances.Pair a b)
+                      (Instances.Pair @ a @ b ww))
+                   (w1 ww1)) -}
+d80ab31ea55ca9d5bad7d19c26c9eb96
+  $w$cmaximum :: GHC.Prim.Void# -> a
+  {- Arity: 1, Strictness: <L,U>x, Inline: [0] -}
+b60dcac86a3ad9e669d51e41c5d51132
+  $w$cminimum :: GHC.Prim.Void# -> a
+  {- Arity: 1, Strictness: <L,U>x, Inline: [0] -}
+adcf78c2091b0801238718732c4c60e2
+  $w$csequence ::
+    GHC.Base.Monad m => a -> m a1 -> m (Instances.Pair a a1)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U,A,A,A,A)><L,U><L,U>, Inline: [0],
+     Unfolding: (\ @ a
+                   @ (m :: * -> *)
+                   @ a1
+                   (w :: GHC.Base.Monad m)
+                   (ww :: a)
+                   (ww1 :: m a1) ->
+                 let {
+                   $dApplicative :: GHC.Base.Applicative m = GHC.Base.$p1Monad @ m w
+                 } in
+                 GHC.Base.<*>
+                   @ m
+                   $dApplicative
+                   @ a1
+                   @ (Instances.Pair a a1)
+                   (GHC.Base.pure
+                      @ m
+                      $dApplicative
+                      @ (a1 -> Instances.Pair a a1)
+                      (Instances.Pair @ a @ a1 ww))
+                   ww1) -}
+adcf78c2091b0801238718732c4c60e2
+  $w$ctraverse ::
+    GHC.Base.Applicative f =>
+    (a1 -> f b) -> a -> a1 -> f (Instances.Pair a b)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(LLC(C(S))LL),U(A,1*C1(U),1*C1(C1(U)),A,A)><L,1*C1(U)><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ (f :: * -> *)
+                   @ a1
+                   @ b
+                   (w :: GHC.Base.Applicative f)
+                   (w1 :: a1 -> f b)
+                   (ww :: a)
+                   (ww1 :: a1) ->
+                 GHC.Base.<*>
+                   @ f
+                   w
+                   @ b
+                   @ (Instances.Pair a b)
+                   (GHC.Base.pure
+                      @ f
+                      w
+                      @ (b -> Instances.Pair a b)
+                      (Instances.Pair @ a @ b ww))
+                   (w1 ww1)) -}
+2e07086db4bebf913358f43d2adde5a2
+  type role Const representational phantom
+  newtype Const a b = Const {getConst :: a}
+0aebbbe9a6b3254111cd43c4e9fe8363
+  data Either a b = Left a | Right b
+a0a0a5a8a1c7ba9c87a11da8656aee53
+  newtype Identity a = Identity {runIdentity :: a}
+adcf78c2091b0801238718732c4c60e2
+  data Pair a b = Pair a b
+27e76b3c109fb7cffbdb6c1b8362443d
+  getConst :: Instances.Const a b -> a
+  RecSel Left Instances.Const
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.getConst1
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <Instances.Const a b>_R ->_R Instances.N:Const[0] <a>_R <b>_P) -}
+1ee0c99b6c2521928914b03a5ca1e3e6
+  getConst1 :: Instances.Const a b -> Instances.Const a b
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a @ b (ds :: Instances.Const a b) -> ds) -}
+73c0479c7e83f86067cbf2af52213d35
+  runIdentity :: Instances.Identity a -> a
+  RecSel Left Instances.Identity
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Instances.runIdentity1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Instances.Identity a>_R ->_R Instances.N:Identity[0] <a>_R) -}
+7f1e1795394ef7fb56952bfccb8e5f70
+  runIdentity1 :: Instances.Identity a -> Instances.Identity a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a (ds :: Instances.Identity a) -> ds) -}
+instance [safe] GHC.Base.Applicative [Instances.Const]
+  = Instances.$fApplicativeConst
+instance [safe] GHC.Base.Applicative [Instances.Either]
+  = Instances.$fApplicativeEither
+instance [safe] GHC.Base.Applicative [Instances.Identity]
+  = Instances.$fApplicativeIdentity
+instance [safe] GHC.Base.Applicative [Instances.Pair]
+  = Instances.$fApplicativePair
+instance [safe] GHC.Base.Applicative [Tree.Tree]
+  = Instances.$fApplicativeTree
+instance [safe] Data.Foldable.Foldable [Instances.Const]
+  = Instances.$fFoldableConst
+instance [safe] Data.Foldable.Foldable [Instances.Either]
+  = Instances.$fFoldableEither
+instance [safe] Data.Foldable.Foldable [Instances.Identity]
+  = Instances.$fFoldableIdentity
+instance [safe] Data.Foldable.Foldable [Instances.Pair]
+  = Instances.$fFoldablePair
+instance [safe] GHC.Base.Functor [Instances.Const]
+  = Instances.$fFunctorConst
+instance [safe] GHC.Base.Functor [Instances.Either]
+  = Instances.$fFunctorEither
+instance [safe] GHC.Base.Functor [Instances.Identity]
+  = Instances.$fFunctorIdentity
+instance [safe] GHC.Base.Functor [Instances.Pair]
+  = Instances.$fFunctorPair
+instance [safe] GHC.Base.Functor [Tree.Tree]
+  = Instances.$fFunctorTree
+instance [safe] Data.Traversable.Traversable [Instances.Const]
+  = Instances.$fTraversableConst
+instance [safe] Data.Traversable.Traversable [Instances.Either]
+  = Instances.$fTraversableEither
+instance [safe] Data.Traversable.Traversable [Instances.Identity]
+  = Instances.$fTraversableIdentity
+instance [safe] Data.Traversable.Traversable [Instances.Pair]
+  = Instances.$fTraversablePair
+instance [safe] Data.Traversable.Traversable [Tree.Tree]
+  = Instances.$fTraversableTree
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
