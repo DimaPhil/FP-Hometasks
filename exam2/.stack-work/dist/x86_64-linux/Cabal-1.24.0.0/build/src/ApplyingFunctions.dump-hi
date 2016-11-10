@@ -1,0 +1,69 @@
+
+==================== FINAL INTERFACE ====================
+2016-11-07 14:02:54.36218 UTC
+
+interface exam2-0.1.0.0-5J9SdOISNPfLgwpUsYJGtC:ApplyingFunctions 8001
+  interface hash: 875bd405b4e0f49b93d1a43891642c0f
+  ABI hash: 2464544e2628e0ce3fb5e97b4c8be470
+  export-list hash: 686c6f1795bb137419d3d731f13293f3
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 78ad97a3c20cf3033ad470b32c4f90a0
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  ApplyingFunctions.apply
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+56288e8137fd67973bc4df6ea70cae66
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   ApplyingFunctions.$trModule2
+                   ApplyingFunctions.$trModule1) -}
+6609dd385bc42e2105714366f253bb71
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "ApplyingFunctions"#) -}
+57745de6232a19bfe04277c95bfbd739
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "exam2-0.1.0.0-5J9SdOISNPfLgwpUsYJGtC"#) -}
+79edf7c3b53f29549977d73e1882cc03
+  apply :: GHC.Base.Monad m => [a -> m a] -> a -> m a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,U(A,C(C1(U)),A,1*C1(U),A)><S,1*U><L,U>,
+     Unfolding: (\ @ (m :: * -> *)
+                   @ a
+                   ($dMonad :: GHC.Base.Monad m)
+                   (functions :: [a -> m a])
+                   (e :: a) ->
+                 let {
+                   z :: m a = GHC.Base.return @ m $dMonad @ a e
+                 } in
+                 letrec {
+                   go :: [a -> m a] -> m a {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [a -> m a]) ->
+                     case ds of wild {
+                       [] -> z : y ys -> GHC.Base.>>= @ m $dMonad @ a @ a (go ys) y }
+                 } in
+                 go functions) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
