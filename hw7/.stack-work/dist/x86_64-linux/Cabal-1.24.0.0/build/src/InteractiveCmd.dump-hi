@@ -1,0 +1,547 @@
+
+==================== FINAL INTERFACE ====================
+2016-11-14 14:12:12.394453 UTC
+
+interface hw7-0.1.0.0-17DQWlDqMzvGTs6m332wVc:InteractiveCmd 8001
+  interface hash: e372b4765cc4a4abfe9e7c2e9aa532eb
+  ABI hash: 1f7c2374f31d4d57bc7498202a3031d3
+  export-list hash: 532f2f530d891eb4269f0c96a65a03a9
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  InteractiveCmd.addItem
+  InteractiveCmd.cmd
+  InteractiveCmd.modifyItem
+  InteractiveCmd.quit
+  InteractiveCmd.runCmd
+  InteractiveCmd.saveToFile
+  InteractiveCmd.splitProperty
+  InteractiveCmd.wrongCommand
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0*
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+                      text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s*
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Show
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+import  -/  base-4.9.0.0:Control.Applicative 7728b33d6969dce59e89474349eb1397
+import  -/  base-4.9.0.0:Control.Monad 7767aebfd53f0b584cef2fe66ad3986c
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:Data.IORef 4b625b2df7d0ef688ec068837f79c7b0
+import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
+import  -/  base-4.9.0.0:Data.Tuple acb0ed10307ed88df6c81b8589f4de16
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.IO.Handle.Text 23b6dc4ed000f42bf105ce56bdeb0dc6
+import  -/  base-4.9.0.0:GHC.IO.IOMode 9380a6a6b8c50facc225c4877c5e1e90
+import  -/  base-4.9.0.0:GHC.IORef c27b760cf1b1851f9cf1a1693e335fa5
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.Environment ee0914a962f5508d0fd404c89ee4999b
+import  -/  base-4.9.0.0:System.IO eb1d40aa793a4047069a5023f2ebcfe3
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text 6515f3179e27a91345842b6e634f584c
+import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Internal 530216acfbfab25df053b0caac6d6a57
+import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Show c6fc4b1a4431943028eb6eb78b495e09
+4c31980214bbe26f48613e7ee845f953
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   InteractiveCmd.$trModule2
+                   InteractiveCmd.$trModule1) -}
+acdc2ee0b045f99da6344ecaf86143ac
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "InteractiveCmd"#) -}
+698b079fe61e99d54a1db603c9a3bdf2
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw7-0.1.0.0-17DQWlDqMzvGTs6m332wVc"#) -}
+81bb890d79f1b548f8bb4aeaecaf4b0e
+  $waddItem ::
+    GHC.Prim.MutVar#
+      GHC.Prim.RealWorld
+      [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, Strictness: <S,U><L,U(U,U,U)><L,U(U,U,U)><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.MutVar#
+                            GHC.Prim.RealWorld
+                            [(Data.Text.Internal.Text, Data.Text.Internal.Text)])
+                   (ww1 :: Data.Text.Internal.Text)
+                   (ww2 :: Data.Text.Internal.Text)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                        ww
+                        w of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.List.elem
+                        @ Data.Text.Internal.Text
+                        Data.Text.$fEqText
+                        ww1
+                        (GHC.Base.map
+                           @ (Data.Text.Internal.Text, Data.Text.Internal.Text)
+                           @ Data.Text.Internal.Text
+                           (Data.Tuple.fst
+                              @ Data.Text.Internal.Text
+                              @ Data.Text.Internal.Text)
+                           ipv1) of wild {
+                   GHC.Types.False
+                   -> case GHC.Prim.writeMutVar#
+                             @ GHC.Prim.RealWorld
+                             @ [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                             ww
+                             (GHC.Types.:
+                                @ (Data.Text.Internal.Text, Data.Text.Internal.Text)
+                                (ww1, ww2)
+                                ipv1)
+                             ipv of s2# { DEFAULT ->
+                      case GHC.IO.Handle.Text.hPutStr2
+                             GHC.IO.Handle.FD.stdout
+                             (GHC.CString.unpackAppendCString#
+                                "("#
+                                (case Data.Text.Show.$w$cshow ww1 of ww3 { (#,#) ww4 ww5 ->
+                                 GHC.Base.++
+                                   @ GHC.Types.Char
+                                   (GHC.Types.: @ GHC.Types.Char ww4 ww5)
+                                   (GHC.CString.unpackAppendCString#
+                                      ", "#
+                                      (case Data.Text.Show.$w$cshow ww2 of ww6 { (#,#) ww7 ww8 ->
+                                       GHC.Base.++
+                                         @ GHC.Types.Char
+                                         (GHC.Types.: @ GHC.Types.Char ww7 ww8)
+                                         InteractiveCmd.addItem4 })) }))
+                             GHC.Types.True
+                             s2# of ds2 { (#,#) ipv2 ipv3 ->
+                      InteractiveCmd.addItem3
+                        (GHC.STRef.STRef
+                           @ GHC.Prim.RealWorld
+                           @ [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                           ww)
+                          `cast`
+                        (Sym (GHC.IORef.N:IORef[0]) <[(Data.Text.Internal.Text,
+                                                       Data.Text.Internal.Text)]>_N)
+                        ipv2 } }
+                   GHC.Types.True
+                   -> case GHC.IO.Handle.Text.hPutStr2
+                             GHC.IO.Handle.FD.stdout
+                             (GHC.CString.unpackAppendCString#
+                                "Key \""#
+                                (case Data.Text.Show.$w$cshow ww1 of ww3 { (#,#) ww4 ww5 ->
+                                 GHC.Base.++
+                                   @ GHC.Types.Char
+                                   (GHC.Types.: @ GHC.Types.Char ww4 ww5)
+                                   InteractiveCmd.addItem2 }))
+                             GHC.Types.True
+                             ipv of ds2 { (#,#) ipv2 ipv3 ->
+                      InteractiveCmd.addItem3
+                        (GHC.STRef.STRef
+                           @ GHC.Prim.RealWorld
+                           @ [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                           ww)
+                          `cast`
+                        (Sym (GHC.IORef.N:IORef[0]) <[(Data.Text.Internal.Text,
+                                                       Data.Text.Internal.Text)]>_N)
+                        ipv2 } } }) -}
+894bd11def8591ae5e24c223e9b5b82c
+  $wmodifyItem ::
+    GHC.Prim.MutVar#
+      GHC.Prim.RealWorld
+      [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, Strictness: <S,U><L,U(U,U,U)><L,U(U,U,U)><S,U>,
+     Inline: [0] -}
+fa410bec044163c4a0a48d20fe0f5c4a
+  $wouter ::
+    Data.Text.Array.MArray GHC.Prim.RealWorld
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+     Inline: [0] -}
+e76db03cf2d9b4369b16e42593eda2a9
+  $wsaveToFile ::
+    GHC.Prim.MutVar#
+      GHC.Prim.RealWorld
+      [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+    -> Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <S,U><L,1*U(U,U,U)><S,U>, Inline: [0] -}
+37165ff5027060ee3b11585225f1afda
+  $wsplitProperty ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> (# Data.Text.Internal.Text, Data.Text.Internal.Text #)
+  {- Arity: 2, Strictness: <L,1*U(U,U,U)><L,1*U(U,U,U)>,
+     Inline: [0] -}
+57e45b21cefc66a0ab86a7871db737f9
+  addItem ::
+    GHC.IORef.IORef
+      [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+    -> (Data.Text.Internal.Text, Data.Text.Internal.Text)
+    -> GHC.Types.IO ()
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(U(U,U,U),U(U,U,U))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.addItem1
+                  `cast`
+                (<GHC.IORef.IORef
+                    [(Data.Text.Internal.Text, Data.Text.Internal.Text)]>_R
+                 ->_R <(Data.Text.Internal.Text, Data.Text.Internal.Text)>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+39c67cc0aad31ad0d9cbd4dbec4e9aaf
+  addItem1 ::
+    GHC.IORef.IORef
+      [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+    -> (Data.Text.Internal.Text, Data.Text.Internal.Text)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(U(U,U,U),U(U,U,U))><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.IORef.IORef
+                           [(Data.Text.Internal.Text, Data.Text.Internal.Text)])
+                   (w1 :: (Data.Text.Internal.Text, Data.Text.Internal.Text))
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w `cast`
+                      (GHC.IORef.N:IORef[0] <[(Data.Text.Internal.Text,
+                                               Data.Text.Internal.Text)]>_N) of ww { GHC.STRef.STRef ww1 ->
+                 case w1 of ww2 { (,) ww3 ww4 ->
+                 InteractiveCmd.$waddItem ww1 ww3 ww4 w2 } }) -}
+6617fd50825f9725c2f7cf30fac870a6
+  addItem2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "\" already exists"#) -}
+9324a3ac741953c6d382335eea564c05
+  addItem3 ::
+    GHC.IORef.IORef
+      [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,1*U(U)><S,U> -}
+fd83c032aa0777e8fa520a5e614a8a66
+  addItem4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ") successfully added"#) -}
+c130c0749cd395f02530398d8a006d9e
+  cmd :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.cmd1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+8fc549a68ea73cd568761390c41be84a
+  cmd1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case System.Environment.getArgs1 s of ds1 { (#,#) ipv ipv1 ->
+                 let {
+                   $w$j :: GHC.Prim.State# GHC.Prim.RealWorld
+                           -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                   = \ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case GHC.List.$wlenAcc @ [GHC.Types.Char] ipv1 0# of ww2 {
+                       DEFAULT -> (# w, GHC.Tuple.() #)
+                       1#
+                       -> case GHC.IO.Handle.FD.openFile1
+                                 (GHC.List.head @ GHC.Base.String ipv1)
+                                 GHC.IO.IOMode.ReadMode
+                                 w of ds2 { (#,#) ipv2 ipv3 ->
+                          case GHC.IO.Handle.Text.hGetContents1
+                                 ipv3
+                                 ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                          case GHC.Prim.newMutVar#
+                                 @ [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                                 @ GHC.Prim.RealWorld
+                                 (GHC.Base.map
+                                    @ [GHC.Types.Char]
+                                    @ (Data.Text.Internal.Text, Data.Text.Internal.Text)
+                                    InteractiveCmd.cmd3
+                                    (Data.OldList.lines ipv5))
+                                 ipv4 of ds { (#,#) ipv6 ipv7 ->
+                          InteractiveCmd.addItem3
+                            (GHC.STRef.STRef
+                               @ GHC.Prim.RealWorld
+                               @ [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                               ipv7)
+                              `cast`
+                            (Sym (GHC.IORef.N:IORef[0]) <[(Data.Text.Internal.Text,
+                                                           Data.Text.Internal.Text)]>_N)
+                            ipv6 } } } }
+                 } in
+                 case GHC.List.$wlenAcc @ [GHC.Types.Char] ipv1 0# of ww2 {
+                   DEFAULT
+                   -> case GHC.IO.Handle.Text.hPutStr2
+                             GHC.IO.Handle.FD.stdout
+                             InteractiveCmd.cmd2
+                             GHC.Types.True
+                             ipv of ds2 { (#,#) ipv2 ipv3 ->
+                      $w$j ipv2 }
+                   1# -> $w$j ipv } }) -}
+839d4872ce40d26c2b71547c820816f0
+  cmd2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Usage: cmd <filename>"#) -}
+07475e70e99afc6012f0d1c96c9ffb43
+  cmd3 ::
+    GHC.Base.String
+    -> (Data.Text.Internal.Text, Data.Text.Internal.Text)
+  {- Arity: 1,
+     Unfolding: (\ (x :: GHC.Base.String) ->
+                 case InteractiveCmd.$wsplitProperty
+                        InteractiveCmd.cmd5
+                        (case GHC.Magic.runRW#
+                                @ 'GHC.Types.PtrRepLifted
+                                @ Data.Text.Internal.Text
+                                (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                 case GHC.Prim.newByteArray#
+                                        @ GHC.Prim.RealWorld
+                                        8#
+                                        s1 of ds1 { (#,#) ipv ipv1 ->
+                                 InteractiveCmd.$wouter
+                                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                                   InteractiveCmd.cmd4
+                                   x
+                                   0#
+                                   ipv }) of ds1 { (#,#) ipv ipv1 ->
+                         ipv1 }) of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+7d1b8d3805c15c5228bef7f9286974c8
+  cmd4 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
+112e80c358e01e4b008230bb96549154
+  cmd5 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "="#) -}
+18e6acf0fe8c05702df565b50fbde696
+  modifyItem ::
+    GHC.IORef.IORef
+      [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+    -> (Data.Text.Internal.Text, Data.Text.Internal.Text)
+    -> GHC.Types.IO ()
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(U(U,U,U),U(U,U,U))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.modifyItem1
+                  `cast`
+                (<GHC.IORef.IORef
+                    [(Data.Text.Internal.Text, Data.Text.Internal.Text)]>_R
+                 ->_R <(Data.Text.Internal.Text, Data.Text.Internal.Text)>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+60bf484b55e6f99c3c1ab74d2ff25355
+  modifyItem1 ::
+    GHC.IORef.IORef
+      [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+    -> (Data.Text.Internal.Text, Data.Text.Internal.Text)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(U(U,U,U),U(U,U,U))><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.IORef.IORef
+                           [(Data.Text.Internal.Text, Data.Text.Internal.Text)])
+                   (w1 :: (Data.Text.Internal.Text, Data.Text.Internal.Text))
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w `cast`
+                      (GHC.IORef.N:IORef[0] <[(Data.Text.Internal.Text,
+                                               Data.Text.Internal.Text)]>_N) of ww { GHC.STRef.STRef ww1 ->
+                 case w1 of ww2 { (,) ww3 ww4 ->
+                 InteractiveCmd.$wmodifyItem ww1 ww3 ww4 w2 } }) -}
+b0b93f57e32170154647a82e107b65a5
+  quit :: GHC.Types.IO ()
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.quit1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+dffc249f85edada40fc6aff8c7ce89ab
+  quit1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s, GHC.Tuple.() #)) -}
+d413ffb18289568f537d7d18fe98c9d1
+  runCmd ::
+    GHC.IORef.IORef
+      [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+    -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,1*U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.addItem3
+                  `cast`
+                (<GHC.IORef.IORef
+                    [(Data.Text.Internal.Text, Data.Text.Internal.Text)]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+11d969304444c672e80e94ed98a09576
+  saveToFile ::
+    GHC.IORef.IORef
+      [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+    -> Data.Text.Internal.Text -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,1*U(U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.saveToFile1
+                  `cast`
+                (<GHC.IORef.IORef
+                    [(Data.Text.Internal.Text, Data.Text.Internal.Text)]>_R
+                 ->_R <Data.Text.Internal.Text>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+aea12ff33be05a6cfc19da3fbc9ca72a
+  saveToFile1 ::
+    GHC.IORef.IORef
+      [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+    -> Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,1*U(U,U,U)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.IORef.IORef
+                           [(Data.Text.Internal.Text, Data.Text.Internal.Text)])
+                   (w1 :: Data.Text.Internal.Text)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w `cast`
+                      (GHC.IORef.N:IORef[0] <[(Data.Text.Internal.Text,
+                                               Data.Text.Internal.Text)]>_N) of ww { GHC.STRef.STRef ww1 ->
+                 InteractiveCmd.$wsaveToFile ww1 w1 w2 }) -}
+d240800f4753973bd6815deadab827d9
+  splitProperty ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> (Data.Text.Internal.Text, Data.Text.Internal.Text)
+  {- Arity: 2, Strictness: <L,1*U(U,U,U)><L,1*U(U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Data.Text.Internal.Text)
+                   (w1 :: Data.Text.Internal.Text) ->
+                 case InteractiveCmd.$wsplitProperty w w1 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+7c3a88e5c8a6cd3f1949117f40bc0b94
+  wrongCommand ::
+    GHC.IORef.IORef
+      [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+    -> Data.Text.Internal.Text -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,1*U(U)><L,1*U(U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.wrongCommand1
+                  `cast`
+                (<GHC.IORef.IORef
+                    [(Data.Text.Internal.Text, Data.Text.Internal.Text)]>_R
+                 ->_R <Data.Text.Internal.Text>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+3c1ff6acb10dabae5be968d31e111fd4
+  wrongCommand1 ::
+    GHC.IORef.IORef
+      [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+    -> Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,1*U(U)><L,1*U(U,U,U)><S,U>,
+     Unfolding: (\ (props :: GHC.IORef.IORef
+                               [(Data.Text.Internal.Text, Data.Text.Internal.Text)])
+                   (command :: Data.Text.Internal.Text)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (GHC.CString.unpackAppendCString#
+                           "Wrong command: "#
+                           (case command of wild { Data.Text.Internal.Text dt dt1 dt2 ->
+                            let {
+                              end :: GHC.Prim.Int# = GHC.Prim.+# dt1 dt2
+                            } in
+                            letrec {
+                              $wunfold :: GHC.Prim.Int# -> [GHC.Types.Char]
+                                {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                              = \ (ww :: GHC.Prim.Int#) ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.>=# ww end) of wild1 {
+                                  GHC.Types.False
+                                  -> case GHC.Prim.indexWord16Array# dt ww of r# { DEFAULT ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.geWord# r# 55296##) of wild2 {
+                                       GHC.Types.False
+                                       -> GHC.Types.:
+                                            @ GHC.Types.Char
+                                            (GHC.Types.C# (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                            ($wunfold (GHC.Prim.+# ww 1#))
+                                       GHC.Types.True
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.leWord# r# 56319##) of wild3 {
+                                            GHC.Types.False
+                                            -> GHC.Types.:
+                                                 @ GHC.Types.Char
+                                                 (GHC.Types.C#
+                                                    (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                                 ($wunfold (GHC.Prim.+# ww 1#))
+                                            GHC.Types.True
+                                            -> case GHC.Prim.indexWord16Array#
+                                                      dt
+                                                      (GHC.Prim.+# ww 1#) of r#1 { DEFAULT ->
+                                               GHC.Types.:
+                                                 @ GHC.Types.Char
+                                                 (GHC.Types.C#
+                                                    (GHC.Prim.chr#
+                                                       (GHC.Prim.+#
+                                                          (GHC.Prim.+#
+                                                             (GHC.Prim.uncheckedIShiftL#
+                                                                (GHC.Prim.-#
+                                                                   (GHC.Prim.word2Int# r#)
+                                                                   55296#)
+                                                                10#)
+                                                             (GHC.Prim.-#
+                                                                (GHC.Prim.word2Int# r#1)
+                                                                56320#))
+                                                          65536#)))
+                                                 ($wunfold (GHC.Prim.+# ww 2#)) } } } }
+                                  GHC.Types.True -> GHC.Types.[] @ GHC.Types.Char }
+                            } in
+                            $wunfold dt1 }))
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 InteractiveCmd.addItem3 props ipv }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
