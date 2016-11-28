@@ -1,7 +1,7 @@
 module ExprParser where
 
 import           Control.Applicative   (pure, (*>), (<$>), (<*>))
-import           Control.Monad         (replicateM_, void)
+import           Control.Monad         (void)
 import           Control.Monad.Reader  (Reader (), asks, liftM2, runReader)
 import           Data.Map              (Map (), empty, fromList, insert, lookup)
 import           Data.Maybe            (fromJust, fromMaybe)
