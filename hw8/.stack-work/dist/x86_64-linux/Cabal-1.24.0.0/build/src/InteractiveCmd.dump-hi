@@ -1,0 +1,589 @@
+
+==================== FINAL INTERFACE ====================
+2016-11-28 14:56:45.168775 UTC
+
+interface hw8-0.1.0.0-JYzRyvYdyOz8QS5p7KNV9n:InteractiveCmd 8001
+  interface hash: 771eb8d05338d017c89bd89866257247
+  ABI hash: bf80362305496ecb1eb7340919f4320f
+  export-list hash: 0d9897a132f08c9fe651c760f7ae868e
+  orphan hash: 8143a3ab33e3c08a5a876863a5d2b257
+  flag hash: 57d900b1c2ee46d04a484fcbe9ab7cf6
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  InteractiveCmd.addItem
+  InteractiveCmd.addToMap
+  InteractiveCmd.cmd
+  InteractiveCmd.modifyItem
+  InteractiveCmd.quit
+  InteractiveCmd.runCmd
+  InteractiveCmd.saveToFile
+  InteractiveCmd.splitProperty
+  InteractiveCmd.wrongCommand
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0*
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+                      text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s*
+                      transformers-0.5.2.0@transformers-0.5.2.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Show
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+import  -/  base-4.9.0.0:Control.Applicative 7728b33d6969dce59e89474349eb1397
+import  -/  base-4.9.0.0:Control.Monad 7767aebfd53f0b584cef2fe66ad3986c
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:Data.Maybe 5f2ba364cbe65c060bc5436bc0b9d049
+import  -/  base-4.9.0.0:Data.Monoid 1efae021212a10c79fd75960dc0a1d99
+import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.IO.Handle.Text 23b6dc4ed000f42bf105ce56bdeb0dc6
+import  -/  base-4.9.0.0:GHC.IO.IOMode 9380a6a6b8c50facc225c4877c5e1e90
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.Environment ee0914a962f5508d0fd404c89ee4999b
+import  -/  base-4.9.0.0:System.IO eb1d40aa793a4047069a5023f2ebcfe3
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map 24b19ef74cea78e4c18332bed9f0491d
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base 1e8d61dcc59a1a983b27bab6fd6bdcaf
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text 6515f3179e27a91345842b6e634f584c
+import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.IO 4bbe6162b66e24a3ce48e078208c8e49
+import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Internal 530216acfbfab25df053b0caac6d6a57
+import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Show c6fc4b1a4431943028eb6eb78b495e09
+import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Class dbb3e20cde5546fe0eb9f9b8c0fb8ef4
+import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.State 8d226555bc2686d0ea757e495e63698c
+import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.State.Lazy 16a585e7f12cd771300b3cab638df233
+5e67e5a45942e1caf889eaaaeaaaa98b
+  $sfromList ::
+    [(Data.Text.Internal.Text, a)]
+    -> Data.Map.Base.Map Data.Text.Internal.Text a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ a (ds :: [(Data.Text.Internal.Text, a)]) ->
+                 case ds of wild {
+                   [] -> Data.Map.Base.Tip @ Data.Text.Internal.Text @ a
+                   : ds1 ds2
+                   -> case ds1 of wild1 { (,) kx x ->
+                      case ds2 of wild2 {
+                        []
+                        -> case kx of dt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                           Data.Map.Base.Bin
+                             @ Data.Text.Internal.Text
+                             @ a
+                             1#
+                             dt
+                             x
+                             (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a)
+                             (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a) }
+                        : ipv ipv1
+                        -> case ipv of wild3 { (,) ky ds3 ->
+                           case kx of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                           case ky of ww4 { Data.Text.Internal.Text ww5 ww6 ww7 ->
+                           case Data.Text.$w$ccompare ww1 ww2 ww3 ww5 ww6 ww7 of wild4 {
+                             DEFAULT
+                             -> InteractiveCmd.$sfromList1
+                                  @ a
+                                  (Data.Map.Base.Bin
+                                     @ Data.Text.Internal.Text
+                                     @ a
+                                     1#
+                                     ww
+                                     x
+                                     (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a)
+                                     (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a))
+                                  wild2
+                             GHC.Types.LT
+                             -> InteractiveCmd.$wpoly_go10
+                                  @ a
+                                  1#
+                                  (Data.Map.Base.Bin
+                                     @ Data.Text.Internal.Text
+                                     @ a
+                                     1#
+                                     ww
+                                     x
+                                     (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a)
+                                     (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a))
+                                  wild2 } } } } } } }) -}
+2347c3a4210bf880768ca41f7382046f
+  $sfromList1 ::
+    Data.Map.Base.Map Data.Text.Internal.Text a1
+    -> [(Data.Text.Internal.Text, a1)]
+    -> Data.Map.Base.Map Data.Text.Internal.Text a1
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+60da31ef01ab0d54b9a4287dd3e5bf44
+  $sinsert_$sgo10 ::
+    Data.Text.Internal.Text
+    -> a1
+    -> Data.Map.Base.Map Data.Text.Internal.Text a1
+    -> Data.Map.Base.Map Data.Text.Internal.Text a1
+  {- Arity: 3, Strictness: <S,1*U(U,U,U)><L,U><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a1
+                   (w :: Data.Text.Internal.Text)
+                   (w1 :: a1)
+                   (w2 :: Data.Map.Base.Map Data.Text.Internal.Text a1) ->
+                 case w of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 InteractiveCmd.$w$sgo10 @ a1 ww1 ww2 ww3 w1 w2 }) -}
+b40504445c60e04a70ef380bd3c69bc8
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   InteractiveCmd.$trModule2
+                   InteractiveCmd.$trModule1) -}
+cd41eede08e493c22bd00a5fdfb6f1e0
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "InteractiveCmd"#) -}
+933a1f9dbc4bcf117d8f3da89a89a146
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw8-0.1.0.0-JYzRyvYdyOz8QS5p7KNV9n"#) -}
+44351fdd823c79e2a264077ea7db42ac
+  $w$sgo10 ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> a1
+    -> Data.Map.Base.Map Data.Text.Internal.Text a1
+    -> Data.Map.Base.Map Data.Text.Internal.Text a1
+  {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><S,1*U>,
+     Inline: [0] -}
+a03f13c00ccdd978d97e1c1bb70bdea5
+  $waddItem ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Text.Internal.Text
+    -> Data.Map.Base.Map
+         Data.Text.Internal.Text Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((),
+           Data.Map.Base.Map
+             Data.Text.Internal.Text Data.Text.Internal.Text) #)
+  {- Arity: 6, Strictness: <L,U><L,U><L,U><L,U(U,U,U)><S,U><S,U>,
+     Inline: [0] -}
+21447fdec43b159d36988800c21236e3
+  $wmodifyItem ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Text.Internal.Text
+    -> Data.Map.Base.Map
+         Data.Text.Internal.Text Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((),
+           Data.Map.Base.Map
+             Data.Text.Internal.Text Data.Text.Internal.Text) #)
+  {- Arity: 6, Strictness: <L,U><L,U><L,U><L,U(U,U,U)><S,U><S,U>,
+     Inline: [0] -}
+f610f466186ff61aa46966ab11bc61a8
+  $wouter ::
+    Data.Text.Array.MArray GHC.Prim.RealWorld
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+     Inline: [0] -}
+5a968c3dfd9512b7d79b7ccfa4dd987e
+  $wpoly_go1 ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Map.Base.Map Data.Text.Internal.Text a
+    -> GHC.Base.Maybe a
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,U><L,U><L,U><S,1*U>,
+     Inline: [0] -}
+24cd9755dbe353bbc0859188a56ee40a
+  $wpoly_go10 ::
+    GHC.Prim.Int#
+    -> Data.Map.Base.Map Data.Text.Internal.Text a
+    -> [(Data.Text.Internal.Text, a)]
+    -> Data.Map.Base.Map Data.Text.Internal.Text a
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+bba5eddc1f86d724e68284143bdf0982
+  $wsplitProperty ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> (# Data.Text.Internal.Text, Data.Text.Internal.Text #)
+  {- Arity: 2, Strictness: <L,1*U(U,U,U)><L,1*U(U,U,U)>,
+     Inline: [0] -}
+f8a190c7d1b460b19b4f7c3cb99ae6a3
+  addItem ::
+    (Data.Text.Internal.Text, Data.Text.Internal.Text)
+    -> Control.Monad.Trans.State.Lazy.StateT
+         (Data.Map.Base.Map Data.Text.Internal.Text Data.Text.Internal.Text)
+         GHC.Types.IO
+         ()
+  {- Arity: 3, Strictness: <S(SL),1*U(U(U,U,U),U(U,U,U))><S,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.addItem1
+                  `cast`
+                (<(Data.Text.Internal.Text, Data.Text.Internal.Text)>_R
+                 ->_R Trans
+                          (<Data.Map.Base.Map
+                              Data.Text.Internal.Text Data.Text.Internal.Text>_R
+                           ->_R Sym (GHC.Types.N:IO[0]
+                                         <((),
+                                           Data.Map.Base.Map
+                                             Data.Text.Internal.Text Data.Text.Internal.Text)>_R))
+                          (Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                    <Data.Map.Base.Map
+                                       Data.Text.Internal.Text Data.Text.Internal.Text>_N
+                                    <GHC.Types.IO>_R
+                                    <()>_N))) -}
+4b9c042344eaea700e4b660805a8a7fc
+  addItem1 ::
+    (Data.Text.Internal.Text, Data.Text.Internal.Text)
+    -> Data.Map.Base.Map
+         Data.Text.Internal.Text Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((),
+           Data.Map.Base.Map
+             Data.Text.Internal.Text Data.Text.Internal.Text) #)
+  {- Arity: 3, Strictness: <S(SL),1*U(U(U,U,U),U(U,U,U))><S,U><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: (Data.Text.Internal.Text, Data.Text.Internal.Text))
+                   (w1 :: Data.Map.Base.Map
+                            Data.Text.Internal.Text Data.Text.Internal.Text)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { Data.Text.Internal.Text ww4 ww5 ww6 ->
+                 InteractiveCmd.$waddItem ww4 ww5 ww6 ww2 w1 w2 } }) -}
+9b1cad45cd344729ab53666b0c166539
+  addToMap ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> Control.Monad.Trans.State.Lazy.StateT
+         (Data.Map.Base.Map Data.Text.Internal.Text Data.Text.Internal.Text)
+         GHC.Types.IO
+         ()
+  {- Arity: 4, Strictness: <L,1*U(U,U,U)><L,U><L,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.addToMap1
+                  `cast`
+                (<Data.Text.Internal.Text>_R
+                 ->_R <Data.Text.Internal.Text>_R
+                 ->_R Trans
+                          (<Data.Map.Base.Map
+                              Data.Text.Internal.Text Data.Text.Internal.Text>_R
+                           ->_R Sym (GHC.Types.N:IO[0]
+                                         <((),
+                                           Data.Map.Base.Map
+                                             Data.Text.Internal.Text Data.Text.Internal.Text)>_R))
+                          (Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                    <Data.Map.Base.Map
+                                       Data.Text.Internal.Text Data.Text.Internal.Text>_N
+                                    <GHC.Types.IO>_R
+                                    <()>_N))) -}
+7a02d3e305ef7dc6c9f3f616ab89b567
+  addToMap1 ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> Data.Map.Base.Map
+         Data.Text.Internal.Text Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((),
+           Data.Map.Base.Map
+             Data.Text.Internal.Text Data.Text.Internal.Text) #)
+  {- Arity: 4, Strictness: <L,1*U(U,U,U)><L,U><L,1*U><S,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ (name :: Data.Text.Internal.Text)
+                   (value :: Data.Text.Internal.Text)
+                   (eta :: Data.Map.Base.Map
+                             Data.Text.Internal.Text Data.Text.Internal.Text)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s,
+                    (GHC.Tuple.(),
+                     InteractiveCmd.$sinsert_$sgo10
+                       @ Data.Text.Internal.Text
+                       name
+                       value
+                       eta) #)) -}
+ddbe39c2cae610dbaa455b78dd518fe2
+  cmd :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.cmd1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+5f930d0dd37780883b70dde379a7a044
+  cmd1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case System.Environment.getArgs1 s of ds1 { (#,#) ipv ipv1 ->
+                 let {
+                   $w$j :: GHC.Prim.State# GHC.Prim.RealWorld
+                           -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                   = \ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case GHC.List.$wlenAcc @ [GHC.Types.Char] ipv1 0# of ww2 {
+                       DEFAULT -> (# w, GHC.Tuple.() #)
+                       1#
+                       -> case GHC.IO.Handle.FD.openFile1
+                                 (GHC.List.head @ GHC.Base.String ipv1)
+                                 GHC.IO.IOMode.ReadMode
+                                 w of ds2 { (#,#) ipv2 ipv3 ->
+                          case GHC.IO.Handle.Text.hGetContents1
+                                 ipv3
+                                 ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                          case InteractiveCmd.cmd6
+                                 (InteractiveCmd.$sfromList
+                                    @ Data.Text.Internal.Text
+                                    (GHC.Base.map
+                                       @ [GHC.Types.Char]
+                                       @ (Data.Text.Internal.Text, Data.Text.Internal.Text)
+                                       InteractiveCmd.cmd3
+                                       (Data.OldList.lines ipv5)))
+                                 ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                          (# ipv6, GHC.Tuple.() #) } } } }
+                 } in
+                 case GHC.List.$wlenAcc @ [GHC.Types.Char] ipv1 0# of ww2 {
+                   DEFAULT
+                   -> case Data.Text.IO.appendFile2
+                             GHC.IO.Handle.FD.stdout
+                             InteractiveCmd.cmd2
+                             ipv of ds2 { (#,#) ipv2 ipv3 ->
+                      case GHC.IO.Handle.Text.$whPutChar
+                             GHC.IO.Handle.FD.stdout
+                             '\n'#
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      $w$j ipv4 } }
+                   1# -> $w$j ipv } }) -}
+600a662491d5d6e93de70281b38c0224
+  cmd2 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   "Usage: cmd <filename>"#) -}
+d46d238f6fb37394e229bd8de8c1e287
+  cmd3 ::
+    GHC.Base.String
+    -> (Data.Text.Internal.Text, Data.Text.Internal.Text)
+  {- Arity: 1,
+     Unfolding: (\ (x :: GHC.Base.String) ->
+                 case InteractiveCmd.$wsplitProperty
+                        InteractiveCmd.cmd5
+                        (case GHC.Magic.runRW#
+                                @ 'GHC.Types.PtrRepLifted
+                                @ Data.Text.Internal.Text
+                                (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                 case GHC.Prim.newByteArray#
+                                        @ GHC.Prim.RealWorld
+                                        8#
+                                        s1 of ds1 { (#,#) ipv ipv1 ->
+                                 InteractiveCmd.$wouter
+                                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                                   InteractiveCmd.cmd4
+                                   x
+                                   0#
+                                   ipv }) of ds1 { (#,#) ipv ipv1 ->
+                         ipv1 }) of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+2fb5e335ca1f49ed8c6de28d64b76b0c
+  cmd4 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
+e609bd79f1c4bde61ebdabfb0b76a486
+  cmd5 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "="#) -}
+5c9f0a1f6038fedac9a75fae37579000
+  cmd6 ::
+    Data.Map.Base.Map Data.Text.Internal.Text Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((),
+           Data.Map.Base.Map
+             Data.Text.Internal.Text Data.Text.Internal.Text) #)
+  {- Arity: 2, Strictness: <L,U><S,U> -}
+b7ddaa7f9ea05341da372875ce45d995
+  modifyItem ::
+    (Data.Text.Internal.Text, Data.Text.Internal.Text)
+    -> Control.Monad.Trans.State.Lazy.StateT
+         (Data.Map.Base.Map Data.Text.Internal.Text Data.Text.Internal.Text)
+         GHC.Types.IO
+         ()
+  {- Arity: 3, Strictness: <S(SL),1*U(U(U,U,U),U(U,U,U))><S,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.modifyItem1
+                  `cast`
+                (<(Data.Text.Internal.Text, Data.Text.Internal.Text)>_R
+                 ->_R Trans
+                          (<Data.Map.Base.Map
+                              Data.Text.Internal.Text Data.Text.Internal.Text>_R
+                           ->_R Sym (GHC.Types.N:IO[0]
+                                         <((),
+                                           Data.Map.Base.Map
+                                             Data.Text.Internal.Text Data.Text.Internal.Text)>_R))
+                          (Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                    <Data.Map.Base.Map
+                                       Data.Text.Internal.Text Data.Text.Internal.Text>_N
+                                    <GHC.Types.IO>_R
+                                    <()>_N))) -}
+7fbbf3185625a5dbfa49ebf46911fafe
+  modifyItem1 ::
+    (Data.Text.Internal.Text, Data.Text.Internal.Text)
+    -> Data.Map.Base.Map
+         Data.Text.Internal.Text Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((),
+           Data.Map.Base.Map
+             Data.Text.Internal.Text Data.Text.Internal.Text) #)
+  {- Arity: 3, Strictness: <S(SL),1*U(U(U,U,U),U(U,U,U))><S,U><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: (Data.Text.Internal.Text, Data.Text.Internal.Text))
+                   (w1 :: Data.Map.Base.Map
+                            Data.Text.Internal.Text Data.Text.Internal.Text)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { Data.Text.Internal.Text ww4 ww5 ww6 ->
+                 InteractiveCmd.$wmodifyItem ww4 ww5 ww6 ww2 w1 w2 } }) -}
+5f11d11917e75976492d3acaddd8ca7d
+  quit :: GHC.Types.IO ()
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.quit1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+3f5ab8678cbabdff8599241460aa707a
+  quit1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s, GHC.Tuple.() #)) -}
+a148f2f723d671f0353a4d570851fbab
+  runCmd ::
+    Control.Monad.Trans.State.Lazy.StateT
+      (Data.Map.Base.Map Data.Text.Internal.Text Data.Text.Internal.Text)
+      GHC.Types.IO
+      ()
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.cmd6
+                  `cast`
+                (Trans
+                     (<Data.Map.Base.Map
+                         Data.Text.Internal.Text Data.Text.Internal.Text>_R
+                      ->_R Sym (GHC.Types.N:IO[0]
+                                    <((),
+                                      Data.Map.Base.Map
+                                        Data.Text.Internal.Text Data.Text.Internal.Text)>_R))
+                     (Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                               <Data.Map.Base.Map
+                                  Data.Text.Internal.Text Data.Text.Internal.Text>_N
+                               <GHC.Types.IO>_R
+                               <()>_N))) -}
+76e8f22024dde58e4b1a62605fe77fc2
+  saveToFile ::
+    Data.Text.Internal.Text
+    -> Control.Monad.Trans.State.Lazy.StateT
+         (Data.Map.Base.Map Data.Text.Internal.Text Data.Text.Internal.Text)
+         GHC.Types.IO
+         ()
+  {- Arity: 3, Strictness: <L,1*U(U,U,U)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.saveToFile1
+                  `cast`
+                (<Data.Text.Internal.Text>_R
+                 ->_R Trans
+                          (<Data.Map.Base.Map
+                              Data.Text.Internal.Text Data.Text.Internal.Text>_R
+                           ->_R Sym (GHC.Types.N:IO[0]
+                                         <((),
+                                           Data.Map.Base.Map
+                                             Data.Text.Internal.Text Data.Text.Internal.Text)>_R))
+                          (Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                    <Data.Map.Base.Map
+                                       Data.Text.Internal.Text Data.Text.Internal.Text>_N
+                                    <GHC.Types.IO>_R
+                                    <()>_N))) -}
+cef5a50152989dc0429100ca0f9f9410
+  saveToFile1 ::
+    Data.Text.Internal.Text
+    -> Data.Map.Base.Map
+         Data.Text.Internal.Text Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((),
+           Data.Map.Base.Map
+             Data.Text.Internal.Text Data.Text.Internal.Text) #)
+  {- Arity: 3, Strictness: <L,1*U(U,U,U)><L,U><S,U> -}
+25014fb9a62193d7bb9df37852ad2ed0
+  splitProperty ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> (Data.Text.Internal.Text, Data.Text.Internal.Text)
+  {- Arity: 2, Strictness: <L,1*U(U,U,U)><L,1*U(U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Data.Text.Internal.Text)
+                   (w1 :: Data.Text.Internal.Text) ->
+                 case InteractiveCmd.$wsplitProperty w w1 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+724d27d48053d20cf82ec2987f53ee93
+  wrongCommand :: Data.Text.Internal.Text -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,1*U(U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                InteractiveCmd.wrongCommand1
+                  `cast`
+                (<Data.Text.Internal.Text>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+000cffa38263ce2d7fd7a6a29e225be8
+  wrongCommand1 ::
+    Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,1*U(U,U,U)><S,U>,
+     Unfolding: (\ (command :: Data.Text.Internal.Text)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Data.Text.IO.appendFile2
+                        GHC.IO.Handle.FD.stdout
+                        (Data.Text.append InteractiveCmd.wrongCommand2 command)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 GHC.IO.Handle.Text.$whPutChar
+                   GHC.IO.Handle.FD.stdout
+                   '\n'#
+                   ipv }) -}
+33babac4f30bb2a54d91e6e31591318c
+  wrongCommand2 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "Wrong command: "#) -}
+"SPEC/InteractiveCmd fromList @ Text _" [ALWAYS] forall @ a
+                                                        ($dOrd :: GHC.Classes.Ord
+                                                                    Data.Text.Internal.Text)
+  Data.Map.Base.fromList @ Data.Text.Internal.Text @ a $dOrd
+  = InteractiveCmd.$sfromList @ a
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

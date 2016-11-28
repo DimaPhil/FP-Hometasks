@@ -1,0 +1,324 @@
+
+==================== FINAL INTERFACE ====================
+2016-11-28 14:56:45.841134 UTC
+
+interface hw8-0.1.0.0-JYzRyvYdyOz8QS5p7KNV9n:MonadStateInstances 8001
+  interface hash: 71a53f0746204db340ff4290adbeb74e
+  ABI hash: 3324d39ba6bb0d8a054af15ab07613ae
+  export-list hash: a8189ec8cdddcd95cad45cf70a1f203c
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 551fd85314752b77c51bcaed80a5e4e8
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  MonadStateInstances.MonadState{MonadStateInstances.get MonadStateInstances.put}
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 transformers-0.5.2.0@transformers-0.5.2.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Functor.Identity base-4.9.0.0:Data.List.NonEmpty
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Semigroup
+                         base-4.9.0.0:Data.Type.Equality base-4.9.0.0:Data.Version
+                         base-4.9.0.0:Data.Void base-4.9.0.0:GHC.Exts
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Class dbb3e20cde5546fe0eb9f9b8c0fb8ef4
+import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Maybe 95e0bda3bd306ebbde6d0c7967416cea
+import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Reader e4096b104cf1a0df8752e81669ef6a24
+import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.State 8d226555bc2686d0ea757e495e63698c
+import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.State.Lazy 16a585e7f12cd771300b3cab638df233
+a5d5316692c7cb0b5031e30975564a40
+  $fMonadStatesMaybeT ::
+    MonadStateInstances.MonadState s m =>
+    MonadStateInstances.MonadState
+      s (Control.Monad.Trans.Maybe.MaybeT m)
+  DFunId
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,U(U(U(U(U,U),U,U,U,U),U,U,U,U),U,C(U))>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ s
+                      @ (m :: * -> *)
+                      ($dMonadState :: MonadStateInstances.MonadState s m).
+                  @ s
+                  @ (Control.Monad.Trans.Maybe.MaybeT m)
+                  (MonadStateInstances.$fMonadStatesMaybeT_$cp1MonadState
+                     @ s
+                     @ m
+                     $dMonadState)
+                  (MonadStateInstances.$fMonadStatesMaybeT_$cget
+                     @ s
+                     @ m
+                     $dMonadState)
+                  (MonadStateInstances.$fMonadStatesMaybeT_$cput
+                     @ s
+                     @ m
+                     $dMonadState) -}
+a5d5316692c7cb0b5031e30975564a40
+  $fMonadStatesMaybeT_$cget ::
+    MonadStateInstances.MonadState s m =>
+    Control.Monad.Trans.Maybe.MaybeT m s
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),U(1*U,1*U,A)>,
+     Unfolding: (\ @ s
+                   @ (m :: * -> *)
+                   ($dMonadState :: MonadStateInstances.MonadState s m) ->
+                 let {
+                   $dMonad :: GHC.Base.Monad m
+                   = MonadStateInstances.$p1MonadState @ s @ m $dMonadState
+                 } in
+                 (GHC.Base.>>=
+                    @ m
+                    $dMonad
+                    @ s
+                    @ (GHC.Base.Maybe s)
+                    (MonadStateInstances.get @ s @ m $dMonadState)
+                    (\ (x1 :: s) ->
+                     GHC.Base.return
+                       @ m
+                       $dMonad
+                       @ (GHC.Base.Maybe s)
+                       (GHC.Base.Just @ s x1)))
+                   `cast`
+                 (Sym (Control.Monad.Trans.Maybe.N:MaybeT[0] <m>_R <s>_N))) -}
+a5d5316692c7cb0b5031e30975564a40
+  $fMonadStatesMaybeT_$cp1MonadState ::
+    MonadStateInstances.MonadState s m =>
+    GHC.Base.Monad (Control.Monad.Trans.Maybe.MaybeT m)
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,1*U(1*U(U(U(C(U),A),A,A,A,A),C(C1(U)),A,C(U),A),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ s
+                   @ (m :: * -> *)
+                   ($dMonadState :: MonadStateInstances.MonadState s m) ->
+                 Control.Monad.Trans.Maybe.$fMonadMaybeT
+                   @ m
+                   (MonadStateInstances.$p1MonadState @ s @ m $dMonadState)) -}
+a5d5316692c7cb0b5031e30975564a40
+  $fMonadStatesMaybeT_$cput ::
+    MonadStateInstances.MonadState s m =>
+    s -> Control.Monad.Trans.Maybe.MaybeT m ()
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),U(1*U,A,1*C1(U))><L,U>,
+     Unfolding: (\ @ s
+                   @ (m :: * -> *)
+                   ($dMonadState :: MonadStateInstances.MonadState s m)
+                   (eta :: s) ->
+                 let {
+                   $dMonad :: GHC.Base.Monad m
+                   = MonadStateInstances.$p1MonadState @ s @ m $dMonadState
+                 } in
+                 (GHC.Base.>>=
+                    @ m
+                    $dMonad
+                    @ ()
+                    @ (GHC.Base.Maybe ())
+                    (MonadStateInstances.put @ s @ m $dMonadState eta)
+                    (\ (x1 :: ()) ->
+                     GHC.Base.return
+                       @ m
+                       $dMonad
+                       @ (GHC.Base.Maybe ())
+                       (GHC.Base.Just @ () x1)))
+                   `cast`
+                 (Sym (Control.Monad.Trans.Maybe.N:MaybeT[0] <m>_R <()>_N))) -}
+a5d5316692c7cb0b5031e30975564a40
+  $fMonadStatesReaderT ::
+    MonadStateInstances.MonadState s m =>
+    MonadStateInstances.MonadState
+      s (Control.Monad.Trans.Reader.ReaderT r m)
+  DFunId
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,U(1*U(U(U(C(U),A),C(U),C(C1(U)),A,A),C(C1(U)),A,A,C(U)),U,C(U))>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ s
+                      @ (m :: * -> *)
+                      @ r
+                      ($dMonadState :: MonadStateInstances.MonadState s m).
+                  @ s
+                  @ (Control.Monad.Trans.Reader.ReaderT r m)
+                  (MonadStateInstances.$fMonadStatesReaderT_$cp1MonadState
+                     @ s
+                     @ m
+                     @ r
+                     $dMonadState)
+                  (MonadStateInstances.$fMonadStatesReaderT_$cget
+                     @ s
+                     @ m
+                     @ r
+                     $dMonadState)
+                  (MonadStateInstances.$fMonadStatesReaderT_$cput
+                     @ s
+                     @ m
+                     @ r
+                     $dMonadState) -}
+a5d5316692c7cb0b5031e30975564a40
+  $fMonadStatesReaderT1 ::
+    MonadStateInstances.MonadState s m => r -> m s
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ s
+                   @ (m :: * -> *)
+                   @ r
+                   ($dMonadState :: MonadStateInstances.MonadState s m)
+                   (eta :: r) ->
+                 MonadStateInstances.get @ s @ m $dMonadState) -}
+a5d5316692c7cb0b5031e30975564a40
+  $fMonadStatesReaderT_$cget ::
+    MonadStateInstances.MonadState s m =>
+    Control.Monad.Trans.Reader.ReaderT r m s
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)><L,A>,
+     Unfolding: InlineRule (0, True, True)
+                MonadStateInstances.$fMonadStatesReaderT1
+                  `cast`
+                (forall (s :: <*>_N) (m :: <* -> *>_N) (r :: <*>_N).
+                 <MonadStateInstances.MonadState s m>_R
+                 ->_R Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                               <*>_N <r>_R <m>_R <s>_N)) -}
+a5d5316692c7cb0b5031e30975564a40
+  $fMonadStatesReaderT_$cp1MonadState ::
+    MonadStateInstances.MonadState s m =>
+    GHC.Base.Monad (Control.Monad.Trans.Reader.ReaderT r m)
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,1*U(1*U(U(U(C(U),A),C(U),C(C1(U)),A,A),C(C1(U)),A,A,C(U)),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ s
+                   @ (m :: * -> *)
+                   @ r
+                   ($dMonadState :: MonadStateInstances.MonadState s m) ->
+                 Control.Monad.Trans.Reader.$fMonadReaderT
+                   @ m
+                   @ r
+                   (MonadStateInstances.$p1MonadState @ s @ m $dMonadState)) -}
+a5d5316692c7cb0b5031e30975564a40
+  $fMonadStatesReaderT_$cput ::
+    MonadStateInstances.MonadState s m =>
+    s -> Control.Monad.Trans.Reader.ReaderT r m ()
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(A,A,1*C1(U))><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ s
+                   @ (m :: * -> *)
+                   @ r
+                   ($dMonadState :: MonadStateInstances.MonadState s m)
+                   (eta :: s) ->
+                 let {
+                   eta1 :: m () = MonadStateInstances.put @ s @ m $dMonadState eta
+                 } in
+                 (\ (eta2 :: r) -> eta1)
+                   `cast`
+                 (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                           <*>_N <r>_R <m>_R <()>_N))) -}
+a5d5316692c7cb0b5031e30975564a40
+  $fMonadStatesStateT ::
+    GHC.Base.Monad m =>
+    MonadStateInstances.MonadState
+      s (Control.Monad.Trans.State.Lazy.StateT s m)
+  DFunId
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,U(U(U(C(U),A),A,A,A,A),C(C1(U)),A,C(U),C(U))>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ (m :: * -> *) @ s ($dMonad :: GHC.Base.Monad m).
+                  @ s
+                  @ (Control.Monad.Trans.State.Lazy.StateT s m)
+                  (Control.Monad.Trans.State.Lazy.$fMonadStateT @ m @ s $dMonad)
+                  (MonadStateInstances.$fMonadStatesStateT_$cget @ m @ s $dMonad)
+                  (MonadStateInstances.$fMonadStatesStateT_$cput @ m @ s $dMonad) -}
+9801904956cda371ea4436aaf933ed06
+  $fMonadStatesStateT1 :: GHC.Base.Monad m => s -> m (s, s)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLC(S)L),1*U(A,A,A,1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (m :: * -> *) @ s ($dMonad :: GHC.Base.Monad m) (s1 :: s) ->
+                 GHC.Base.return @ m $dMonad @ (s, s) (s1, s1)) -}
+de0fda2cc24dfabf740a866029a28e73
+  $fMonadStatesStateT_$cget ::
+    GHC.Base.Monad m => Control.Monad.Trans.State.Lazy.StateT s m s
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLC(S)L),1*U(A,A,A,1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                MonadStateInstances.$fMonadStatesStateT1
+                  `cast`
+                (forall (m :: <* -> *>_N) (s :: <*>_N).
+                 <GHC.Base.Monad m>_R
+                 ->_R Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                               <s>_N <m>_R <s>_N)) -}
+9ba328e446a1804a9857b6fc94197cd6
+  $fMonadStatesStateT_$cput ::
+    GHC.Base.Monad m =>
+    s -> Control.Monad.Trans.State.Lazy.StateT s m ()
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (m :: * -> *) @ s ($dMonad :: GHC.Base.Monad m) (s1 :: s) ->
+                 let {
+                   lvl :: m ((), s)
+                   = GHC.Base.return @ m $dMonad @ ((), s) (GHC.Tuple.(), s1)
+                 } in
+                 (\ (ds :: s) -> lvl)
+                   `cast`
+                 (Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                           <s>_N <m>_R <()>_N))) -}
+f6ba007beb3539eeed0ad6608adb8705
+  $tc'C:MonadState :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15406651367797363421##
+                   3073700096595814707##
+                   MonadStateInstances.$trModule
+                   MonadStateInstances.$tc'C:MonadState1) -}
+27c3038d7c825c35dbecd5bbc87c0069
+  $tc'C:MonadState1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:MonadState"#) -}
+a7e678f6a3117bf01193a0e171fc0125
+  $tcMonadState :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1719007695638731032##
+                   11540024638030012515##
+                   MonadStateInstances.$trModule
+                   MonadStateInstances.$tcMonadState1) -}
+b35a8eb612476da7f568ba633b1939a2
+  $tcMonadState1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MonadState"#) -}
+ed8b710887c105d99a6f66cc1bfdb41e
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   MonadStateInstances.$trModule2
+                   MonadStateInstances.$trModule1) -}
+f9595c0ecd2f6484038f581a4618789e
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MonadStateInstances"#) -}
+883aa9583bdc5e3856ec3b55e4668754
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw8-0.1.0.0-JYzRyvYdyOz8QS5p7KNV9n"#) -}
+a5d5316692c7cb0b5031e30975564a40
+  class GHC.Base.Monad m => MonadState s (m :: * -> *) where
+    get :: m s
+    put :: s -> m ()
+    {-# MINIMAL get, put #-}
+instance [safe] MonadStateInstances.MonadState [.,
+                                                Control.Monad.Trans.Maybe.MaybeT]
+  = MonadStateInstances.$fMonadStatesMaybeT
+instance [safe] MonadStateInstances.MonadState [.,
+                                                Control.Monad.Trans.Reader.ReaderT]
+  = MonadStateInstances.$fMonadStatesReaderT
+instance [safe] MonadStateInstances.MonadState [.,
+                                                Control.Monad.Trans.State.Lazy.StateT]
+  = MonadStateInstances.$fMonadStatesStateT
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
