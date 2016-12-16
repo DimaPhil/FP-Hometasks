@@ -1,0 +1,126 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-01 17:13:44.552539 UTC
+
+interface hw10-0.1.0.0-8Uja5qijgqlBvE867Eonvw:PrettyShow 8001
+  interface hash: 5249260aa43f6da8c3a1cca3aa59fa52
+  ABI hash: 0c4c58a80f96865ea80071c5b162788d
+  export-list hash: 05aa7ea47445790ef22565a2eaac8fd0
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8dafd2ab15791fac6ed7d254bc0fac09
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  PrettyShow.prettyShow
+  PrettyShow.MyData{PrettyShow.MyData bar foo}
+module dependencies: SelN
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-boot-th-8.0.1@ghc-boot-th-8.0.1
+                      ghc-prim-0.5.0.0 integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.0.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  SelN 186731f4ed9d508eac791948378fb077
+  exports: 12778966bd15962dca065631d817ec3b
+  selN 688d9d29c8492daa2834861f2d4b8f9e
+import  -/  template-haskell-2.11.0.0:Language.Haskell.TH f21b7378cc315cc16d8cb96824740c8e
+import  -/  template-haskell-2.11.0.0:Language.Haskell.TH.Lib 528ee49882ca878bd8c852030ac3480b
+import  -/  template-haskell-2.11.0.0:Language.Haskell.TH.Syntax 2736fdb398685b55523f09714ccd6204
+e0534bd049a91576edfb1108a209fe18
+  $tc'MyData :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3349565955874701972##
+                   17357401046592538968##
+                   PrettyShow.$trModule
+                   PrettyShow.$tc'MyData1) -}
+8c8d0bbb23dabab0b5a2748a830a93c3
+  $tc'MyData1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'MyData"#) -}
+3ebebab4227de8c42a01f107efeab922
+  $tcMyData :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1117436274954492956##
+                   15676123649569646869##
+                   PrettyShow.$trModule
+                   PrettyShow.$tcMyData1) -}
+20d2d9e8873c6bc821ec429e079c3362
+  $tcMyData1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MyData"#) -}
+8aeb58916fcb13a6798c17c1eef8cb7d
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   PrettyShow.$trModule2
+                   PrettyShow.$trModule1) -}
+7b8de87c4cf782a7647904d2d55f48f4
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "PrettyShow"#) -}
+8da1f299085c1e96baa608e5e36ab483
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw10-0.1.0.0-8Uja5qijgqlBvE867Eonvw"#) -}
+5185ca2dd44a4ffdd18f5e886d5df3aa
+  data MyData = MyData {foo :: GHC.Base.String, bar :: GHC.Types.Int}
+6befc85de0c2a0f82455532167c30e62
+  bar :: PrettyShow.MyData -> GHC.Types.Int
+  RecSel Left PrettyShow.MyData
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: PrettyShow.MyData) ->
+                 case ds of wild { PrettyShow.MyData ds1 ds2 -> ds2 }) -}
+e6e26bfdadf8c1cd7485b100652d61a5
+  foo :: PrettyShow.MyData -> GHC.Base.String
+  RecSel Left PrettyShow.MyData
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: PrettyShow.MyData) ->
+                 case ds of wild { PrettyShow.MyData ds1 ds2 -> ds1 }) -}
+9b113e07518f65dde7f60fcd12cd1af8
+  prettyShow ::
+    Language.Haskell.TH.Syntax.Name
+    -> Language.Haskell.TH.Syntax.Q [Language.Haskell.TH.Syntax.Dec]
+  {- Arity: 2,
+     Strictness: <L,U><S(S(S(LC(C(S))LLL)L)LLLLLLLLLLLLLLLLLLLL),U(U(U(U(U(U,U),U,U,U,U),U,U,U,U),U),U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)>,
+     Unfolding: InlineRule (0, True, True)
+                PrettyShow.prettyShow1
+                  `cast`
+                (<Language.Haskell.TH.Syntax.Name>_R
+                 ->_R Sym (Language.Haskell.TH.Syntax.N:Q[0]
+                               <[Language.Haskell.TH.Syntax.Dec]>_N)) -}
+eb59d3377ef8abf8793a71990429b015
+  prettyShow1 ::
+    Language.Haskell.TH.Syntax.Name
+    -> forall (m :: * -> *).
+       Language.Haskell.TH.Syntax.Quasi m =>
+       m [Language.Haskell.TH.Syntax.Dec]
+  {- Arity: 2,
+     Strictness: <L,U><S(S(S(LC(C(S))LLL)L)LLLLLLLLLLLLLLLLLLLL),U(U(U(U(U(U,U),U,U,U,U),U,U,U,U),U),U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,1188 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-12 13:28:42.633111 UTC
+
+interface hw9-0.1.0.0-CPYgjv8pW7d5wZN3Wr1mlu:DynamicArray 8001
+  interface hash: 478685bd93a0dee7c7a3488bd004f6ab
+  ABI hash: 45741e91f50747d016fc1249ced0601c
+  export-list hash: 159d756f16accffaab5a2b37e1fa5832
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 727753a02b3a1c7044f42a3918d9166b
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  DynamicArray.concat
+  DynamicArray.empty
+  DynamicArray.fromList
+  DynamicArray.getByIndex
+  DynamicArray.getCapacity
+  DynamicArray.getElements
+  DynamicArray.getSize
+  DynamicArray.popBack
+  DynamicArray.pushBack
+  DynamicArray.setByIndex
+  DynamicArray.sort
+  DynamicArray.testPopBack
+  DynamicArray.testPushBack
+  DynamicArray.toList
+  DynamicArray.DynamicArray{DynamicArray.DynamicArray elements size}
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      ghc-prim-0.5.0.0 integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:GHC.Exts
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  array-0.5.1.1@array-0.5.1.1:Data.Array.Base cebd6cb9c4069796f65ee2b1e63ddb08
+import  -/  array-0.5.1.1@array-0.5.1.1:Data.Array.ST fa150aae9c7abb0d47aca63436c1c0a7
+import  -/  base-4.9.0.0:Control.Monad.ST 9991ebcc8500fe535e4641e125d98458
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:Data.STRef bd5bdb9807299523da2c856a2fbc6782
+import  -/  base-4.9.0.0:GHC.Arr fbccefe7cac601823d07f61ad7e915a2
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.ST d7676002f17e0115ded3f5980e601902
+import  -/  base-4.9.0.0:GHC.STRef 94e9ee02a357283b9bdcb956d1ddc02f
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+fff3fdfb32eef805092a257572402d14
+  $tc'DynamicArray :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5966027533940464553##
+                   4050301572539922372##
+                   DynamicArray.$trModule
+                   DynamicArray.$tc'DynamicArray1) -}
+6873204c176c52992ad25b9092cd35d2
+  $tc'DynamicArray1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'DynamicArray"#) -}
+b3245faa0f38c7ff94bfcc189746fbbe
+  $tcDynamicArray :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3093496114448288222##
+                   14680186969872952350##
+                   DynamicArray.$trModule
+                   DynamicArray.$trModule1) -}
+cd112bd2d68ecc0ddbb8c0a91610e5a1
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   DynamicArray.$trModule2
+                   DynamicArray.$trModule1) -}
+2783fb3e78b8d09d4a5545c4b388fe43
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "DynamicArray"#) -}
+7d60d91af3bd3e61ec5122073494eb56
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw9-0.1.0.0-CPYgjv8pW7d5wZN3Wr1mlu"#) -}
+91d3228d91969068518e4975519afa1b
+  $wgetByIndex ::
+    GHC.Prim.MutVar# s (GHC.Arr.STArray s GHC.Types.Int a)
+    -> GHC.Prim.MutVar# s GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, a #)
+  {- Arity: 4, Strictness: <S,U><L,A><S,U><S,U>, Inline: [0],
+     Unfolding: (\ @ s
+                   @ a
+                   (ww :: GHC.Prim.MutVar# s (GHC.Arr.STArray s GHC.Types.Int a))
+                   (ww1 :: GHC.Prim.MutVar# s GHC.Types.Int)
+                   (ww2 :: GHC.Prim.Int#)
+                   (w :: GHC.Prim.State# s)[OneShot] ->
+                 case GHC.Prim.readMutVar#
+                        @ s
+                        @ (GHC.Arr.STArray s GHC.Types.Int a)
+                        ww
+                        w of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild { GHC.Arr.STArray l u dt ds2 ->
+                 case l of wild1 { GHC.Types.I# m ->
+                 case u of wild2 { GHC.Types.I# n1 ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.<=# m ww2) of wild4 {
+                   GHC.Types.False
+                   -> case DynamicArray.concat14 wild2 wild1 ww2
+                      ret_ty (# GHC.Prim.State# s, a #)
+                      of {}
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# ww2 n1) of wild5 {
+                        GHC.Types.False
+                        -> case DynamicArray.concat14 wild2 wild1 ww2
+                           ret_ty (# GHC.Prim.State# s, a #)
+                           of {}
+                        GHC.Types.True
+                        -> let {
+                             w1 :: GHC.Prim.Int# = GHC.Prim.-# ww2 m
+                           } in
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<=# 0# w1) of wild6 {
+                             GHC.Types.False
+                             -> case DynamicArray.concat13 dt w1
+                                ret_ty (# GHC.Prim.State# s, a #)
+                                of {}
+                             GHC.Types.True
+                             -> case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.<# w1 dt) of wild7 {
+                                  GHC.Types.False
+                                  -> case DynamicArray.concat13 dt w1
+                                     ret_ty (# GHC.Prim.State# s, a #)
+                                     of {}
+                                  GHC.Types.True
+                                  -> GHC.Prim.readArray# @ s @ a ds2 w1 ipv } } } } } } } }) -}
+9f290aae4c82665085fb67ec31d53b8c
+  $wpopBack ::
+    GHC.Prim.MutVar# s (GHC.Arr.STArray s GHC.Types.Int a)
+    -> GHC.Prim.MutVar# s GHC.Types.Int
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, a #)
+  {- Arity: 3, Strictness: <S,U><S,U><S,U>, Inline: [0],
+     Unfolding: (\ @ s
+                   @ a
+                   (ww :: GHC.Prim.MutVar# s (GHC.Arr.STArray s GHC.Types.Int a))
+                   (ww1 :: GHC.Prim.MutVar# s GHC.Types.Int)
+                   (w :: GHC.Prim.State# s)[OneShot] ->
+                 case GHC.Prim.readMutVar#
+                        @ s
+                        @ GHC.Types.Int
+                        ww1
+                        w of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild { GHC.Types.I# x ->
+                 case DynamicArray.$wgetByIndex
+                        @ s
+                        @ a
+                        ww
+                        ww1
+                        (GHC.Prim.-# x 1#)
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.Prim.readMutVar#
+                        @ s
+                        @ GHC.Types.Int
+                        ww1
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case GHC.Prim.writeMutVar#
+                        @ s
+                        @ GHC.Types.Int
+                        ww1
+                        (DynamicArray.popBack2 ipv5)
+                        ipv4 of s2# { DEFAULT ->
+                 (# s2#, ipv3 #) } } } } }) -}
+799b1da2b379b71aa036e1cdcc2cf52b
+  $wpushBack ::
+    GHC.Prim.MutVar# s (GHC.Arr.STArray s GHC.Types.Int a)
+    -> GHC.Prim.MutVar# s GHC.Types.Int
+    -> a
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, () #)
+  {- Arity: 4, Strictness: <S,U><S,U><L,U><S,U>, Inline: [0],
+     Unfolding: (\ @ s
+                   @ a
+                   (ww :: GHC.Prim.MutVar# s (GHC.Arr.STArray s GHC.Types.Int a))
+                   (ww1 :: GHC.Prim.MutVar# s GHC.Types.Int)
+                   (w :: a)
+                   (w1 :: GHC.Prim.State# s)[OneShot] ->
+                 case GHC.Prim.readMutVar#
+                        @ s
+                        @ GHC.Types.Int
+                        ww1
+                        w1 of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.Prim.readMutVar#
+                        @ s
+                        @ (GHC.Arr.STArray s GHC.Types.Int a)
+                        ww
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case ipv3 of wild { GHC.Arr.STArray l u dt ds3 ->
+                 case u of wild1 { GHC.Types.I# x ->
+                 case GHC.Prim.readMutVar#
+                        @ s
+                        @ GHC.Types.Int
+                        ww1
+                        ipv2 of ds4 { (#,#) ipv4 ipv5 ->
+                 case GHC.Prim.writeMutVar#
+                        @ s
+                        @ GHC.Types.Int
+                        ww1
+                        (case ipv5 of wild2 { GHC.Types.I# y ->
+                         GHC.Types.I# (GHC.Prim.+# 1# y) })
+                        ipv4 of s2# { DEFAULT ->
+                 case ipv1 of wild2 { GHC.Types.I# y ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># x y) of wild3 {
+                   GHC.Types.False
+                   -> case DynamicArray.$wtoList
+                             @ s
+                             @ a
+                             ww
+                             ww1
+                             s2# of ds5 { (#,#) ipv6 ipv7 ->
+                      let {
+                        u1 :: GHC.Prim.Int# = GHC.Prim.*# x 2#
+                      } in
+                      let {
+                        $j :: GHC.Prim.Int# -> (# GHC.Prim.State# s, () #)
+                          {- Arity: 1, Strictness: <S,U> -}
+                        = \ (x1 :: GHC.Prim.Int#)[OneShot] ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.<# x1 0#) of wild4 {
+                            GHC.Types.False
+                            -> case GHC.Prim.newArray#
+                                      @ a
+                                      @ s
+                                      x1
+                                      (Data.Array.Base.arrEleBottom @ a)
+                                      ipv6 of ds6 { (#,#) ipv8 ipv9 ->
+                               let {
+                                 $j1 :: GHC.Prim.Int# -> (# GHC.Prim.State# s, () #) {- Arity: 1 -}
+                                 = \ (ww2 :: GHC.Prim.Int#)[OneShot] ->
+                                   letrec {
+                                     $wfillFromList :: GHC.Prim.Int#
+                                                       -> [a]
+                                                       -> GHC.Prim.State# s
+                                                       -> (# GHC.Prim.State# s, () #)
+                                       {- Arity: 3, Strictness: <S,U><L,1*U><S,U>, Inline: [0] -}
+                                     = \ (ww3 :: GHC.Prim.Int#)
+                                         (w2 :: [a])
+                                         (w3 :: GHC.Prim.State# s)[OneShot] ->
+                                       case GHC.Prim.tagToEnum#
+                                              @ GHC.Types.Bool
+                                              (GHC.Prim.==# ww3 ww2) of wild5 {
+                                         GHC.Types.False
+                                         -> case w2 of wild6 {
+                                              [] -> (# w3, GHC.Tuple.() #)
+                                              : y1 ys
+                                              -> case GHC.Prim.writeArray#
+                                                        @ s
+                                                        @ a
+                                                        ipv9
+                                                        ww3
+                                                        y1
+                                                        w3 of s2#1 { DEFAULT ->
+                                                 $wfillFromList (GHC.Prim.+# ww3 1#) ys s2#1 } }
+                                         GHC.Types.True -> (# w3, GHC.Tuple.() #) }
+                                   } in
+                                   case $wfillFromList 0# ipv7 ipv8 of ds { (#,#) ipv10 ipv11 ->
+                                   case GHC.Prim.writeMutVar#
+                                          @ s
+                                          @ (GHC.Arr.STArray s GHC.Types.Int a)
+                                          ww
+                                          (GHC.Arr.STArray
+                                             @ s
+                                             @ GHC.Types.Int
+                                             @ a
+                                             DynamicArray.concat15
+                                             (GHC.Types.I# u1)
+                                             x1
+                                             ipv9)
+                                          ipv10 of s2#1 { DEFAULT ->
+                                   DynamicArray.$wsetByIndex @ s @ a ww ww1 y w s2#1 } }
+                               } in
+                               case GHC.Prim.tagToEnum#
+                                      @ GHC.Types.Bool
+                                      (GHC.Prim.<=# 0# u1) of wild5 {
+                                 GHC.Types.False -> $j1 0#
+                                 GHC.Types.True
+                                 -> let {
+                                      x2 :: GHC.Prim.Int# = GHC.Prim.+# u1 1#
+                                    } in
+                                    case GHC.Prim.tagToEnum#
+                                           @ GHC.Types.Bool
+                                           (GHC.Prim.<# x2 0#) of wild6 {
+                                      GHC.Types.False -> $j1 x2
+                                      GHC.Types.True
+                                      -> case GHC.Err.error
+                                                @ 'GHC.Types.PtrRepLifted
+                                                @ GHC.Types.Int
+                                                DynamicArray.concat4
+                                                  `cast`
+                                                (Sym (GHC.Classes.N:IP[0]
+                                                          <"callStack">_N
+                                                          <GHC.Stack.Types.CallStack>_N))
+                                                DynamicArray.concat3
+                                         ret_ty (# GHC.Prim.State# s, () #)
+                                         of {} } } }
+                            GHC.Types.True
+                            -> case GHC.Arr.negRange ret_ty (# GHC.Prim.State# s, () #) of {} }
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# 0# u1) of wild4 {
+                        GHC.Types.False -> $j 0#
+                        GHC.Types.True -> $j (GHC.Prim.+# u1 1#) } }
+                   GHC.Types.True
+                   -> DynamicArray.$wsetByIndex
+                        @ s
+                        @ a
+                        ww
+                        ww1
+                        y
+                        w
+                        s2# } } } } } } } }) -}
+1598f4c4a29cd1a1b31bba07640e5c2f
+  $wsetByIndex ::
+    GHC.Prim.MutVar# s (GHC.Arr.STArray s GHC.Types.Int a)
+    -> GHC.Prim.MutVar# s GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> a
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, () #)
+  {- Arity: 5, Strictness: <S,U><L,A><S,U><L,U><S,U>, Inline: [0],
+     Unfolding: (\ @ s
+                   @ a
+                   (ww :: GHC.Prim.MutVar# s (GHC.Arr.STArray s GHC.Types.Int a))
+                   (ww1 :: GHC.Prim.MutVar# s GHC.Types.Int)
+                   (ww2 :: GHC.Prim.Int#)
+                   (w :: a)
+                   (w1 :: GHC.Prim.State# s)[OneShot] ->
+                 case GHC.Prim.readMutVar#
+                        @ s
+                        @ (GHC.Arr.STArray s GHC.Types.Int a)
+                        ww
+                        w1 of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild { GHC.Arr.STArray l u dt ds2 ->
+                 case l of wild1 { GHC.Types.I# m ->
+                 case u of wild2 { GHC.Types.I# n1 ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.<=# m ww2) of wild4 {
+                   GHC.Types.False
+                   -> case DynamicArray.concat14 wild2 wild1 ww2
+                      ret_ty (# GHC.Prim.State# s, () #)
+                      of {}
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# ww2 n1) of wild5 {
+                        GHC.Types.False
+                        -> case DynamicArray.concat14 wild2 wild1 ww2
+                           ret_ty (# GHC.Prim.State# s, () #)
+                           of {}
+                        GHC.Types.True
+                        -> let {
+                             w2 :: GHC.Prim.Int# = GHC.Prim.-# ww2 m
+                           } in
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<=# 0# w2) of wild6 {
+                             GHC.Types.False
+                             -> case DynamicArray.concat13 dt w2
+                                ret_ty (# GHC.Prim.State# s, () #)
+                                of {}
+                             GHC.Types.True
+                             -> case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.<# w2 dt) of wild7 {
+                                  GHC.Types.False
+                                  -> case DynamicArray.concat13 dt w2
+                                     ret_ty (# GHC.Prim.State# s, () #)
+                                     of {}
+                                  GHC.Types.True
+                                  -> case GHC.Prim.writeArray#
+                                            @ s
+                                            @ a
+                                            ds2
+                                            w2
+                                            w
+                                            ipv of s2# { DEFAULT ->
+                                     case GHC.Prim.writeMutVar#
+                                            @ s
+                                            @ (GHC.Arr.STArray s GHC.Types.Int a)
+                                            ww
+                                            wild
+                                            s2# of s2#1 { DEFAULT ->
+                                     (# s2#1, GHC.Tuple.() #) } } } } } } } } } }) -}
+31fc46472eda1dc0a092aa465797f244
+  $wtoList ::
+    GHC.Prim.MutVar# s (GHC.Arr.STArray s GHC.Types.Int a)
+    -> GHC.Prim.MutVar# s GHC.Types.Int
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [a] #)
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,U><S,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ s
+                   @ a
+                   (ww :: GHC.Prim.MutVar# s (GHC.Arr.STArray s GHC.Types.Int a))
+                   (ww1 :: GHC.Prim.MutVar# s GHC.Types.Int)
+                   (w :: GHC.Prim.State# s)[OneShot] ->
+                 case GHC.Prim.readMutVar#
+                        @ s
+                        @ GHC.Types.Int
+                        ww1
+                        w of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.Prim.readMutVar#
+                        @ s
+                        @ (GHC.Arr.STArray s GHC.Types.Int a)
+                        ww
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case ipv3 of wild { GHC.Arr.STArray l u dt ds3 ->
+                 let {
+                   y :: GHC.Prim.Int# = GHC.Prim.-# dt 1#
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># 0# y) of wild1 {
+                   GHC.Types.False
+                   -> letrec {
+                        go :: GHC.Prim.Int# -> [GHC.ST.ST s a]
+                          {- Arity: 1, Strictness: <L,U> -}
+                        = \ (x :: GHC.Prim.Int#) ->
+                          GHC.Types.:
+                            @ (GHC.ST.ST s a)
+                            (\ (eta2 :: GHC.Prim.State# s)[OneShot] ->
+                             GHC.Prim.readArray# @ s @ a ds3 x eta2)
+                              `cast`
+                            (Sym (GHC.ST.N:ST[0] <s>_N <a>_R))
+                            (case GHC.Prim.tagToEnum#
+                                    @ GHC.Types.Bool
+                                    (GHC.Prim.==# x y) of wild2 {
+                               GHC.Types.False -> go (GHC.Prim.+# x 1#)
+                               GHC.Types.True -> GHC.Types.[] @ (GHC.ST.ST s a) })
+                      } in
+                      case DynamicArray.concat2
+                             @ s
+                             @ a
+                             (go 0#)
+                             ipv2 of ds4 { (#,#) ipv4 ipv5 ->
+                      (# ipv4,
+                         case ipv1 of wild2 { GHC.Types.I# y1 ->
+                         case GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.<# 0# y1) of wild3 {
+                           GHC.Types.False -> GHC.Types.[] @ a
+                           GHC.Types.True -> GHC.List.$wunsafeTake @ a y1 ipv5 } } #) }
+                   GHC.Types.True
+                   -> case DynamicArray.concat2
+                             @ s
+                             @ a
+                             (GHC.Types.[] @ (GHC.ST.ST s a))
+                             ipv2 of ds4 { (#,#) ipv4 ipv5 ->
+                      (# ipv4,
+                         case ipv1 of wild2 { GHC.Types.I# y1 ->
+                         case GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.<# 0# y1) of wild3 {
+                           GHC.Types.False -> GHC.Types.[] @ a
+                           GHC.Types.True
+                           -> GHC.List.$wunsafeTake @ a y1 ipv5 } } #) } } } } }) -}
+2390febf19f29cb3867e42cd72e1876e
+  type role DynamicArray nominal representational
+  data DynamicArray s a
+    = DynamicArray {elements :: {-# UNPACK #-}GHC.STRef.STRef
+                                                s (GHC.Arr.STArray s GHC.Types.Int a),
+                    size :: {-# UNPACK #-}GHC.STRef.STRef s GHC.Types.Int}
+4e2aa19ab67d6874f4ed7bb67d981bda
+  concat :: [GHC.Types.Int] -> [GHC.Types.Int] -> [GHC.Types.Int]
+  {- Arity: 2, Strictness: <S,U><L,U>,
+     Unfolding: (\ (a :: [GHC.Types.Int]) (b :: [GHC.Types.Int]) ->
+                 case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ [GHC.Types.Int]
+                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case DynamicArray.concat16
+                                @ GHC.Types.Int
+                                @ GHC.Prim.RealWorld
+                                a
+                                s1 of ds1 { (#,#) ipv ipv1 ->
+                         case DynamicArray.concat16
+                                @ GHC.Types.Int
+                                @ GHC.Prim.RealWorld
+                                b
+                                ipv of ds2 { (#,#) ipv2 ipv3 ->
+                         case ipv3 of wild { DynamicArray.DynamicArray dt dt1 ->
+                         case GHC.Prim.readMutVar#
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                dt1
+                                ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                         case ipv5 of wild1 { GHC.Types.I# x ->
+                         let {
+                           y :: GHC.Prim.Int# = GHC.Prim.-# x 1#
+                         } in
+                         case GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.># 0# y) of wild2 {
+                           GHC.Types.False
+                           -> letrec {
+                                go :: GHC.Prim.Int#
+                                      -> GHC.Prim.State# GHC.Prim.RealWorld
+                                      -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                                  {- Arity: 2, Strictness: <S,U><S,U> -}
+                                = \ (x1 :: GHC.Prim.Int#)
+                                    (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                  case DynamicArray.$wgetByIndex
+                                         @ GHC.Prim.RealWorld
+                                         @ GHC.Types.Int
+                                         dt
+                                         dt1
+                                         x1
+                                         eta of ds4 { (#,#) ipv6 ipv7 ->
+                                  case ipv1 of ww { DynamicArray.DynamicArray ww1 ww2 ->
+                                  case DynamicArray.$wpushBack
+                                         @ GHC.Prim.RealWorld
+                                         @ GHC.Types.Int
+                                         ww1
+                                         ww2
+                                         ipv7
+                                         ipv6 of ds { (#,#) ipv8 ipv9 ->
+                                  case GHC.Prim.tagToEnum#
+                                         @ GHC.Types.Bool
+                                         (GHC.Prim.==# x1 y) of wild3 {
+                                    GHC.Types.False -> go (GHC.Prim.+# x1 1#) ipv8
+                                    GHC.Types.True -> (# ipv8, GHC.Tuple.() #) } } } }
+                              } in
+                              case go 0# ipv4 of ds { (#,#) ipv6 ipv7 ->
+                              DynamicArray.concat1
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                ipv1
+                                ipv6 }
+                           GHC.Types.True
+                           -> DynamicArray.concat1
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                ipv1
+                                ipv4 } } } } } }) of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+520afb05ded3cfdd6c0b5fdeb9954d11
+  concat1 ::
+    DynamicArray.DynamicArray s a
+    -> GHC.Prim.State# s -> (# GHC.Prim.State# s, [a] #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SS),1*U(U,U)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ s
+                   @ a
+                   (w :: DynamicArray.DynamicArray s a)
+                   (w1 :: GHC.Prim.State# s)[OneShot] ->
+                 case w of ww { DynamicArray.DynamicArray ww1 ww2 ->
+                 DynamicArray.$wtoList @ s @ a ww1 ww2 w1 }) -}
+1f0e4565f268dc6a4e2b6e3fe6c338a8
+  concat10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Data.Array.Base"#) -}
+f07b26d9a1a3674173e2250219f8cadf
+  concat11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "array-0.5.1.1"#) -}
+0d54f79999566098d0cc2f704ef1bd7b
+  concat12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "error"#) -}
+17381798b1101fa38eb356aaa9e0022d
+  concat13 :: GHC.Prim.Int# -> GHC.Prim.Int# -> GHC.Types.Int
+  {- Arity: 2, Strictness: <L,U><L,U>x -}
+e825bf61474eb7cb57d80ac72c3b31f1
+  concat14 ::
+    GHC.Types.Int -> GHC.Types.Int -> GHC.Prim.Int# -> GHC.Types.Int
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>x -}
+593acdfc1134f9670f8518c4c681a9a8
+  concat15 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+87a6aa63c70ecc6be3c39abd61b9dac6
+  concat16 ::
+    [a]
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, DynamicArray.DynamicArray s a #)
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: (\ @ a
+                   @ s
+                   (lst :: [a])
+                   (eta :: GHC.Prim.State# s)[OneShot] ->
+                 case GHC.List.$wlenAcc @ a lst 0# of ww2 { DEFAULT ->
+                 let {
+                   n1 :: GHC.Prim.Int# = GHC.Prim.+# ww2 1#
+                 } in
+                 let {
+                   $j :: GHC.Prim.Int#
+                         -> (# GHC.Prim.State# s, DynamicArray.DynamicArray s a #)
+                     {- Arity: 1, Strictness: <S,U> -}
+                   = \ (x :: GHC.Prim.Int#)[OneShot] ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.<# x 0#) of wild1 {
+                       GHC.Types.False
+                       -> case GHC.Prim.newArray#
+                                 @ a
+                                 @ s
+                                 x
+                                 (Data.Array.Base.arrEleBottom @ a)
+                                 eta of ds1 { (#,#) ipv ipv1 ->
+                          let {
+                            $j1 :: GHC.Prim.Int#
+                                   -> (# GHC.Prim.State# s, DynamicArray.DynamicArray s a #)
+                              {- Arity: 1 -}
+                            = \ (ww :: GHC.Prim.Int#)[OneShot] ->
+                              letrec {
+                                $wfillFromList :: GHC.Prim.Int#
+                                                  -> [a]
+                                                  -> GHC.Prim.State# s
+                                                  -> (# GHC.Prim.State# s, () #)
+                                  {- Arity: 3, Strictness: <S,U><L,1*U><S,U>, Inline: [0] -}
+                                = \ (ww1 :: GHC.Prim.Int#)
+                                    (w :: [a])
+                                    (w1 :: GHC.Prim.State# s)[OneShot] ->
+                                  case GHC.Prim.tagToEnum#
+                                         @ GHC.Types.Bool
+                                         (GHC.Prim.==# ww1 ww) of wild2 {
+                                    GHC.Types.False
+                                    -> case w of wild3 {
+                                         [] -> (# w1, GHC.Tuple.() #)
+                                         : y ys
+                                         -> case GHC.Prim.writeArray#
+                                                   @ s
+                                                   @ a
+                                                   ipv1
+                                                   ww1
+                                                   y
+                                                   w1 of s2# { DEFAULT ->
+                                            $wfillFromList (GHC.Prim.+# ww1 1#) ys s2# } }
+                                    GHC.Types.True -> (# w1, GHC.Tuple.() #) }
+                              } in
+                              case $wfillFromList 0# lst ipv of ds { (#,#) ipv2 ipv3 ->
+                              case GHC.Prim.newMutVar#
+                                     @ (GHC.Arr.STArray s GHC.Types.Int a)
+                                     @ s
+                                     (GHC.Arr.STArray
+                                        @ s
+                                        @ GHC.Types.Int
+                                        @ a
+                                        DynamicArray.concat15
+                                        (GHC.Types.I# n1)
+                                        x
+                                        ipv1)
+                                     ipv2 of ds2 { (#,#) ipv4 ipv5 ->
+                              case GHC.Prim.newMutVar#
+                                     @ GHC.Types.Int
+                                     @ s
+                                     (GHC.Types.I# ww2)
+                                     ipv4 of ds3 { (#,#) ipv6 ipv7 ->
+                              (# ipv6, DynamicArray.DynamicArray @ s @ a ipv5 ipv7 #) } } }
+                          } in
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.<=# 0# n1) of wild3 {
+                            GHC.Types.False -> $j1 0#
+                            GHC.Types.True
+                            -> let {
+                                 x1 :: GHC.Prim.Int# = GHC.Prim.+# n1 1#
+                               } in
+                               case GHC.Prim.tagToEnum#
+                                      @ GHC.Types.Bool
+                                      (GHC.Prim.<# x1 0#) of wild2 {
+                                 GHC.Types.False -> $j1 x1
+                                 GHC.Types.True
+                                 -> case GHC.Err.error
+                                           @ 'GHC.Types.PtrRepLifted
+                                           @ GHC.Types.Int
+                                           DynamicArray.concat4
+                                             `cast`
+                                           (Sym (GHC.Classes.N:IP[0]
+                                                     <"callStack">_N <GHC.Stack.Types.CallStack>_N))
+                                           DynamicArray.concat3
+                                    ret_ty (# GHC.Prim.State# s, DynamicArray.DynamicArray s a #)
+                                    of {} } } }
+                       GHC.Types.True
+                       -> case GHC.Arr.negRange
+                          ret_ty (# GHC.Prim.State# s, DynamicArray.DynamicArray s a #)
+                          of {} }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.<=# 0# n1) of wild3 {
+                   GHC.Types.False -> $j 0#
+                   GHC.Types.True -> $j (GHC.Prim.+# n1 1#) } }) -}
+dcf346fb82d57c4ca92e5d8d57eace4d
+  concat2 ::
+    [GHC.ST.ST s a]
+    -> GHC.Prim.State# s -> (# GHC.Prim.State# s, [a] #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U> -}
+092d2366772cbc9f45fc8706d1b1ee4d
+  concat3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Negative range size"#) -}
+1fe2beaa33123b24785855b5a28edad8
+  concat4 :: GHC.Stack.Types.CallStack
+  {- Unfolding: (GHC.Stack.Types.PushCallStack
+                   DynamicArray.concat12
+                   DynamicArray.concat5
+                   GHC.Stack.Types.EmptyCallStack) -}
+f256e8944a9a45356e02ef2b24a08284
+  concat5 :: GHC.Stack.Types.SrcLoc
+  {- Unfolding: (GHC.Stack.Types.SrcLoc
+                   DynamicArray.concat11
+                   DynamicArray.concat10
+                   DynamicArray.concat9
+                   DynamicArray.concat8
+                   DynamicArray.concat7
+                   DynamicArray.concat8
+                   DynamicArray.concat6) -}
+d9a4e636dbeeaee151d89d01b7717135
+  concat6 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 67#) -}
+11f915a7a86903f4fc167a9ca710fcb1
+  concat7 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 40#) -}
+1bbea4b31e5125dc948f0e6fee0d6fb3
+  concat8 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 79#) -}
+92a3123311992511a6096ec42a50d88a
+  concat9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "libraries/array/Data/Array/Base.hs"#) -}
+1bfa37ecbe3c269730777cb2c34cd8e1
+  elements ::
+    DynamicArray.DynamicArray s a
+    -> GHC.STRef.STRef s (GHC.Arr.STArray s GHC.Types.Int a)
+  RecSel Left DynamicArray.DynamicArray
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(U,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ s @ a (ds :: DynamicArray.DynamicArray s a) ->
+                 case ds of wild { DynamicArray.DynamicArray dt dt1 ->
+                 GHC.STRef.STRef @ s @ (GHC.Arr.STArray s GHC.Types.Int a) dt }) -}
+f209686354f02c9824ddedd6801d56d2
+  empty :: GHC.ST.ST s (DynamicArray.DynamicArray s a)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DynamicArray.empty1
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 Sym (GHC.ST.N:ST[0] <s>_N <DynamicArray.DynamicArray s a>_R)) -}
+4db95096166fcf26ea3a74b2a122e03c
+  empty1 ::
+    GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, DynamicArray.DynamicArray s a #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ @ s @ a (s1 :: GHC.Prim.State# s)[OneShot] ->
+                 case GHC.Prim.newArray#
+                        @ a
+                        @ s
+                        2#
+                        (DynamicArray.empty3 @ a)
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.Prim.newMutVar#
+                        @ (GHC.Arr.STArray s GHC.Types.Int a)
+                        @ s
+                        (GHC.Arr.STArray
+                           @ s
+                           @ GHC.Types.Int
+                           @ a
+                           DynamicArray.concat15
+                           DynamicArray.empty2
+                           2#
+                           ipv1)
+                        ipv of ds { (#,#) ipv2 ipv3 ->
+                 case GHC.Prim.newMutVar#
+                        @ GHC.Types.Int
+                        @ s
+                        DynamicArray.concat15
+                        ipv2 of ds2 { (#,#) ipv4 ipv5 ->
+                 (# ipv4, DynamicArray.DynamicArray @ s @ a ipv3 ipv5 #) } } }) -}
+e122fae7281029a969d3dd021f0be8c2
+  empty2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+022af49adb009458e5247a1e515ac163
+  empty3 :: a
+  {- Strictness: x -}
+70ad1911f4e7f8b2bfe93bd13c56e6b6
+  fromList :: [a] -> GHC.ST.ST s (DynamicArray.DynamicArray s a)
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DynamicArray.concat16
+                  `cast`
+                (forall (a :: <*>_N) (s :: <*>_N).
+                 <[a]>_R
+                 ->_R Sym (GHC.ST.N:ST[0]
+                               <s>_N <DynamicArray.DynamicArray s a>_R)) -}
+7ca749771d3795b336501e2f51c478d0
+  getByIndex ::
+    DynamicArray.DynamicArray s a -> GHC.Types.Int -> GHC.ST.ST s a
+  {- Arity: 3, Strictness: <S(SL),1*U(U,A)><S(S),1*U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DynamicArray.getByIndex1
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 <DynamicArray.DynamicArray s a>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R Sym (GHC.ST.N:ST[0] <s>_N <a>_R)) -}
+75f6db4dcfc5f3fc1df360335968c9b4
+  getByIndex1 ::
+    DynamicArray.DynamicArray s a
+    -> GHC.Types.Int -> GHC.Prim.State# s -> (# GHC.Prim.State# s, a #)
+  {- Arity: 3, Strictness: <S(SL),1*U(U,A)><S(S),1*U(U)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   @ a
+                   (w :: DynamicArray.DynamicArray s a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: GHC.Prim.State# s)[OneShot] ->
+                 case w of ww { DynamicArray.DynamicArray ww1 ww2 ->
+                 case w1 of ww3 { GHC.Types.I# ww4 ->
+                 DynamicArray.$wgetByIndex @ s @ a ww1 ww2 ww4 w2 } }) -}
+a1a14845fe0d5a86c3a25d2df36429c8
+  getCapacity ::
+    DynamicArray.DynamicArray s a -> GHC.ST.ST s GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SL),1*U(U,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DynamicArray.getCapacity1
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 <DynamicArray.DynamicArray s a>_R
+                 ->_R Sym (GHC.ST.N:ST[0] <s>_N <GHC.Types.Int>_R)) -}
+48af72b40efbf0610fe6dd8e777026ca
+  getCapacity1 ::
+    DynamicArray.DynamicArray s a
+    -> GHC.Prim.State# s -> (# GHC.Prim.State# s, GHC.Types.Int #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SL),1*U(U,A)><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ s
+                   @ a
+                   (array :: DynamicArray.DynamicArray s a)
+                   (s1 :: GHC.Prim.State# s)[OneShot] ->
+                 case array of wild { DynamicArray.DynamicArray dt dt1 ->
+                 case GHC.Prim.readMutVar#
+                        @ s
+                        @ (GHC.Arr.STArray s GHC.Types.Int a)
+                        dt
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild1 { GHC.Arr.STArray l u dt2 ds2 ->
+                 (# ipv, u #) } } }) -}
+93f2d75d15fdfe72a6d5f2a2659d06d9
+  getElements ::
+    DynamicArray.DynamicArray s a
+    -> GHC.ST.ST s (GHC.Arr.STArray s GHC.Types.Int a)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SL),1*U(U,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DynamicArray.getElements1
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 <DynamicArray.DynamicArray s a>_R
+                 ->_R Sym (GHC.ST.N:ST[0]
+                               <s>_N <GHC.Arr.STArray s GHC.Types.Int a>_R)) -}
+66a04ccdd5959edc9274eb891e80d004
+  getElements1 ::
+    DynamicArray.DynamicArray s a
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, GHC.Arr.STArray s GHC.Types.Int a #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SL),1*U(U,A)><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ s
+                   @ a
+                   (array :: DynamicArray.DynamicArray s a)
+                   (eta :: GHC.Prim.State# s)[OneShot] ->
+                 case array of wild { DynamicArray.DynamicArray dt dt1 ->
+                 GHC.Prim.readMutVar#
+                   @ s
+                   @ (GHC.Arr.STArray s GHC.Types.Int a)
+                   dt
+                   eta }) -}
+ef26e8ddf5d17ebec5e5f1e0aa504e7b
+  getSize ::
+    DynamicArray.DynamicArray s a -> GHC.ST.ST s GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(LS),1*U(A,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DynamicArray.getSize1
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 <DynamicArray.DynamicArray s a>_R
+                 ->_R Sym (GHC.ST.N:ST[0] <s>_N <GHC.Types.Int>_R)) -}
+d6c9bc43566a592cd5ae9e641ac5e927
+  getSize1 ::
+    DynamicArray.DynamicArray s a
+    -> GHC.Prim.State# s -> (# GHC.Prim.State# s, GHC.Types.Int #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(LS),1*U(A,U)><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ s
+                   @ a
+                   (array :: DynamicArray.DynamicArray s a)
+                   (eta :: GHC.Prim.State# s)[OneShot] ->
+                 case array of wild { DynamicArray.DynamicArray dt dt1 ->
+                 GHC.Prim.readMutVar# @ s @ GHC.Types.Int dt1 eta }) -}
+c7d68277867cbd4da10d638fd6e2b50c
+  popBack :: DynamicArray.DynamicArray s a -> GHC.ST.ST s a
+  {- Arity: 2, Strictness: <S(SS),1*U(U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DynamicArray.popBack1
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 <DynamicArray.DynamicArray s a>_R
+                 ->_R Sym (GHC.ST.N:ST[0] <s>_N <a>_R)) -}
+727635cfb00e6330b0628ce9672196dd
+  popBack1 ::
+    DynamicArray.DynamicArray s a
+    -> GHC.Prim.State# s -> (# GHC.Prim.State# s, a #)
+  {- Arity: 2, Strictness: <S(SS),1*U(U,U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ s
+                   @ a
+                   (w :: DynamicArray.DynamicArray s a)
+                   (w1 :: GHC.Prim.State# s)[OneShot] ->
+                 case w of ww { DynamicArray.DynamicArray ww1 ww2 ->
+                 DynamicArray.$wpopBack @ s @ a ww1 ww2 w1 }) -}
+f08f59d9d63f32aa47e2465b109c96ac
+  popBack2 :: GHC.Types.Int -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (y :: GHC.Types.Int) ->
+                 case y of wild { GHC.Types.I# x ->
+                 GHC.Types.I# (GHC.Prim.-# x 1#) }) -}
+12db36febc1b637ed1d68d62ed227372
+  pushBack :: DynamicArray.DynamicArray s a -> a -> GHC.ST.ST s ()
+  {- Arity: 3, Strictness: <S(SS),1*U(U,U)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DynamicArray.pushBack1
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 <DynamicArray.DynamicArray s a>_R
+                 ->_R <a>_R
+                 ->_R Sym (GHC.ST.N:ST[0] <s>_N <()>_R)) -}
+1778c27d1d1446283750db3994ec2c20
+  pushBack1 ::
+    DynamicArray.DynamicArray s a
+    -> a -> GHC.Prim.State# s -> (# GHC.Prim.State# s, () #)
+  {- Arity: 3, Strictness: <S(SS),1*U(U,U)><L,U><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   @ a
+                   (w :: DynamicArray.DynamicArray s a)
+                   (w1 :: a)
+                   (w2 :: GHC.Prim.State# s)[OneShot] ->
+                 case w of ww { DynamicArray.DynamicArray ww1 ww2 ->
+                 DynamicArray.$wpushBack @ s @ a ww1 ww2 w1 w2 }) -}
+88b10290c6a9d65f0e36b82da51a5768
+  setByIndex ::
+    DynamicArray.DynamicArray s a
+    -> GHC.Types.Int -> a -> GHC.ST.ST s ()
+  {- Arity: 4, Strictness: <S(SL),1*U(U,A)><S(S),1*U(U)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DynamicArray.setByIndex1
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 <DynamicArray.DynamicArray s a>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R <a>_R
+                 ->_R Sym (GHC.ST.N:ST[0] <s>_N <()>_R)) -}
+187304a53d4b96eccb90d1f8c9927587
+  setByIndex1 ::
+    DynamicArray.DynamicArray s a
+    -> GHC.Types.Int
+    -> a
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, () #)
+  {- Arity: 4, Strictness: <S(SL),1*U(U,A)><S(S),1*U(U)><L,U><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ s
+                   @ a
+                   (w :: DynamicArray.DynamicArray s a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: a)
+                   (w3 :: GHC.Prim.State# s)[OneShot] ->
+                 case w of ww { DynamicArray.DynamicArray ww1 ww2 ->
+                 case w1 of ww3 { GHC.Types.I# ww4 ->
+                 DynamicArray.$wsetByIndex @ s @ a ww1 ww2 ww4 w2 w3 } }) -}
+5fd04e4b8c3fac8bd82d706f4cdc6152
+  size ::
+    DynamicArray.DynamicArray s a -> GHC.STRef.STRef s GHC.Types.Int
+  RecSel Left DynamicArray.DynamicArray
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ s @ a (ds :: DynamicArray.DynamicArray s a) ->
+                 case ds of wild { DynamicArray.DynamicArray dt dt1 ->
+                 GHC.STRef.STRef @ s @ GHC.Types.Int dt1 }) -}
+b44f0f3b10cbf8c27add49e3a81ab63a
+  sort :: [GHC.Types.Int] -> [GHC.Types.Int]
+  {- Arity: 1, Strictness: <S,U> -}
+763dc1a9e431193feca7770ca0169843
+  testPopBack :: [GHC.Types.Int] -> [GHC.Types.Int]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (l :: [GHC.Types.Int]) ->
+                 case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ [GHC.Types.Int]
+                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case DynamicArray.concat16
+                                @ GHC.Types.Int
+                                @ GHC.Prim.RealWorld
+                                l
+                                s1 of ds1 { (#,#) ipv ipv1 ->
+                         case ipv1 of wild { DynamicArray.DynamicArray dt dt1 ->
+                         case GHC.Prim.readMutVar#
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                dt1
+                                ipv of ds2 { (#,#) ipv2 ipv3 ->
+                         case ipv3 of wild1 { GHC.Types.I# x ->
+                         case DynamicArray.$wgetByIndex
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                dt
+                                dt1
+                                (GHC.Prim.-# x 1#)
+                                ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                         case GHC.Prim.readMutVar#
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                dt1
+                                ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                         case GHC.Prim.writeMutVar#
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                dt1
+                                (DynamicArray.popBack2 ipv7)
+                                ipv6 of s2# { DEFAULT ->
+                         DynamicArray.$wtoList
+                           @ GHC.Prim.RealWorld
+                           @ GHC.Types.Int
+                           dt
+                           dt1
+                           s2# } } } } } } }) of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+a659a7747a173567b5047de3f78ce67d
+  testPushBack :: [GHC.Types.Int] -> [GHC.Types.Int]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (l :: [GHC.Types.Int]) ->
+                 case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ [GHC.Types.Int]
+                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case DynamicArray.concat16
+                                @ GHC.Types.Int
+                                @ GHC.Prim.RealWorld
+                                l
+                                s1 of ds1 { (#,#) ipv ipv1 ->
+                         case ipv1 of ww { DynamicArray.DynamicArray ww1 ww2 ->
+                         case DynamicArray.$wpushBack
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                ww1
+                                ww2
+                                DynamicArray.empty2
+                                ipv of ds { (#,#) ipv2 ipv3 ->
+                         case DynamicArray.$wpushBack
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                ww1
+                                ww2
+                                DynamicArray.testPushBack9
+                                ipv2 of ds2 { (#,#) ipv4 ipv5 ->
+                         case DynamicArray.$wpushBack
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                ww1
+                                ww2
+                                DynamicArray.testPushBack8
+                                ipv4 of ds3 { (#,#) ipv6 ipv7 ->
+                         case DynamicArray.$wpushBack
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                ww1
+                                ww2
+                                DynamicArray.testPushBack7
+                                ipv6 of ds4 { (#,#) ipv8 ipv9 ->
+                         case DynamicArray.$wpushBack
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                ww1
+                                ww2
+                                DynamicArray.testPushBack6
+                                ipv8 of ds5 { (#,#) ipv10 ipv11 ->
+                         case DynamicArray.$wpushBack
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                ww1
+                                ww2
+                                DynamicArray.testPushBack5
+                                ipv10 of ds6 { (#,#) ipv12 ipv13 ->
+                         case DynamicArray.$wpushBack
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                ww1
+                                ww2
+                                DynamicArray.testPushBack4
+                                ipv12 of ds7 { (#,#) ipv14 ipv15 ->
+                         case DynamicArray.$wpushBack
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                ww1
+                                ww2
+                                DynamicArray.testPushBack3
+                                ipv14 of ds8 { (#,#) ipv16 ipv17 ->
+                         case DynamicArray.$wpushBack
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                ww1
+                                ww2
+                                DynamicArray.testPushBack2
+                                ipv16 of ds9 { (#,#) ipv18 ipv19 ->
+                         case DynamicArray.$wpushBack
+                                @ GHC.Prim.RealWorld
+                                @ GHC.Types.Int
+                                ww1
+                                ww2
+                                DynamicArray.testPushBack1
+                                ipv18 of ds10 { (#,#) ipv20 ipv21 ->
+                         DynamicArray.$wtoList
+                           @ GHC.Prim.RealWorld
+                           @ GHC.Types.Int
+                           ww1
+                           ww2
+                           ipv20 } } } } } } } } } } } }) of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+b770b6dd24e677b973e783c0c72f732a
+  testPushBack1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 10#) -}
+fe377263effe413cc013c0b6e6025067
+  testPushBack2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 9#) -}
+893897159b9f35aabe6b25ee4578b001
+  testPushBack3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 8#) -}
+f4f7a98f1c165cd2f20a23273c9d8a6e
+  testPushBack4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 7#) -}
+50019c023aeeed319cae4996fb02c5ef
+  testPushBack5 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 6#) -}
+32ce2e847ee04e8bf7dc9a475e3e148e
+  testPushBack6 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5#) -}
+f10e87f51bc6864c527b9164253af02e
+  testPushBack7 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4#) -}
+117821f9b65964171c517c016b9153da
+  testPushBack8 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
+5938db5b1f9ca025e69a0186d0208c1b
+  testPushBack9 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
+0ff8102f34692e676274593eb13b3ba9
+  toList :: DynamicArray.DynamicArray s a -> GHC.ST.ST s [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SS),1*U(U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                DynamicArray.concat1
+                  `cast`
+                (forall (s :: <*>_N) (a :: <*>_N).
+                 <DynamicArray.DynamicArray s a>_R
+                 ->_R Sym (GHC.ST.N:ST[0] <s>_N <[a]>_R)) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

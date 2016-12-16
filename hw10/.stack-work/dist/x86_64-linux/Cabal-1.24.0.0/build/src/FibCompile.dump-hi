@@ -1,0 +1,144 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-01 17:14:03.675576 UTC
+
+interface hw10-0.1.0.0-8Uja5qijgqlBvE867Eonvw:FibCompile 8001
+  interface hash: 4597660515ae6903e6907bd70e5615d3
+  ABI hash: 4f4592a182454991461cf35499cbddb1
+  export-list hash: c7b8bb88c13a894d190e104b7e3368bd
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  FibCompile.ctFib
+  FibCompile.fib
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-boot-th-8.0.1@ghc-boot-th-8.0.1
+                      ghc-prim-0.5.0.0 integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.0.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  template-haskell-2.11.0.0:Language.Haskell.TH f21b7378cc315cc16d8cb96824740c8e
+import  -/  template-haskell-2.11.0.0:Language.Haskell.TH.Syntax 2736fdb398685b55523f09714ccd6204
+477a33bb1914da8413738ee71e112c67
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   FibCompile.$trModule2
+                   FibCompile.$trModule1) -}
+00cdf90feb5e514c5e1f3474ce8a1e11
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "FibCompile"#) -}
+a76a63f6ff7ed3174885cf69a8a2063c
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw10-0.1.0.0-8Uja5qijgqlBvE867Eonvw"#) -}
+089f8dbcb9b13d13ac2270c29201753e
+  $wfib :: GHC.Prim.Int# -> GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0] -}
+5381bbc7b886335345afa2226ec94483
+  ctFib ::
+    GHC.Types.Int
+    -> Language.Haskell.TH.Syntax.Q Language.Haskell.TH.Syntax.Exp
+  {- Arity: 1, Strictness: <L,1*U(1*U)>,
+     Unfolding: (\ (n :: GHC.Types.Int) ->
+                 let {
+                   x :: GHC.Integer.Type.Integer
+                   = case n of ww { GHC.Types.I# ww1 -> FibCompile.$wfib ww1 }
+                 } in
+                 let {
+                   x1 :: Language.Haskell.TH.Syntax.Lit
+                   = Language.Haskell.TH.Syntax.IntegerL x
+                 } in
+                 let {
+                   x2 :: Language.Haskell.TH.Syntax.Exp
+                   = Language.Haskell.TH.Syntax.LitE x1
+                 } in
+                 (\ @ (m :: * -> *)
+                    ($dQuasi :: Language.Haskell.TH.Syntax.Quasi m) ->
+                  GHC.Base.pure
+                    @ m
+                    (GHC.Base.$p1Monad
+                       @ m
+                       (Control.Monad.Fail.$p1MonadFail
+                          @ m
+                          (Language.Haskell.TH.Syntax.$p1Quasi @ m $dQuasi)))
+                    @ Language.Haskell.TH.Syntax.Exp
+                    x2)
+                   `cast`
+                 (Sym (Language.Haskell.TH.Syntax.N:Q[0]
+                           <Language.Haskell.TH.Syntax.Exp>_N))) -}
+f5834e5101c24cc6b5f909d7d9bbe6fe
+  fib :: (GHC.Num.Num a, GHC.Num.Num t, GHC.Classes.Eq a) => a -> t
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,A,C(U))><S,U(C(C1(U)),A,A,A,A,A,C(U))><S(C(C(S))L),U(C(C1(U)),A)><L,U>,
+     Unfolding: (\ @ t
+                   @ a
+                   ($dNum :: GHC.Num.Num a)
+                   ($dNum1 :: GHC.Num.Num t)
+                   ($dEq :: GHC.Classes.Eq a)
+                   (eta :: a) ->
+                 let {
+                   lvl :: t = GHC.Num.fromInteger @ t $dNum1 FibCompile.fib3
+                 } in
+                 let {
+                   lvl1 :: a = GHC.Num.fromInteger @ a $dNum FibCompile.fib3
+                 } in
+                 let {
+                   lvl2 :: a = GHC.Num.fromInteger @ a $dNum FibCompile.fib2
+                 } in
+                 let {
+                   lvl3 :: a = GHC.Num.fromInteger @ a $dNum FibCompile.fib1
+                 } in
+                 letrec {
+                   fib4 :: a -> t {- Arity: 1, Strictness: <L,U> -}
+                   = \ (ds :: a) ->
+                     case GHC.Classes.== @ a $dEq ds lvl3 of wild {
+                       GHC.Types.False
+                       -> case GHC.Classes.== @ a $dEq ds lvl1 of wild1 {
+                            GHC.Types.False
+                            -> GHC.Num.+
+                                 @ t
+                                 $dNum1
+                                 (fib4 (GHC.Num.- @ a $dNum ds lvl1))
+                                 (fib4 (GHC.Num.- @ a $dNum ds lvl2))
+                            GHC.Types.True -> lvl }
+                       GHC.Types.True -> lvl }
+                 } in
+                 fib4 eta) -}
+0df7221be84a0ef736c49167bee1570d
+  fib1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+004bf369225939ba35ceba12625e2819
+  fib2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+bad75062411d06fb6f8742e1df7652f7
+  fib3 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,161 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-01 17:18:59.100406 UTC
+
+interface hw10-0.1.0.0-8Uja5qijgqlBvE867Eonvw:SelN 8001
+  interface hash: 7fc41cdb3f2bdabaf2aa0cf337d6e10a
+  ABI hash: 186731f4ed9d508eac791948378fb077
+  export-list hash: 12778966bd15962dca065631d817ec3b
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 7dc9e102766e1d881b7ccb9137d37b94
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  SelN.selN
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-boot-th-8.0.1@ghc-boot-th-8.0.1
+                      ghc-prim-0.5.0.0 integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.0.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  template-haskell-2.11.0.0:Language.Haskell.TH f21b7378cc315cc16d8cb96824740c8e
+import  -/  template-haskell-2.11.0.0:Language.Haskell.TH.Syntax 2736fdb398685b55523f09714ccd6204
+1f8c8565475e16c1362f01400a2c3c0c
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module SelN.$trModule2 SelN.$trModule1) -}
+5980436c48f914bebf685c7b2f5d0033
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "SelN"#) -}
+455236ac65e44d1c75df93b5232f44f2
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw10-0.1.0.0-8Uja5qijgqlBvE867Eonvw"#) -}
+8f0deca5523f68778423020fa0bf1073
+  $wxs :: GHC.Prim.Int# -> [Language.Haskell.TH.Syntax.Pat]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+688d9d29c8492daa2834861f2d4b8f9e
+  selN ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> Language.Haskell.TH.Syntax.Q Language.Haskell.TH.Syntax.Exp
+  {- Arity: 2, Strictness: <L,1*U(U)><L,U(U)>,
+     Unfolding: (\ (n :: GHC.Types.Int) (index :: GHC.Types.Int) ->
+                 let {
+                   lvl1 :: [Language.Haskell.TH.Syntax.Pat]
+                   = case n of wild { GHC.Types.I# x ->
+                     case index of wild1 { GHC.Types.I# y ->
+                     let {
+                       y1 :: GHC.Prim.Int# = GHC.Prim.-# x y
+                     } in
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.<# 0# y1) of wild2 {
+                       GHC.Types.False -> GHC.Types.[] @ Language.Haskell.TH.Syntax.Pat
+                       GHC.Types.True -> SelN.$wxs y1 } } }
+                 } in
+                 (\ @ (m :: * -> *)
+                    ($dQuasi :: Language.Haskell.TH.Syntax.Quasi m) ->
+                  let {
+                    lvl2 :: Control.Monad.Fail.MonadFail m
+                    = Language.Haskell.TH.Syntax.$p1Quasi @ m $dQuasi
+                  } in
+                  let {
+                    lvl3 :: GHC.Base.Monad m = Control.Monad.Fail.$p1MonadFail @ m lvl2
+                  } in
+                  let {
+                    lvl4 :: GHC.Base.Applicative m = GHC.Base.$p1Monad @ m lvl3
+                  } in
+                  GHC.Base.>>=
+                    @ m
+                    (Control.Monad.Fail.$p1MonadFail
+                       @ m
+                       (Language.Haskell.TH.Syntax.$p1Quasi @ m $dQuasi))
+                    @ Language.Haskell.TH.Syntax.Name
+                    @ Language.Haskell.TH.Syntax.Exp
+                    (Language.Haskell.TH.Syntax.qNewName @ m $dQuasi SelN.selN1)
+                    (\ (x :: Language.Haskell.TH.Syntax.Name) ->
+                     GHC.Base.pure
+                       @ m
+                       lvl4
+                       @ Language.Haskell.TH.Syntax.Exp
+                       (Language.Haskell.TH.Syntax.LamE
+                          (GHC.Types.:
+                             @ Language.Haskell.TH.Syntax.Pat
+                             (Language.Haskell.TH.Syntax.TupP
+                                (case index of wild { GHC.Types.I# x1 ->
+                                 let {
+                                   y :: GHC.Prim.Int# = GHC.Prim.-# x1 1#
+                                 } in
+                                 case GHC.Prim.tagToEnum#
+                                        @ GHC.Types.Bool
+                                        (GHC.Prim.<# 0# y) of wild1 {
+                                   GHC.Types.False
+                                   -> GHC.Types.:
+                                        @ Language.Haskell.TH.Syntax.Pat
+                                        (Language.Haskell.TH.Syntax.VarP x)
+                                        lvl1
+                                   GHC.Types.True
+                                   -> let {
+                                        n1 :: Language.Haskell.TH.Syntax.Pat
+                                        = Language.Haskell.TH.Syntax.VarP x
+                                      } in
+                                      let {
+                                        n2 :: [Language.Haskell.TH.Syntax.Pat]
+                                        = GHC.Types.: @ Language.Haskell.TH.Syntax.Pat n1 lvl1
+                                      } in
+                                      let {
+                                        lvl5 :: [Language.Haskell.TH.Syntax.Pat]
+                                        = GHC.Types.:
+                                            @ Language.Haskell.TH.Syntax.Pat
+                                            Language.Haskell.TH.Syntax.WildP
+                                            n2
+                                      } in
+                                      letrec {
+                                        $wxs1 :: GHC.Prim.Int# -> [Language.Haskell.TH.Syntax.Pat]
+                                          {- Arity: 1, Strictness: <S,1*U>, Inline: [0] -}
+                                        = \ (ww :: GHC.Prim.Int#) ->
+                                          case ww of ds1 {
+                                            DEFAULT
+                                            -> GHC.Types.:
+                                                 @ Language.Haskell.TH.Syntax.Pat
+                                                 Language.Haskell.TH.Syntax.WildP
+                                                 ($wxs1 (GHC.Prim.-# ds1 1#))
+                                            1# -> lvl5 }
+                                      } in
+                                      $wxs1 y } }))
+                             (GHC.Types.[] @ Language.Haskell.TH.Syntax.Pat))
+                          (Language.Haskell.TH.Syntax.VarE x))))
+                   `cast`
+                 (Sym (Language.Haskell.TH.Syntax.N:Q[0]
+                           <Language.Haskell.TH.Syntax.Exp>_N))) -}
+bdcb334584c6a55854206d10c29003df
+  selN1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "x"#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

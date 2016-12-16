@@ -1,0 +1,201 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-01 17:13:44.943629 UTC
+
+interface hw10-0.1.0.0-8Uja5qijgqlBvE867Eonvw:TH3 [orphan module] 8001
+  interface hash: 12ca015b7812662f6f38c4abdad4010f
+  ABI hash: ad87cffc70caba828cee739cb7b15635
+  export-list hash: 05467970332e7b11637056e2d8e2a378
+  orphan hash: 0dc78161ca62a0e81c6ebee3c485210a
+  flag hash: 687468869fd8a86a1ae924013d40b27b
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  TH3.th3
+module dependencies: PrettyShow SelN
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-boot-th-8.0.1@ghc-boot-th-8.0.1
+                      ghc-prim-0.5.0.0 integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.0.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+import  -/  base-4.9.0.0:Data.List 49b86831b79b49ce5d4d9416ecba61df
+import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.IO eb1d40aa793a4047069a5023f2ebcfe3
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  PrettyShow 0c4c58a80f96865ea80071c5b162788d
+  exports: 05aa7ea47445790ef22565a2eaac8fd0
+  MyData c97bb3d211f53919b394f44936ae6364
+  MyData 5185ca2dd44a4ffdd18f5e886d5df3aa
+  bar 6befc85de0c2a0f82455532167c30e62
+  foo e6e26bfdadf8c1cd7485b100652d61a5
+  prettyShow 9b113e07518f65dde7f60fcd12cd1af8
+61f5d0965ac784a7bfda1da7892bfc94
+  $fShowMyData :: GHC.Show.Show PrettyShow.MyData
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ PrettyShow.MyData
+                  TH3.$fShowMyData_$cshowsPrec
+                  TH3.$fShowMyData_$cshow
+                  TH3.$fShowMyData_$cshowList -}
+15621be63e68ac8fd873983b86b17500
+  $fShowMyData1 ::
+    PrettyShow.MyData -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2,
+     Unfolding: (\ (x :: PrettyShow.MyData)
+                   (s :: GHC.Base.String)[OneShot] ->
+                 GHC.Base.++ @ GHC.Types.Char (TH3.$fShowMyData_$cshow x) s) -}
+fe9ad38501f68f1960af60d88d614013
+  $fShowMyData2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "\n\
+                   \}"#) -}
+ea1f3b2fab6b895bd19235b5cba4966e
+  $fShowMyData3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ",\n"#) -}
+c3f60d4c372680a492ff9d7688937bad
+  $fShowMyData4 :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows8
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+d1fa6ddfe645f758ee443a0c6d1bef3f
+  $fShowMyData5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "    "#) -}
+4249c26183596d0f2e44e81713ce9847
+  $fShowMyData_$cshow :: PrettyShow.MyData -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,U(1*U,1*U(U))>,
+     Unfolding: (\ (x :: PrettyShow.MyData) ->
+                 GHC.CString.unpackAppendCString#
+                   "PrettyShow.MyData {\n"#
+                   (GHC.Base.++
+                      @ GHC.Types.Char
+                      (Data.OldList.intercalate_$spoly_go
+                         @ GHC.Types.Char
+                         (GHC.Base.++
+                            @ GHC.Types.Char
+                            TH3.$fShowMyData5
+                            (GHC.CString.unpackAppendCString#
+                               "foo"#
+                               (GHC.CString.unpackAppendCString#
+                                  " = "#
+                                  (GHC.Types.:
+                                     @ GHC.Types.Char
+                                     GHC.Show.shows8
+                                     (case x of wild { PrettyShow.MyData ds1 ds2 ->
+                                      GHC.Show.showLitString ds1 TH3.$fShowMyData4 })))))
+                         (Data.OldList.prependToAll
+                            @ [GHC.Types.Char]
+                            TH3.$fShowMyData3
+                            (GHC.Types.:
+                               @ [GHC.Types.Char]
+                               (GHC.Base.++
+                                  @ GHC.Types.Char
+                                  TH3.$fShowMyData5
+                                  (GHC.CString.unpackAppendCString#
+                                     "bar"#
+                                     (GHC.CString.unpackAppendCString#
+                                        " = "#
+                                        (case x of wild { PrettyShow.MyData ds1 ds2 ->
+                                         case ds2 of ww2 { GHC.Types.I# ww3 ->
+                                         case GHC.Show.$wshowSignedInt
+                                                0#
+                                                ww3
+                                                (GHC.Types.[]
+                                                   @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                                         GHC.Types.: @ GHC.Types.Char ww5 ww6 } } }))))
+                               (GHC.Types.[] @ [GHC.Types.Char]))))
+                      TH3.$fShowMyData2)) -}
+b8098fac98df85b0f2ded3bd4e5e3eb9
+  $fShowMyData_$cshowList :: [PrettyShow.MyData] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (ls :: [PrettyShow.MyData]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ PrettyShow.MyData TH3.$fShowMyData1 ls s) -}
+6c1b9e365997d897a25b1db4d8ce0a1d
+  $fShowMyData_$cshowsPrec ::
+    GHC.Types.Int -> PrettyShow.MyData -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><L,U(U,U(U))><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (x :: PrettyShow.MyData)
+                   (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (TH3.$fShowMyData_$cshow x))
+                   s) -}
+26dc8efcba6e0b1167a54ff84fa8a0e0
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module TH3.$trModule2 TH3.$trModule1) -}
+adf80c3906b0f5c7f6e26f93eb47d4f6
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "TH3"#) -}
+2ef87c84f45ebb435b9e2d91ce982178
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw10-0.1.0.0-8Uja5qijgqlBvE867Eonvw"#) -}
+e06055a230e18812d4428688ba0b112e
+  th1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta :: GHC.Prim.State#
+                             GHC.Prim.RealWorld)[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   TH3.th2
+                   GHC.Types.True
+                   eta) -}
+8c027f088d97933b0bfeabc27dc5e85f
+  th2 :: GHC.Base.String
+  {- Unfolding: (TH3.$fShowMyData_$cshow TH3.th4) -}
+01f8cab008e3e5a48fbc5b3615075fb3
+  th3 :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                TH3.th1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+33fa0e163463c5247ed360b7e0fd6c64
+  th4 :: PrettyShow.MyData
+  {- Unfolding: (PrettyShow.MyData TH3.th6 TH3.th5) -}
+6567d65f64675535809d58eade5d7205
+  th5 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 5#) -}
+e95253823db6b0e67b626a81edf69ae7
+  th6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "bar"#) -}
+instance GHC.Show.Show [PrettyShow.MyData] = TH3.$fShowMyData
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

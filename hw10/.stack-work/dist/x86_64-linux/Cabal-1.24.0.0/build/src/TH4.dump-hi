@@ -1,0 +1,87 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-01 17:14:03.961822 UTC
+
+interface hw10-0.1.0.0-8Uja5qijgqlBvE867Eonvw:TH4 8001
+  interface hash: aa92cc1a7a1bfbd9ab4eeeb9080bd5a6
+  ABI hash: bfba618496d1da2552794caf5d4627da
+  export-list hash: b0b5a4683cd18ac1916d552d9ce5bd4c
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 687468869fd8a86a1ae924013d40b27b
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  TH4.th4
+module dependencies: FibCompile
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-boot-th-8.0.1@ghc-boot-th-8.0.1
+                      ghc-prim-0.5.0.0 integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.0.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.IO eb1d40aa793a4047069a5023f2ebcfe3
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  FibCompile 4f4592a182454991461cf35499cbddb1
+  exports: c7b8bb88c13a894d190e104b7e3368bd
+  ctFib 5381bbc7b886335345afa2226ec94483
+dc7db939bf1b8555aa9972eaba764ecd
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module TH4.$trModule2 TH4.$trModule1) -}
+bd9d6c369fc802d77716a26b4e11218e
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "TH4"#) -}
+10fdc3cdf2d48091c76b5ce673217933
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw10-0.1.0.0-8Uja5qijgqlBvE867Eonvw"#) -}
+cd0eb95641f5a6433291872a56a18088
+  th1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta :: GHC.Prim.State#
+                             GHC.Prim.RealWorld)[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   TH4.th2
+                   GHC.Types.True
+                   eta) -}
+396c29063d3fd7110d2e522f9393dcaf
+  th2 :: GHC.Base.String
+  {- Unfolding: (case GHC.Show.$w$cshowsPrec3
+                        0#
+                        TH4.th3
+                        (GHC.Types.[] @ GHC.Types.Char) of ww2 { (#,#) ww3 ww4 ->
+                 GHC.Types.: @ GHC.Types.Char ww3 ww4 }) -}
+18d3b8914c9200ae14ab41c21508cfae
+  th3 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1346269) -}
+d92a4e3e3f31c57a1376e93a506d2724
+  th4 :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                TH4.th1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,159 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-01 16:40:50.388969 UTC
+
+interface hw10-0.1.0.0-8Uja5qijgqlBvE867Eonvw:EnvShow 8001
+  interface hash: b17e3d609e6604683543ee51dbe8e027
+  ABI hash: b83ab55b8e736b5ed5848f09d9248ec5
+  export-list hash: 4bc81279017aaa48916bd39f8deb366f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  EnvShow.envTemplate
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-boot-th-8.0.1@ghc-boot-th-8.0.1
+                      ghc-prim-0.5.0.0 integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.0.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.Environment ee0914a962f5508d0fd404c89ee4999b
+import  -/  template-haskell-2.11.0.0:Language.Haskell.TH f21b7378cc315cc16d8cb96824740c8e
+import  -/  template-haskell-2.11.0.0:Language.Haskell.TH.Syntax 2736fdb398685b55523f09714ccd6204
+027d6b6d7cc6a2d331650aae5b0b14f1
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   EnvShow.$trModule2
+                   EnvShow.$trModule1) -}
+f87bc9f49877265d4723f7ba4618658d
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "EnvShow"#) -}
+53a263e50552cc081904298140de4d9c
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "hw10-0.1.0.0-8Uja5qijgqlBvE867Eonvw"#) -}
+ffcdefbbca00e8c2230299c790403035
+  envTemplate ::
+    Language.Haskell.TH.Syntax.Q Language.Haskell.TH.Syntax.Exp
+  {- Arity: 1,
+     Strictness: <S(S(S(LC(C(S))LLL)L)LLLLLLLLLLLLLLLLLLLL),U(U(U(U(A,C(U),A,A,A),1*C1(C1(U)),A,A,A),A),A,A,A,A,A,A,A,A,A,A,A,A,1*C1(U),A,A,A,A,A,A,A)>,
+     Unfolding: InlineRule (0, True, True)
+                EnvShow.envTemplate1
+                  `cast`
+                (Sym (Language.Haskell.TH.Syntax.N:Q[0]
+                          <Language.Haskell.TH.Syntax.Exp>_N)) -}
+e01e31b53e948b5ac86f01f43d7538cf
+  envTemplate1 ::
+    Language.Haskell.TH.Syntax.Quasi m =>
+    m Language.Haskell.TH.Syntax.Exp
+  {- Arity: 1,
+     Strictness: <S(S(S(LC(C(S))LLL)L)LLLLLLLLLLLLLLLLLLLL),U(U(U(U(A,C(U),A,A,A),1*C1(C1(U)),A,A,A),A),A,A,A,A,A,A,A,A,A,A,A,A,1*C1(U),A,A,A,A,A,A,A)>,
+     Unfolding: (\ @ (m :: * -> *)
+                   ($dQuasi :: Language.Haskell.TH.Syntax.Quasi m) ->
+                 let {
+                   lvl :: Control.Monad.Fail.MonadFail m
+                   = Language.Haskell.TH.Syntax.$p1Quasi @ m $dQuasi
+                 } in
+                 let {
+                   lvl1 :: GHC.Base.Monad m = Control.Monad.Fail.$p1MonadFail @ m lvl
+                 } in
+                 let {
+                   lvl2 :: GHC.Base.Applicative m = GHC.Base.$p1Monad @ m lvl1
+                 } in
+                 GHC.Base.>>=
+                   @ m
+                   (Control.Monad.Fail.$p1MonadFail
+                      @ m
+                      (Language.Haskell.TH.Syntax.$p1Quasi @ m $dQuasi))
+                   @ GHC.Base.String
+                   @ Language.Haskell.TH.Syntax.Exp
+                   (Language.Haskell.TH.Syntax.qRunIO
+                      @ m
+                      $dQuasi
+                      @ GHC.Base.String
+                      EnvShow.envTemplate2
+                        `cast`
+                      (Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)))
+                   (\ (x :: GHC.Base.String) ->
+                    GHC.Base.pure
+                      @ m
+                      lvl2
+                      @ Language.Haskell.TH.Syntax.Exp
+                      (Language.Haskell.TH.Syntax.LitE
+                         (Language.Haskell.TH.Syntax.StringL x)))) -}
+035b3cc77f700a24f0af470f9c58a1ae
+  envTemplate2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Encoding.getForeignEncoding1 of wild { (,) getForeignEncoding5 setForeignEncoding1 ->
+                 case getForeignEncoding5
+                        `cast`
+                      (GHC.Types.N:IO[0] <GHC.IO.Encoding.Types.TextEncoding>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.Foreign.charIsRepresentable3
+                        @ (GHC.Base.Maybe GHC.Base.String)
+                        ipv1
+                        EnvShow.envTemplate_name
+                        System.Environment.getEnv4
+                          `cast`
+                        (<Foreign.C.String.CString>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.Maybe GHC.Base.String>_R))
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case ipv3 of wild1 {
+                   GHC.Base.Nothing
+                   -> GHC.Prim.raiseIO#
+                        @ GHC.Exception.SomeException
+                        @ GHC.Base.String
+                        EnvShow.envTemplate3
+                        ipv2
+                   GHC.Base.Just x -> (# ipv2, x #) } } } }) -}
+10bdfb2542a43a6ea41bed19766eaf9b
+  envTemplate3 :: GHC.Exception.SomeException
+  {- Unfolding: (GHC.IO.Exception.$fExceptionIOException_$ctoException
+                   EnvShow.envTemplate4) -}
+25760a1f53d4c3b8caf6016a924190ff
+  envTemplate4 :: GHC.IO.Exception.IOException
+  {- Unfolding: (GHC.IO.Exception.IOError
+                   (GHC.Base.Nothing @ GHC.IO.Handle.Types.Handle)
+                   GHC.IO.Exception.NoSuchThing
+                   System.Environment.getEnv3
+                   System.Environment.getEnv2
+                   (GHC.Base.Nothing @ Foreign.C.Types.CInt)
+                   EnvShow.envTemplate5) -}
+79efed582f2e8024c5f3f9451eb2d85b
+  envTemplate5 :: GHC.Base.Maybe GHC.Base.String
+  {- Unfolding: (GHC.Base.Just
+                   @ GHC.Base.String
+                   EnvShow.envTemplate_name) -}
+f4a9ef0139dcffd7b3253b2bc5bdad47
+  envTemplate_name :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "TH_ENV"#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

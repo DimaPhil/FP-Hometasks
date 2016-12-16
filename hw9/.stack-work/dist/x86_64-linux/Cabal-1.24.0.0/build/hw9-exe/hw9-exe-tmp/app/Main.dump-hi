@@ -1,0 +1,617 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-12 13:28:44.585714 UTC
+
+interface main@main:Main 8001
+  interface hash: 1e1f0591d22009dd5e7a75a01d673150
+  ABI hash: 31aefffc8d252929984151b3bf06290e
+  export-list hash: 0885e78f6cd39aceb783280347c677e0
+  orphan hash: 914bfb83a70404f1f20309d0cb3a92e3
+  flag hash: 6a03bf308eb38edfb7e637df47bbefad
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.lst
+  Main.lstr
+  Main.main
+module dependencies:
+package dependencies: Glob-0.7.12@Glob-0.7.12-6ONSkI0W8EPI2F7ftZDeCU
+                      abstract-par-0.3.3@abstract-par-0.3.3-I2gvKCBAweu3uYwWNazPJ0
+                      aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
+                      ansi-terminal-0.6.2.3@ansi-terminal-0.6.2.3-448ipfN5j28Ha0AgPiJmdI
+                      ansi-wl-pprint-0.6.7.3@ansi-wl-pprint-0.6.7.3-LVnipygDrAR1FEMFhjxcQX
+                      array-0.5.1.1@array-0.5.1.1
+                      attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR
+                      base-4.9.0.0 binary-0.8.3.0@binary-0.8.3.0
+                      blaze-builder-0.4.0.2@blaze-builder-0.4.0.2-KWDLbdBYSBoALiMW0LHIz1
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      cassava-0.4.5.1@cassava-0.4.5.1-21lW63lVT3WE7tgJlzrKJy
+                      containers-0.5.7.1@containers-0.5.7.1
+                      criterion-1.1.1.0@criterion-1.1.1.0-ErhcTp7l4P55D8Wzu2m81Q
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.2.6.2@directory-1.2.6.2
+                      dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv
+                      filepath-1.4.1.0@filepath-1.4.1.0
+                      ghc-boot-th-8.0.1@ghc-boot-th-8.0.1 ghc-prim-0.5.0.0
+                      hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G
+                      hastache-0.6.1@hastache-0.6.1-BM4X5BNteLxJcnhshpDGOv
+                      hw9-0.1.0.0@hw9-0.1.0.0-CPYgjv8pW7d5wZN3Wr1mlu
+                      ieee754-0.7.9@ieee754-0.7.9-GGOMObQlFhs75IwEfmeIx2
+                      integer-gmp-1.0.0.1
+                      math-functions-0.2.0.2@math-functions-0.2.0.2-IKucf2F6PPp7GCACitUv0c
+                      monad-par-0.3.4.8@monad-par-0.3.4.8-HZuv8WcY8cj57MToyw9XXz
+                      monad-par-extras-0.3.3@monad-par-extras-0.3.3-EJjMy6Ffx2aEZ9sTU5n83S
+                      mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
+                      mwc-random-0.13.4.0@mwc-random-0.13.4.0-CH6ozsPFZjwVSNwmEz44J
+                      optparse-applicative-0.12.1.0@optparse-applicative-0.12.1.0-LOTKI1ZYRJkF3RPPjfyooJ
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa
+                      process-1.4.2.0@process-1.4.2.0
+                      scientific-0.3.4.9@scientific-0.3.4.9-6oTYuCcx6H5BsTGU7D2Gk3
+                      statistics-0.13.3.0@statistics-0.13.3.0-7VFEmkbNhWt4RKKByldTgK
+                      syb-0.6@syb-0.6-C65vWCsht6A8uLstpQIXyj
+                      tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx
+                      template-haskell-2.11.0.0
+                      text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s
+                      time-1.6.0.1@time-1.6.0.1 transformers-0.5.2.0@transformers-0.5.2.0
+                      unix-2.7.2.0@unix-2.7.2.0
+                      unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW
+                      vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6
+                      vector-algorithms-0.7.0.1@vector-algorithms-0.7.0.1-8R8UpWgvBC926XMxBjYPpx
+                      vector-binary-instances-0.2.3.3@vector-binary-instances-0.2.3.3-ITLfSosnCjgDHIm70KxMIu
+                      vector-th-unbox-0.2.1.6@vector-th-unbox-0.2.1.6-GMTpzttBvqGAEXamQ10jEK
+orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Generic
+         aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Instances
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.ByteString.Char8
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Text.Internal
+         base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G:Data.Hashable.Generic
+         monad-par-0.3.4.8@monad-par-0.3.4.8-HZuv8WcY8cj57MToyw9XXz:Control.Monad.Par.Scheds.Trace
+         syb-0.6@syb-0.6-C65vWCsht6A8uLstpQIXyj:Data.Generics.Instances
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
+         vector-binary-instances-0.2.3.3@vector-binary-instances-0.2.3.3-ITLfSosnCjgDHIm70KxMIu:Data.Vector.Binary
+family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
+                         base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Functor.Identity base-4.9.0.0:Data.List.NonEmpty
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Semigroup
+                         base-4.9.0.0:Data.Type.Equality base-4.9.0.0:Data.Version
+                         base-4.9.0.0:Data.Void base-4.9.0.0:GHC.Exts
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         criterion-1.1.1.0@criterion-1.1.1.0-ErhcTp7l4P55D8Wzu2m81Q:Criterion.Main.Options
+                         criterion-1.1.1.0@criterion-1.1.1.0-ErhcTp7l4P55D8Wzu2m81Q:Criterion.Report
+                         criterion-1.1.1.0@criterion-1.1.1.0-ErhcTp7l4P55D8Wzu2m81Q:Criterion.Types
+                         dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv:Data.DList
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         math-functions-0.2.0.2@math-functions-0.2.0.2-IKucf2F6PPp7GCACitUv0c:Numeric.RootFinding
+                         math-functions-0.2.0.2@math-functions-0.2.0.2-IKucf2F6PPp7GCACitUv0c:Numeric.Sum
+                         mwc-random-0.13.4.0@mwc-random-0.13.4.0-CH6ozsPFZjwVSNwmEz44J:System.Random.MWC
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa:Control.Monad.Primitive
+                         statistics-0.13.3.0@statistics-0.13.3.0-7VFEmkbNhWt4RKKByldTgK:Statistics.Distribution.Normal
+                         statistics-0.13.3.0@statistics-0.13.3.0-7VFEmkbNhWt4RKKByldTgK:Statistics.Math.RootFinding
+                         statistics-0.13.3.0@statistics-0.13.3.0-7VFEmkbNhWt4RKKByldTgK:Statistics.Resampling
+                         statistics-0.13.3.0@statistics-0.13.3.0-7VFEmkbNhWt4RKKByldTgK:Statistics.Resampling.Bootstrap
+                         tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx:Data.Tagged
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
+                         unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashMap.Base
+                         unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashSet
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Primitive
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Storable
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:Data.List 49b86831b79b49ce5d4d9416ecba61df
+import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Sequence f826d1801d39fce56e0a0fc955c160c6
+import  -/  criterion-1.1.1.0@criterion-1.1.1.0-ErhcTp7l4P55D8Wzu2m81Q:Criterion.Main 8d8a87a134b64fb005cf00ad73ee26d6
+import  -/  criterion-1.1.1.0@criterion-1.1.1.0-ErhcTp7l4P55D8Wzu2m81Q:Criterion.Types a338842f71c8e0bfe743dd486cc5035e
+import  -/  dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv:Data.DList fc113583e38cb8cbb46ea6c663dd0d67
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  hw9-0.1.0.0@hw9-0.1.0.0-CPYgjv8pW7d5wZN3Wr1mlu:DynamicArray 45741e91f50747d016fc1249ced0601c
+72c9a4e4174d1d1850fd9af2c0569234
+  $ssort1 :: [GHC.Types.Int] -> [GHC.Types.Int]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: [GHC.Types.Int]) ->
+                 Data.OldList.sortBy @ GHC.Types.Int GHC.Classes.compareInt eta) -}
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+7c1cb55516952cc698d1ed54748d3cf4
+  $wgo1 ::
+    ([GHC.Types.Int] -> [GHC.Types.Int])
+    -> [GHC.Types.Int]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,C(U)><L,U><S,U><S,U>,
+     Inline: [0] -}
+3fbe9d8c0b4724e1f1c3ac5dc08ef36d
+  $wgo12 ::
+    (Data.Sequence.Seq GHC.Types.Int -> [GHC.Types.Int])
+    -> Data.Sequence.Seq GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,C(U)><L,U><S,U><S,U>,
+     Inline: [0] -}
+c6414c6ca536de83d3e16a8210ca20be
+  $wgo2 ::
+    ([GHC.Types.Int] -> [GHC.Types.Int])
+    -> [GHC.Types.Int]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,C(U)><L,U><S,U><S,U>,
+     Inline: [0] -}
+b813e8f8e69156a27c2824525590f674
+  $wgo3 ::
+    (Data.Sequence.Seq GHC.Types.Int -> [GHC.Types.Int])
+    -> Data.Sequence.Seq GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,C(U)><L,U><S,U><S,U>,
+     Inline: [0] -}
+87327039c60cb6110d257576f1ff58d9
+  $wgo4 ::
+    ([GHC.Types.Int] -> [GHC.Types.Int])
+    -> [GHC.Types.Int]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,C(U)><L,U><S,U><S,U>,
+     Inline: [0] -}
+77142cfe55e5656705b417204a815733
+  $wgo5 ::
+    (Data.DList.DList GHC.Types.Int -> [GHC.Types.Int])
+    -> Data.DList.DList GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,C(U)><L,U><S,U><S,U>,
+     Inline: [0] -}
+2bb53e84ef4b755bf314fad264afc3e9
+  $wgo6 ::
+    ([GHC.Types.Int] -> [GHC.Types.Int])
+    -> [GHC.Types.Int]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,C(U)><L,U><S,U><S,U>,
+     Inline: [0] -}
+a7b5d3528c23128e5dd0cc0811561dd7
+  $wmain ::
+    GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wgo12
+                   Main.main_eta
+                   Main.main10 `cast` (Sym (Data.Sequence.N:Seq[0] <GHC.Types.Int>_R))
+                   ww
+                   w) -}
+cfa27bbdcc05ad13231b5ebfd8ff6e17
+  $wmain1 ::
+    GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wgo1 Main.$ssort1 Main.lstr ww w) -}
+3555d050df422c469b66d8683f64e7d2
+  $wmain2 ::
+    GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wgo2 DynamicArray.sort Main.lstr ww w) -}
+1a9b505a5c9d47b88a9765d471f56652
+  $wmain3 ::
+    GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wgo3
+                   (Data.Sequence.$fFoldableSeq_$ctoList @ GHC.Types.Int)
+                   Main.main26 `cast` (Sym (Data.Sequence.N:Seq[0] <GHC.Types.Int>_R))
+                   ww
+                   w) -}
+f6d097ccc645e586c7577332dd210825
+  $wmain4 ::
+    GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wgo4 (GHC.Base.id @ [GHC.Types.Int]) Main.main_eta1 ww w) -}
+5f23be9aa795e674fdf49a44b04f901b
+  $wmain5 ::
+    GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wgo5
+                   (Data.DList.toList @ GHC.Types.Int)
+                   Main.main32 `cast` (Sym (Data.DList.N:DList[0] <GHC.Types.Int>_R))
+                   ww
+                   w) -}
+18201c10a451566fc90215044c111f28
+  $wmain6 ::
+    GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wgo6 Main.main_eta2 Main.lst ww w) -}
+358af4de92d150e76dc5f3fb6e8cceda
+  lst :: [GHC.Types.Int]
+  {- Unfolding: (GHC.Enum.efdtInt 1# 2# 1000#) -}
+cc9e214da795cc24f6145ddc3890b6b8
+  lstr :: [GHC.Types.Int]
+  {- Unfolding: (GHC.Enum.efdtInt 1000# 999# 1#) -}
+de7f0bcd211b5805582eb571f48b0579
+  main :: GHC.Types.IO ()
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+f76c8f41e96657c967388408f5064ba7
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (Criterion.Main.defaultMain2
+                   Criterion.Main.Options.defaultConfig
+                   Main.main2) -}
+9deae53bf5798c92a4f1cfee24c1767f
+  main10 ::
+    Data.Sequence.FingerTree (Data.Sequence.Elem GHC.Types.Int)
+  {- Unfolding: (Data.Sequence.fromList1
+                   @ GHC.Types.Int
+                   Main.lstr
+                     `cast`
+                   ([Sym (Data.Sequence.N:Elem[0] <GHC.Types.Int>_R)])_R) -}
+d48c2e5a6e541d695464ebf78161ca26
+  main11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "seq"#) -}
+6ffca5313ffdc41ea898dc8e2023ad93
+  main12 :: Criterion.Types.Benchmark
+  {- Strictness: m2,
+     Unfolding: (Criterion.Types.Benchmark
+                   Main.main14
+                   Main.main13
+                     `cast`
+                   (Trans
+                        (<GHC.Int.Int64>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        (Sym (Criterion.Types.N:Benchmarkable[0])))) -}
+695a100e9a913407a529b4a1c2e6390f
+  main13 ::
+    GHC.Int.Int64
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Int.Int64)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Int.I64# ww1 -> Main.$wmain1 ww1 w1 }) -}
+6f2b2663dc71239c4e12a5f669e7b6cf
+  main14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "list"#) -}
+08a3e5855ad4890c7613eeb76f1f0878
+  main15 :: Criterion.Types.Benchmark
+  {- Strictness: m2,
+     Unfolding: (Criterion.Types.Benchmark
+                   Main.main17
+                   Main.main16
+                     `cast`
+                   (Trans
+                        (<GHC.Int.Int64>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        (Sym (Criterion.Types.N:Benchmarkable[0])))) -}
+544df3b7e01b20e1c539ba7afb87ed0b
+  main16 ::
+    GHC.Int.Int64
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Int.Int64)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Int.I64# ww1 -> Main.$wmain2 ww1 w1 }) -}
+39d14873f16e4db6be59dd8b8d44aa06
+  main17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "dynamic"#) -}
+46ea08b8b8d1a4639ce6a4a8023fda0d
+  main18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "sort1000"#) -}
+c8e229b9ed3309213f798a58832ad530
+  main19 :: Criterion.Types.Benchmark
+  {- Strictness: m3,
+     Unfolding: (Criterion.Types.BenchGroup Main.main36 Main.main20) -}
+3d4ab6c873296b35f92e9a855d574edb
+  main2 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.main19
+                   Main.main3) -}
+9738ed0df329a2f63334a97fde918486
+  main20 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.main34
+                   Main.main21) -}
+e57ca3c9d00bcc884d4bb11bc6a0ddd1
+  main21 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.main30
+                   Main.main22) -}
+0bc7003a0b513dc232884170a109a299
+  main22 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.main28
+                   Main.main23) -}
+4f734f0477f42d7ed97c67629e849069
+  main23 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.main24
+                   (GHC.Types.[] @ Criterion.Types.Benchmark)) -}
+170ae71d81530ae4d214c9f7d2857cc6
+  main24 :: Criterion.Types.Benchmark
+  {- Strictness: m2,
+     Unfolding: (Criterion.Types.Benchmark
+                   Main.main11
+                   Main.main25
+                     `cast`
+                   (Trans
+                        (<GHC.Int.Int64>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        (Sym (Criterion.Types.N:Benchmarkable[0])))) -}
+cde57332a84daeebca9a1be2efe6f9ec
+  main25 ::
+    GHC.Int.Int64
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Int.Int64)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Int.I64# ww1 -> Main.$wmain3 ww1 w1 }) -}
+967547471ae847a064e329320c3b0e25
+  main26 ::
+    Data.Sequence.FingerTree (Data.Sequence.Elem GHC.Types.Int)
+  {- Unfolding: (Data.Sequence.$fAlternativeSeq2
+                   @ GHC.Types.Int
+                   Main.main27 `cast` (Sym (Data.Sequence.N:Seq[0] <GHC.Types.Int>_R))
+                   Main.main27
+                     `cast`
+                   (Sym (Data.Sequence.N:Seq[0] <GHC.Types.Int>_R))) -}
+dba086fea58786052a55666dc63215ee
+  main27 ::
+    Data.Sequence.FingerTree (Data.Sequence.Elem GHC.Types.Int)
+  {- Unfolding: (Data.Sequence.fromList1
+                   @ GHC.Types.Int
+                   Main.lst
+                     `cast`
+                   ([Sym (Data.Sequence.N:Elem[0] <GHC.Types.Int>_R)])_R) -}
+bbb86a5ed4dfdf39ed5f7b02dd2edefd
+  main28 :: Criterion.Types.Benchmark
+  {- Strictness: m2,
+     Unfolding: (Criterion.Types.Benchmark
+                   Main.main14
+                   Main.main29
+                     `cast`
+                   (Trans
+                        (<GHC.Int.Int64>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        (Sym (Criterion.Types.N:Benchmarkable[0])))) -}
+efb3eb70e69392a38cf9fa77f38e6a18
+  main29 ::
+    GHC.Int.Int64
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Int.Int64)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Int.I64# ww1 -> Main.$wmain4 ww1 w1 }) -}
+abba5e0c55de3bd36e18b4f23ad389fa
+  main3 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.main4
+                   (GHC.Types.[] @ Criterion.Types.Benchmark)) -}
+1e92f0e4aba189399a509c12922b0f6b
+  main30 :: Criterion.Types.Benchmark
+  {- Strictness: m2,
+     Unfolding: (Criterion.Types.Benchmark
+                   Main.main33
+                   Main.main31
+                     `cast`
+                   (Trans
+                        (<GHC.Int.Int64>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        (Sym (Criterion.Types.N:Benchmarkable[0])))) -}
+4617391bf5a0b9d8c58374dd4700c9b5
+  main31 ::
+    GHC.Int.Int64
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Int.Int64)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Int.I64# ww1 -> Main.$wmain5 ww1 w1 }) -}
+228d628a68ec741c8a7b1accd9460880
+  main32 :: [GHC.Types.Int] -> [GHC.Types.Int]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: [GHC.Types.Int]) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Int
+                   (\ @ b (c :: GHC.Types.Int -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                    GHC.Base.foldr @ GHC.Types.Int @ b c n Main.lst)
+                   (GHC.Base.augment
+                      @ GHC.Types.Int
+                      (\ @ b (c :: GHC.Types.Int -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                       GHC.Base.foldr @ GHC.Types.Int @ b c n Main.lst)
+                      eta)) -}
+8075e09849fc2c52a4679ddcf03b0cd1
+  main33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "dlist"#) -}
+d67b77c9797b4f185646942560c7641e
+  main34 :: Criterion.Types.Benchmark
+  {- Strictness: m2,
+     Unfolding: (Criterion.Types.Benchmark
+                   Main.main17
+                   Main.main35
+                     `cast`
+                   (Trans
+                        (<GHC.Int.Int64>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        (Sym (Criterion.Types.N:Benchmarkable[0])))) -}
+83d3585cde303a7c8ee18b4ce9127f81
+  main35 ::
+    GHC.Int.Int64
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Int.Int64)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Int.I64# ww1 -> Main.$wmain6 ww1 w1 }) -}
+efae2a0067093170f83807a18f8a7415
+  main36 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "concat1000"#) -}
+ae279bdfe2f8ae4591d0812af39ba39b
+  main37 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+f89dd46a98d2cca2fe6e6bf4382412bb
+  main4 :: Criterion.Types.Benchmark
+  {- Strictness: m3,
+     Unfolding: (Criterion.Types.BenchGroup Main.main18 Main.main5) -}
+d18c4258cde7d19b08f3d5c06770037e
+  main5 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.main15
+                   Main.main6) -}
+efcb90aa22258d6a5cfd54ad0d7e39d9
+  main6 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.main12
+                   Main.main7) -}
+edddc5f629f76bd39e158050e33f7215
+  main7 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.main8
+                   (GHC.Types.[] @ Criterion.Types.Benchmark)) -}
+cb4488bb0aff60b604e306cb03ad1ca2
+  main8 :: Criterion.Types.Benchmark
+  {- Strictness: m2,
+     Unfolding: (Criterion.Types.Benchmark
+                   Main.main11
+                   Main.main9
+                     `cast`
+                   (Trans
+                        (<GHC.Int.Int64>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        (Sym (Criterion.Types.N:Benchmarkable[0])))) -}
+7d3d0d2dcd7ae4c472eca617b0632689
+  main9 ::
+    GHC.Int.Int64
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Int.Int64)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Int.I64# ww1 -> Main.$wmain ww1 w1 }) -}
+cee88c2a14424f157cfe0ebc490b60ea
+  main_eta :: Data.Sequence.Seq GHC.Types.Int -> [GHC.Types.Int]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Sequence.Seq GHC.Types.Int) ->
+                 Data.Sequence.$fEqSeq_$cfoldr
+                   @ (Data.Sequence.Elem GHC.Types.Int)
+                   @ [GHC.Types.Int]
+                   (GHC.Types.: @ GHC.Types.Int)
+                     `cast`
+                   (Sym (Data.Sequence.N:Elem[0] <GHC.Types.Int>_R)
+                    ->_R <[GHC.Types.Int] -> [GHC.Types.Int]>_R)
+                   (GHC.Types.[] @ GHC.Types.Int)
+                   (Data.Sequence.sortBy @ GHC.Types.Int GHC.Classes.compareInt x)
+                     `cast`
+                   (Data.Sequence.N:Seq[0] <GHC.Types.Int>_R)) -}
+50977608530b7fa7d4d1a30a2692da90
+  main_eta1 :: [GHC.Types.Int]
+  {- Unfolding: (GHC.Base.++ @ GHC.Types.Int Main.lst Main.lst) -}
+618b4a967e8740a45b5c2c71cd44b66e
+  main_eta2 :: [GHC.Types.Int] -> [GHC.Types.Int]
+  {- Arity: 1, Unfolding: (DynamicArray.concat Main.lst) -}
+"SPEC/Main sort @ Int" [ALWAYS] forall ($dOrd :: GHC.Classes.Ord
+                                                   GHC.Types.Int)
+  Data.OldList.sort @ GHC.Types.Int $dOrd = Main.$ssort1
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
